@@ -2,6 +2,8 @@
 // Jad home page: http://kpdus.tripod.com/jad.html
 // Decompiler options: packimports(3) fieldsfirst ansi space 
 
+// 启动/暂停app模块
+
 package Robinson;
 
 import com.mobiledistillery.celsius.CelsiusMIDlet;
