@@ -8,6 +8,8 @@ import javax.microedition.lcdui.Graphics;
 import javax.microedition.lcdui.Image;
 import javax.microedition.lcdui.game.GameCanvas;
 
+// 分辨率 240 x 320
+
 public abstract class k extends GameCanvas implements Runnable {
 
    public Graphics a;
@@ -264,14 +266,14 @@ public abstract class k extends GameCanvas implements Runnable {
       return var2 < 34?var2:34;
    }
 
-   public final void keyReleased(int var1) {
+   public final void keyReleased(int var1) {  // 键盘放开
       int var2 = this.y[this.b(var1)];
       this.d(var2);
       this.bo = 1;
       this.bv = 0;
    }
 
-   public final void keyPressed(int var1) {
+   public final void keyPressed(int var1) {  // 键盘按下
       this.bo = 3;
       this.br = this.bz;
       if(this.bT == var1) {
@@ -289,9 +291,9 @@ public abstract class k extends GameCanvas implements Runnable {
 
    public final void keyRepeated(int var1) {}
 
-   public void pointerDragged(int var1, int var2) {}
+   public void pointerDragged(int var1, int var2) {}  // 触屏-拉
 
-   public void pointerPressed(int var1, int var2) {
+   public void pointerPressed(int var1, int var2) {  // 触屏-按
       this.bW = 3;
       if(var1 < a() >> 1 && var1 > 0 && var2 < 320 && var2 > 302 && !this.aV && this.e != null) {
          this.br = this.bz;
@@ -321,7 +323,7 @@ public abstract class k extends GameCanvas implements Runnable {
 
    }
 
-   public void pointerReleased(int var1, int var2) {
+   public void pointerReleased(int var1, int var2) {  // 触屏释放
       this.bW = 1;
       if(var1 < a() >> 1 && var1 > 0 && var2 < 320 && var2 > 302 && !this.aV) {
          this.bv = 0;
@@ -358,11 +360,11 @@ public abstract class k extends GameCanvas implements Runnable {
    }
 
    private void c() {
-      if(this.bo == 1) {
+      if(this.bo == 1) {  // 键盘放开
          this.bo = 0;
       }
 
-      if(this.bo == 3) {
+      if(this.bo == 3) {  // 键盘按下
          this.bo = 2;
       }
 
@@ -424,8 +426,8 @@ public abstract class k extends GameCanvas implements Runnable {
    }
 
    public final void run() {
-      this.setFullScreenMode(true);
-      Graphics var1 = this.getGraphics();
+      this.setFullScreenMode(true);  // 全屏
+      Graphics var1 = this.getGraphics();  // 获取绘图区
 
       while(this.a != 0) {
          if(this.aS) {
@@ -438,7 +440,7 @@ public abstract class k extends GameCanvas implements Runnable {
             this.M = System.currentTimeMillis();
             this.b(var1);
             if(this.aT) {
-               this.flushGraphics();
+               this.flushGraphics();  // 刷新绘图区
             }
 
             this.L = System.currentTimeMillis() - this.M;

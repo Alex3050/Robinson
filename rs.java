@@ -13,7 +13,7 @@ public class rs {
    static Class class$0;
 
 
-   public static void main(String[] args) throws Exception {
+   public static void main(String[] args) throws Exception {  // 加载资源，不知道什么资源，但刚开机就加载，显然开始界面
       read_def("3");
    }
 

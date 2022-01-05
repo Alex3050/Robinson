@@ -520,7 +520,7 @@ public final class p extends k implements Runnable {
       this.bm = 0;
       this.bn = 0;
       this.a = var1;
-      this.c();
+      this.c();  // data.k Line_362 似乎是处理键盘结果
    }
 
    public final void a() {
