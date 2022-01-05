@@ -6,7 +6,7 @@ import javax.microedition.lcdui.Display;
 
 public class MyMidlet extends CelsiusMIDlet {
 
-   private p a = new p(this);
+   private p a = new p(this);  // 初始化主循环p
 
 
    public MyMidlet() {
