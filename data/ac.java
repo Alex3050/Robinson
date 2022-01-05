@@ -1,816 +1,818 @@
-// Decompiled by Jad v1.5.8e2. Copyright 2001 Pavel Kouznetsov.
-// Jad home page: http://kpdus.tripod.com/jad.html
-// Decompiler options: packimports(3) fieldsfirst ansi space 
-
 package data;
 
-import java.io.*;
+import data.b;
+import data.k;
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Vector;
 import javax.microedition.lcdui.Font;
 import javax.microedition.lcdui.Graphics;
-import rs;
 
-// Referenced classes of package data:
-//			b, k
+public final class ac {
 
-public final class ac
-{
+   private static ac a = null;
+   private byte a;
+   private byte[] a;
+   private StringBuffer[][] a;
+   private int a = 0;
+   public boolean a = false;
+   private boolean b = true;
+   public int[] a = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+   private Vector a;
+   private Vector b;
+   private Vector c;
+   private Vector d;
+   private int b;
+   private int c;
+   private int d;
+   private boolean c;
+   private static int e;
+   public static StringBuffer[] a;
 
-	private static ac a_data_ac_static = null;
-	private byte a_byte;
-	private byte a_byte_array1d[];
-	private StringBuffer a_java_lang_StringBuffer_array2d[][];
-	private int a_int;
-	public boolean a_boolean;
-	private boolean b_boolean;
-	public int a_int_array1d[] = {
-		0, 0, 0, 0, 0, 0, 0, 0, 0, 0
-	};
-	private Vector a_java_util_Vector;
-	private Vector b_java_util_Vector;
-	private Vector c_java_util_Vector;
-	private Vector d_java_util_Vector;
-	private int b_int;
-	private int c_int;
-	private int d_int;
-	private boolean c_boolean;
-	private static int e;
-	public static StringBuffer a_java_lang_StringBuffer_array1d_static[];
 
-	private ac()
-	{
-		a_int = 0;
-		a_boolean = false;
-		b_boolean = true;
-		b();
-	}
+   private ac() {
+      this.b();
+   }
 
-	public static final ac a()
-	{
-		if (k.a())
-		{
-			if (a_data_ac_static == null)
-				a_data_ac_static = new ac();
-			return a_data_ac_static;
-		} else
-		{
-			throw new b("Unauthorised operation");
-		}
-	}
+   public static final ac a() {
+      if(k.a()) {
+         if(a == null) {
+            a = new ac();
+         }
 
-	public final void a(int i)
-	{
-		if (a_byte != i)
-		{
-			a(true);
-			a_byte = (byte)i;
-			a();
-		}
-	}
+         return a;
+      } else {
+         throw new b("Unauthorised operation");
+      }
+   }
 
-	public final int a()
-	{
-		return 4;
-	}
+   public final void a(int var1) {
+      if(this.a != var1) {
+         this.a(true);
+         this.a = (byte)var1;
+         this.a();
+      }
 
-	public final boolean a()
-	{
-		if (a_byte_array1d[a_int] != -1)
-			a(a_int, a_byte_array1d[a_int]);
-		a_int++;
-		if (a_int == 4)
-		{
-			a_int = 0;
-			return true;
-		} else
-		{
-			return false;
-		}
-	}
+   }
 
-	private void a()
-	{
-		for (int i = 0; i < 4; i++)
-			if (a_byte_array1d[i] != -1)
-				a(i, a_byte_array1d[i]);
+   public final int a() {
+      return 4;
+   }
 
-	}
+   public final boolean a() {
+      if(this.a[this.a] != -1) {
+         this.a(this.a, (int)this.a[this.a]);
+      }
 
-	public final void a(boolean flag)
-	{
-		if (a_java_lang_StringBuffer_array2d == null)
-			return;
-		for (int i = 0; i < 4; i++)
-		{
-			if (!flag)
-				a_byte_array1d[i] = -1;
-			if (a_java_lang_StringBuffer_array2d != null && a_java_lang_StringBuffer_array2d[i] != null)
-			{
-				for (int j = 0; j < a_java_lang_StringBuffer_array2d[i].length; j++)
-					a_java_lang_StringBuffer_array2d[i][j] = null;
+      ++this.a;
+      if(this.a == 4) {
+         this.a = 0;
+         return true;
+      } else {
+         return false;
+      }
+   }
 
-				a_java_lang_StringBuffer_array2d[i] = null;
-			}
-		}
+   private void a() {
+      for(int var1 = 0; var1 < 4; ++var1) {
+         if(this.a[var1] != -1) {
+            this.a(var1, (int)this.a[var1]);
+         }
+      }
 
-		a_java_lang_StringBuffer_array2d = null;
-		System.gc();
-	}
+   }
 
-	public final void b(int i)
-	{
-		byte byte0;
-		if ((byte0 = a_byte_array1d[i]) != -1)
-		{
-			for (int j = 0; j < a_java_lang_StringBuffer_array2d[byte0].length; j++)
-				a_java_lang_StringBuffer_array2d[byte0][j] = null;
+   public final void a(boolean var1) {
+      if(this.a != null) {
+         for(int var2 = 0; var2 < 4; ++var2) {
+            if(!var1) {
+               this.a[var2] = -1;
+            }
 
-			a_java_lang_StringBuffer_array2d[byte0] = null;
-			a_byte_array1d[i] = -1;
-		}
-		System.gc();
-	}
+            if(this.a != null && this.a[var2] != null) {
+               for(int var3 = 0; var3 < this.a[var2].length; ++var3) {
+                  this.a[var2][var3] = null;
+               }
 
-	public final StringBuffer a(int i)
-	{
-		int j = i >> 16;
-		int l;
-		if ((l = a_byte_array1d[j]) < 0)
-			if (a_boolean)
-				l = a(j);
-			else
-				l = a(j, 0);
-		return a_java_lang_StringBuffer_array2d[l][i & 0xffff];
-	}
+               this.a[var2] = null;
+            }
+         }
 
-	public final int a(int i)
-	{
-		if (a_byte_array1d[i] > 0)
-			return a_byte_array1d[i];
-		for (int j = 1; j < 4; j++)
-			if (a_java_lang_StringBuffer_array2d == null || a_java_lang_StringBuffer_array2d[j] == null)
-				return a(i, j);
+         this.a = null;
+         System.gc();
+      }
+   }
 
-		return a(i, 0);
-	}
+   public final void b(int var1) {
+      byte var2;
+      if((var2 = this.a[var1]) != -1) {
+         for(int var3 = 0; var3 < this.a[var2].length; ++var3) {
+            this.a[var2][var3] = null;
+         }
 
-	private int a(int i, int j)
-	{
-		if (a_java_lang_StringBuffer_array2d == null)
-			a_java_lang_StringBuffer_array2d = new StringBuffer[4][];
-		for (int k1 = 0; k1 < 4; k1++)
-			if (a_byte_array1d[k1] == j)
-				a_byte_array1d[k1] = -1;
+         this.a[var2] = null;
+         this.a[var1] = -1;
+      }
 
-		try
-		{
-			int j1 = 9366;
-			int l = 0;
-			int i1 = 5;
-			InputStream inputstream;
-			(inputstream = getClass().getResourceAsStream("/data/D0")).skip(0x138b0L);
-			if (i == -2)
-			{
-				l = inputstream.read();
-			} else
-			{
-				inputstream.skip(1 + 27 * i);
-				i1 = inputstream.read() | inputstream.read() << 8;
-				inputstream.skip(5 * a_byte);
-				l = inputstream.read();
-				j1 = inputstream.read() | inputstream.read() << 8 | inputstream.read() << 16 | inputstream.read() << 24;
-			}
-			inputstream.close();
-			a_java_lang_StringBuffer_array2d[j] = new StringBuffer[i1];
-			if (a_byte == 0 && i >= 0)
-			{
-				ZHRES(i, j);
-			} else
-			{
-				InputStream inputstream1;
-				(inputstream1 = getClass().getResourceAsStream("/data/D" + Integer.toString(l))).skip(j1);
-				for (int l1 = 0; l1 < i1; l1++)
-				{
-					StringBuffer stringbuffer = new StringBuffer();
-					int i2;
-					while ((i2 = inputstream1.read()) != 0) 
-					{
-						int j2 = i2 & 0x7f;
-						if ((i2 & 0x80) != 0)
-						{
-							i2 = inputstream1.read();
-							j2 |= (i2 & 0x7f) << 7;
-							if ((i2 & 0x80) != 0)
-								j2 |= inputstream1.read() << 14;
-						}
-						stringbuffer.append((char)j2);
-					}
-					a_java_lang_StringBuffer_array2d[j][l1] = stringbuffer;
-				}
+      System.gc();
+   }
 
-				inputstream1.close();
-			}
-		}
-		catch (Exception ) { }
-		if (i >= 0)
-			a_byte_array1d[i] = (byte)j;
-		return j;
-	}
+   public final StringBuffer a(int var1) {
+      int var2 = var1 >> 16;
+      int var3;
+      if((var3 = this.a[var2]) < 0) {
+         if(this.a) {
+            var3 = this.a(var2);
+         } else {
+            var3 = this.a(var2, (int)0);
+         }
+      }
 
-	private String a(Vector vector, int i)
-	{
-		return (String)vector.elementAt(i);
-	}
+      return this.a[var3][var1 & '\uffff'];
+   }
 
-	private int a(Vector vector, int i)
-	{
-		return ((Integer)vector.elementAt(i)).intValue();
-	}
+   public final int a(int var1) {
+      if(this.a[var1] > 0) {
+         return this.a[var1];
+      } else {
+         for(int var2 = 1; var2 < 4; ++var2) {
+            if(this.a == null || this.a[var2] == null) {
+               return this.a(var1, var2);
+            }
+         }
 
-	private void a(Vector vector, String s, int i)
-	{
-		vector.setElementAt(s, i);
-	}
+         return this.a(var1, (int)0);
+      }
+   }
 
-	private void a(Vector vector, int i, int j)
-	{
-		vector.setElementAt(new Integer(i), j);
-	}
+   private int a(int var1, int var2) {
+      if(this.a == null) {
+         this.a = new StringBuffer[4][];
+      }
 
-	private void a(String s, Graphics g, int i, int j, int l, int i1, int j1)
-	{
-		if (g == null)
-			return;
-		if ((l & 0x100) != 0)
-		{
-			g.setColor(j1);
-			a(s, g, i, j, l & 0x7f);
-			g.setColor(i1);
-		}
-		g.drawString(s, i, j, l & 0x7f);
-	}
+      int var7;
+      for(var7 = 0; var7 < 4; ++var7) {
+         if(this.a[var7] == var2) {
+            this.a[var7] = -1;
+         }
+      }
 
-	private void a(Graphics g, int i, int j, int l, int i1)
-	{
-		if (g == null)
-		{
-			return;
-		} else
-		{
-			g.setColor(i1);
-			g.setFont(Font.getFont(i, j, l));
-			return;
-		}
-	}
+      try {
+         int var6 = 9366;
+         boolean var4 = false;
+         int var5 = 5;
+         InputStream var3;
+         (var3 = this.getClass().getResourceAsStream("/data/D0")).skip(80048L);
+         int var12;
+         if(var1 == -2) {
+            var12 = var3.read();
+         } else {
+            var3.skip((long)(1 + 27 * var1));
+            var5 = var3.read() | var3.read() << 8;
+            var3.skip((long)(5 * this.a));
+            var12 = var3.read();
+            var6 = var3.read() | var3.read() << 8 | var3.read() << 16 | var3.read() << 24;
+         }
 
-	private boolean a(String s, int i, int j, int l, int i1)
-	{
-		c_boolean = false;
-		if (s == null)
-			return false;
-		if (s.length() == 0)
-			return false;
-		int j1 = a(s, j, l, i1);
-		boolean flag = false;
-		if (j1 + d_int > c_int)
-		{
-			flag = true;
-			if (s.endsWith(" ") && d_int + a(s.substring(0, s.length() - 1), j, l, i1) <= c_int)
-				if (s.length() > 1)
-				{
-					s = s.substring(0, s.length() - 1);
-					flag = false;
-				} else
-				{
-					return false;
-				}
-			if (flag && a_java_util_Vector.size() > 0)
-			{
-				int k1 = a_java_util_Vector.size() - 1;
-				String s1;
-				if ((s1 = a(a_java_util_Vector, k1)).endsWith(" ") && a(d_java_util_Vector, k1) <= c_int)
-				{
-					s1 = s1.substring(0, s1.length() - 1);
-					d_int -= a(d_java_util_Vector, k1);
-					a(a_java_util_Vector, s1, k1);
-					a(d_java_util_Vector, a(s1, j, a(c_java_util_Vector, k1), i1), k1);
-					d_int += a(d_java_util_Vector, k1);
-					b_int--;
-					c_boolean = true;
-				}
-			}
-		}
-		if (s.endsWith(" "))
-			b_int++;
-		a_java_util_Vector.addElement(s);
-		b_java_util_Vector.addElement(new Integer(i));
-		c_java_util_Vector.addElement(new Integer(l));
-		d_java_util_Vector.addElement(new Integer(a(s, j, l, i1)));
-		return flag;
-	}
+         var3.close();
+         this.a[var2] = new StringBuffer[var5];
+         if(this.a == 0 && var1 >= 0) {
+            this.ZHRES(var1, var2);
+         } else {
+            (var3 = this.getClass().getResourceAsStream("/data/D" + Integer.toString(var12))).skip((long)var6);
 
-	private int a(String s, int i, int j, int l)
-	{
-		int i1;
-		return i1 = Font.getFont(i, j, l).stringWidth(s) + s.length() * k.g();
-	}
+            for(var7 = 0; var7 < var5; ++var7) {
+               int var8;
+               StringBuffer var9;
+               int var10;
+               for(var9 = new StringBuffer(); (var8 = var3.read()) != 0; var9.append((char)var10)) {
+                  var10 = var8 & 127;
+                  if((var8 & 128) != 0) {
+                     var8 = var3.read();
+                     var10 |= (var8 & 127) << 7;
+                     if((var8 & 128) != 0) {
+                        var10 |= var3.read() << 14;
+                     }
+                  }
+               }
 
-	private int a(char c1, char c2)
-	{
-		if (c2 == '%')
-		{
-			if (c1 == 'c')
-				return -1;
-			if (c1 == 'u')
-				return -4;
-			if (c1 == 'b')
-				return -1;
-			if (c1 == 'i')
-				return -2;
-		} else
-		{
-			if (c1 == 'c' && c2 >= '0' && c2 <= '9')
-				return a_int_array1d[c2 - 48];
-			if (c1 == 'u')
-				return 4;
-			if (c1 == 'b')
-				return 1;
-			if (c1 == 'i')
-				return 2;
-		}
-		return -999;
-	}
+               this.a[var2][var7] = var9;
+            }
 
-	public static final int b()
-	{
-		return e;
-	}
+            var3.close();
+         }
+      } catch (Exception var11) {
+         ;
+      }
 
-	public static final void c(int i)
-	{
-		e = i;
-	}
+      if(var1 >= 0) {
+         this.a[var1] = (byte)var2;
+      }
 
-	private void a(String s, Graphics g, int i, int j, int l)
-	{
-		for (int i1 = -1; i1 < 2; i1++)
-		{
-			for (int j1 = -1; j1 < 2; j1++)
-				g.drawString(s, i + i1, j + j1, l);
+      return var2;
+   }
 
-		}
+   private String a(Vector var1, int var2) {
+      return (String)var1.elementAt(var2);
+   }
 
-	}
+   private int a(Vector var1, int var2) {
+      return ((Integer)var1.elementAt(var2)).intValue();
+   }
 
-	public final int a(Graphics g, StringBuffer stringbuffer, int i, int j, int l, int i1, int j1, 
-			int k1, int l1, int i2, int j2, int k2, int l2, int i3)
-	{
-		if (stringbuffer == null)
-			return j;
-		if ((i1 & 0x7f) == 0)
-			i1 = i1 | 0x10 | 4;
-		if ((i1 & 2) != 0)
-		{
-			if ((i1 & 0x200) == 0)
-				i1 |= 0x200;
-			i1 = (i1 &= -3) | 0x10;
-		}
-		if ((i1 & 0x200) != 0)
-			if ((i1 & 1) != 0)
-				i1 = i1 & 0xffffff80 | 0x10 | 1;
-			else
-			if ((i1 & 8) != 0)
-				i1 = i1 & 0xffffff80 | 0x10 | 8;
-		if ((i1 & 0x800) != 0)
-		{
-			if ((i1 & 0x200) != 0)
-				j -= i2 / 2;
-			a(g, j1, k1, l1, l);
-			a(stringbuffer.toString(), g, i, j, i1, l, l2);
-			return j + i2;
-		}
-		a_java_util_Vector = new Vector();
-		b_java_util_Vector = new Vector();
-		c_java_util_Vector = new Vector();
-		d_java_util_Vector = new Vector();
-		d_int = 0;
-		c_int = j2;
-		b_int = 0;
-		String s = stringbuffer.toString();
-		String s1 = "";
-		int j3 = l;
-		int k3 = k1;
-		int l3 = j;
-		int i4 = 1;
-		boolean flag = false;
-		int k4 = 0;
-		boolean flag1 = false;
-		int j5 = 0;
-		int k5 = 0;
-		int l5 = 0;
-		int i6 = 0;
-		Vector vector = new Vector();
-		for (int l4 = s.indexOf("\\&"); l4 != -1; l4 = s.indexOf("\\&", l4 + 2))
-		{
-			int j6 = 0;
-			char c2;
-			if ((c2 = s.charAt(l4 + 2)) >= '0' && c2 <= '9' && (j6 = c2 - 48) < a_java_lang_StringBuffer_array1d_static.length)
-				if (a_java_lang_StringBuffer_array1d_static[j6] != null)
-					s = s.substring(0, l4) + a_java_lang_StringBuffer_array1d_static[j6].toString() + s.substring(l4 + 3);
-				else
-					s = s.substring(0, l4) + "***ISSUE WITH TEXT PARAM***" + s.substring(l4 + 3);
-		}
+   private void a(Vector var1, String var2, int var3) {
+      var1.setElementAt(var2, var3);
+   }
 
-		if ((i1 & 0x400) != 0 && e > 0)
-		{
-			if (g != null)
-			{
-				String s2;
-				if (e < 0 || e > s.length())
-					s2 = "***ISSUE WITH DRAWSTRINGOFFSET***";
-				else
-					s2 = s.substring(0, e);
-				for (int i7 = s2.indexOf("\\"); i7 > -1; i7 = s2.indexOf("\\", i7 + 3))
-				{
-					char c3;
-					int j8;
-					if (((c3 = s2.charAt(i7 + 1)) == 'c' || c3 == 'u' || c3 == 'i' || c3 == 'b') && (j8 = a(c3, s2.charAt(i7 + 2))) != -999)
-						if (c3 == 'c')
-						{
-							if (j8 == -1)
-								j3 = l;
-							else
-								j3 = j8;
-						} else
-						if (j8 < 0 && (k3 & -j8) != 0)
-							k3 &= ~-j8;
-						else
-						if (j8 >= 0 && (k3 & j8) == 0)
-							k3 |= j8;
-				}
+   private void a(Vector var1, int var2, int var3) {
+      var1.setElementAt(new Integer(var2), var3);
+   }
 
-			}
-			if (e < 0 || e > s.length())
-				s = "***ISSUE WITH DRAWSTRINGOFFSET***";
-			else
-				s = s.substring(e);
-		}
-		a(g, j1, k3, l1, j3);
-		if ((i1 & 0x1000) != 0 && (i1 & 0x7f) != 0)
-			if ((i1 & 1) != 0)
-			{
-				i -= j2 / 2;
-				i1 = (i1 &= -2) | 4;
-			} else
-			if ((i1 & 8) != 0)
-			{
-				i -= j2;
-				i1 = (i1 &= -9) | 4;
-			}
-		while (k4 < s.length() || a_java_util_Vector.size() > i6) 
-		{
-			char c1 = 'x';
-			int j7 = 0;
-			int l7 = -1;
-			boolean flag3 = false;
-			boolean flag4 = false;
-			int i5;
-			if (k4 < s.length())
-			{
-				int j4;
-				if ((j4 = s.indexOf(" ", k4)) == -1)
-				{
-					flag4 = true;
-					j4 = s.length() - 1;
-				}
-				if ((i5 = (s1 = s.substring(k4, j4 + 1)).indexOf("\\")) + 1 >= s1.length())
-				{
-					i5 = -1;
-					flag4 = true;
-				}
-			} else
-			{
-				i5 = -2;
-				flag4 = true;
-			}
-			if (i5 == -1)
-			{
-				j5 = 0;
-				k4 += s1.length();
-				if (!(flag3 = a(s1, j3, j1, k3, l1)))
-					d_int += a(d_java_util_Vector, d_java_util_Vector.size() - 1);
-			} else
-			{
-				j5 = 0;
-				k5 = 0;
-				while (i5 > -1) 
-				{
-					c1 = s1.charAt(i5 + 1);
-					int i9 = a_java_util_Vector.size();
-					int k9;
-					if (c1 == 'c' || c1 == 'u' || c1 == 'i' || c1 == 'b')
-					{
-						if ((k9 = a(c1, s1.charAt(i5 + 2))) != -999)
-						{
-							if (i5 > 0)
-								flag3 = a(s1.substring(j7, i5), j3, j1, k3, l1);
-							if (c1 == 'c')
-							{
-								if (k9 == -1)
-									j3 = l;
-								else
-									j3 = k9;
-								j5 = 3;
-							} else
-							{
-								if (k9 < 0 && (k3 & -k9) != 0)
-									k3 &= ~-k9;
-								else
-								if (k9 >= 0 && (k3 & k9) == 0)
-									k3 |= k9;
-								if (k9 < 0)
-									j5 = 3;
-								else
-									j5 = 2;
-							}
-						}
-					} else
-					if (c1 == '@' || c1 == 'n' || c1 == 'p')
-					{
-						if (!(flag3 = a(s1.substring(j7, i5), j3, j1, k3, l1)))
-						{
-							l7 = i5;
-							j5 = 2;
-						} else
-						{
-							l7 = -1;
-							j5 = 0;
-						}
-					} else
-					if (c1 == '\247')
-					{
-						if (s1.substring(i5 + 2).indexOf("\\") == -1)
-						{
-							flag3 = a(s1.substring(j7, i5) + " " + s1.substring(i5 + 2), j3, j1, k3, l1);
-							j5 = 2;
-							k4--;
-						} else
-						{
-							s1 = s1.substring(j7, i5) + " " + s1.substring(i5 + 2);
-							j5 = 1;
-							i5 = -1;
-						}
-						k5++;
-					} else
-					if (c1 == 't')
-					{
-						flag3 = a(s1.substring(j7, i5) + "   ", j3, j1, k3, l1);
-						j5 = 2;
-						k4 -= "   ".length();
-					} else
-					if (s1.substring(i5 + 1).indexOf("\\") == -1)
-					{
-						flag3 = a(s1.substring(j7), j3, j1, k3, l1);
-						j5 = 0;
-						i5++;
-					} else
-					{
-						j5 = 0;
-						i5++;
-					}
-					j7 = i5 + j5;
-					i5 += j5;
-					k4 += j5;
-					i5 = s1.indexOf("\\", i5);
-					if (flag4 && i5 == -1 && j7 < s1.length())
-						flag4 = false;
-					if (a_java_util_Vector.size() > i9)
-					{
-						k4 += ((String)a_java_util_Vector.lastElement()).length();
-						if (!flag3)
-							d_int += ((Integer)d_java_util_Vector.lastElement()).intValue();
-					}
-					if (flag3 || l7 > -1)
-						break;
-				}
-			}
-			if (!flag3 && !flag4 && l7 <= -1)
-				continue;
-			if (a_java_util_Vector.size() > i6)
-			{
-				if (a(d_java_util_Vector, i6) > j2)
-				{
-					String s3 = a(a_java_util_Vector, i6);
-					int l9 = a(d_java_util_Vector, i6);
-					int j10 = a(c_java_util_Vector, i6);
-					int l10 = s3.length();
-					for (; l9 > j2; l9 = a(s3.substring(0, l10), j1, j10, l1))
-						if (l10 > 1)
-							l10--;
+   private void a(String var1, Graphics var2, int var3, int var4, int var5, int var6, int var7) {
+      if(var2 != null) {
+         if((var5 & 256) != 0) {
+            var2.setColor(var7);
+            this.a(var1, var2, var3, var4, var5 & 127);
+            var2.setColor(var6);
+         }
 
-					a(a_java_util_Vector, s3.substring(0, l10), i6);
-					a(d_java_util_Vector, l9, i6);
-					a_java_util_Vector.insertElementAt(s3.substring(l10), i6 + 1);
-					b_java_util_Vector.insertElementAt(new Integer(a(b_java_util_Vector, i6)), i6 + 1);
-					c_java_util_Vector.insertElementAt(new Integer(j10), i6 + 1);
-					d_java_util_Vector.insertElementAt(new Integer(a(s3.substring(l10), j1, j10, l1)), i6 + 1);
-					d_int = l9;
-					l5 = i6 + 1;
-					if (l7 > -1)
-						k4 -= 2;
-				} else
-				if (flag3)
-				{
-					l5 = a_java_util_Vector.size() - 1;
-					if ((i1 & 0x1000) != 0 && a(a_java_util_Vector, a_java_util_Vector.size() - 1).endsWith(" "))
-						b_int--;
-				} else
-				{
-					l5 = a_java_util_Vector.size();
-				}
-				int j9 = i;
-				int i10 = i1;
-				if (i1 != 0)
-					if (b_boolean)
-					{
-						if ((i1 & 1) != 0)
-						{
-							j9 = i - d_int / 2;
-							i10 = (i10 = i1 & -2) | 4;
-						} else
-						if ((i1 & 8) != 0)
-						{
-							j9 = i - d_int;
-							i10 = (i10 = i1 & -9) | 4;
-						}
-					} else
-					if ((i1 & 1) != 0)
-					{
-						j9 = i + d_int / 2;
-						i10 = (i10 = i1 & -2) | 8;
-					} else
-					if ((i1 & 4) != 0)
-					{
-						j9 = i + d_int;
-						i10 = (i10 = i1 & -5) | 8;
-					} else
-					if ((i1 & 8) != 0)
-						j9 = i + d_int;
-				int k10 = j2 - d_int;
-				int i11 = 0;
-				int j11 = 0;
-				int k11 = 0;
-				if ((i1 & 0x1000) != 0 && l7 == -1 && k10 < j2 / 3 && b_int > 0)
-				{
-					i11 = k10 / b_int;
-					k11 = (j11 = k10 - i11 * b_int) / b_int + 1;
-				}
-				int i12 = i6;
-				for (int j12 = i6; j12 < l5; j12++)
-				{
-					if ((i1 & 0x200) == 0)
-					{
-						int l11 = a(b_java_util_Vector, i6);
-						a(g, j1, a(c_java_util_Vector, i6), l1, l11);
-						a(a(a_java_util_Vector, i6), g, j9, l3, i10, l11, l2);
-					} else
-					{
-						vector.addElement(new Integer(j9));
-						i12 = j12;
-					}
-					if (b_boolean)
-						j9 += a(d_java_util_Vector, i12);
-					else
-						j9 -= a(d_java_util_Vector, i12);
-					if ((i1 & 0x1000) != 0 && a(a_java_util_Vector, i12).endsWith(" "))
-					{
-						j9 += i11;
-						if (j11 > 0)
-						{
-							j9 += k11;
-							if ((j11 -= k11) < 0)
-							{
-								j11 = 0;
-								k11 = 0;
-							}
-						}
-					}
-					if ((i1 & 0x200) == 0)
-					{
-						a_java_util_Vector.removeElementAt(i6);
-						d_java_util_Vector.removeElementAt(i6);
-						b_java_util_Vector.removeElementAt(i6);
-						c_java_util_Vector.removeElementAt(i6);
-					}
-				}
+         var2.drawString(var1, var3, var4, var5 & 127);
+      }
+   }
 
-				if ((i1 & 0x200) == 0)
-					i6 = 0;
-				else
-					i6 = l5;
-				d_int = 0;
-				b_int = 0;
-				if (a_java_util_Vector.size() > i6)
-				{
-					for (int k12 = i6; k12 < a_java_util_Vector.size(); k12++)
-					{
-						d_int += a(d_java_util_Vector, k12);
-						if ((i1 & 0x1000) != 0 && a(a_java_util_Vector, k12).endsWith(" "))
-							b_int++;
-					}
+   private void a(Graphics var1, int var2, int var3, int var4, int var5) {
+      if(var1 != null) {
+         var1.setColor(var5);
+         var1.setFont(Font.getFont(var2, var3, var4));
+      }
+   }
 
-				}
-			}
-			l3 += i2;
-			if (c1 == 'p' && l7 < l5 && l7 > -1)
-			{
-				for (; l3 < j + k2 * i4; l3 += i2);
-				i4++;
-			}
-			if ((i1 & 0x400) != 0 && l3 + i2 > j + k2 && g != null)
-				break;
-		}
-		if ((i1 & 0x200) != 0 && vector.size() > 0)
-		{
-			boolean flag2 = false;
-			int k7 = a(vector, 0);
-			int k8 = j - (l3 - j) / 2;
-			for (int l8 = 0; l8 < vector.size(); l8++)
-			{
-				int i8 = a(b_java_util_Vector, l8);
-				a(g, j1, a(c_java_util_Vector, l8), l1, i8);
-				a(a(a_java_util_Vector, l8), g, k7, k8, i1 & 0xfffffd80, i8, l2);
-				int k6 = k7;
-				if (l8 + 1 < vector.size())
-					k7 = a(vector, l8 + 1);
-				if (k7 < k6 + a(d_java_util_Vector, l8))
-					k8 += i2;
-			}
+   private boolean a(String var1, int var2, int var3, int var4, int var5) {
+      this.c = false;
+      if(var1 == null) {
+         return false;
+      } else if(var1.length() == 0) {
+         return false;
+      } else {
+         int var6 = this.a(var1, var3, var4, var5);
+         boolean var7 = false;
+         if(var6 + this.d > this.c) {
+            var7 = true;
+            if(var1.endsWith(" ") && this.d + this.a(var1.substring(0, var1.length() - 1), var3, var4, var5) <= this.c) {
+               if(var1.length() <= 1) {
+                  return false;
+               }
 
-			l3 = k8;
-		}
-		if ((i1 & 0x400) != 0)
-		{
-			if (a_java_util_Vector.size() > i6)
-			{
-				for (int l6 = i6; l6 < a_java_util_Vector.size(); l6++)
-					k4 -= a(a_java_util_Vector, l6).length();
+               var1 = var1.substring(0, var1.length() - 1);
+               var7 = false;
+            }
 
-				k4 = (k4 -= j5) - k5;
-			}
-			if (k4 < s.length())
-				e += k4;
-			else
-				e = 0;
-		}
-		a_java_util_Vector = null;
-		c_java_util_Vector = null;
-		b_java_util_Vector = null;
-		d_java_util_Vector = null;
-		return l3;
-	}
+            if(var7 && this.a.size() > 0) {
+               int var8 = this.a.size() - 1;
+               String var9;
+               if((var9 = this.a(this.a, var8)).endsWith(" ") && this.a(this.d, var8) <= this.c) {
+                  var9 = var9.substring(0, var9.length() - 1);
+                  this.d -= this.a(this.d, var8);
+                  this.a(this.a, var9, var8);
+                  this.a(this.d, this.a(var9, var3, this.a(this.c, var8), var5), var8);
+                  this.d += this.a(this.d, var8);
+                  --this.b;
+                  this.c = true;
+               }
+            }
+         }
 
-	public final int a(Graphics g, StringBuffer stringbuffer, int i, int j, int l)
-	{
-		return a(g, stringbuffer, i, j, l, 20, 0, 0, k.e(), k.f(), k.a(), k.b(), 0, 0);
-	}
+         if(var1.endsWith(" ")) {
+            ++this.b;
+         }
 
-	private void b()
-	{
-		a_byte_array1d = new byte[4];
-		a_byte = 0;
-		for (int i = 0; i < 4;)
-			a_byte_array1d[i++] = -1;
+         this.a.addElement(var1);
+         this.b.addElement(new Integer(var2));
+         this.c.addElement(new Integer(var4));
+         this.d.addElement(new Integer(this.a(var1, var3, var4, var5)));
+         return var7;
+      }
+   }
 
-		a_java_lang_StringBuffer_array1d_static = new StringBuffer[10];
-	}
+   private int a(String var1, int var2, int var3, int var4) {
+      return Font.getFont(var2, var3, var4).stringWidth(var1) + var1.length() * k.g();
+   }
 
-	private void ZHRES(int i, int j)
-	{
-		DataInputStream datainputstream = new DataInputStream(getClass().getResourceAsStream("/" + Integer.toString(i)));
-		try
-		{
-			int l = datainputstream.readInt();
-			Object obj = null;
-			for (int i1 = 0; i1 < l; i1++)
-			{
-				StringBuffer stringbuffer = new StringBuffer();
-				short word0 = datainputstream.readShort();
-				byte abyte0[] = new byte[word0];
-				for (int j1 = word0 - 1; j1 > -1; j1--)
-					abyte0[j1] = (byte)(~datainputstream.readByte());
+   private int a(char var1, char var2) {
+      if(var2 == 37) {
+         if(var1 == 99) {
+            return -1;
+         }
 
-				String s = new String(abyte0, "UTF-8");
-				stringbuffer.append(s);
-				a_java_lang_StringBuffer_array2d[j][i1] = stringbuffer;
-			}
+         if(var1 == 117) {
+            return -4;
+         }
 
-			datainputstream.close();
-		}
-		catch (IOException ioexception)
-		{
-			ioexception.printStackTrace();
-		}
-	}
+         if(var1 == 98) {
+            return -1;
+         }
 
+         if(var1 == 105) {
+            return -2;
+         }
+      } else {
+         if(var1 == 99 && var2 >= 48 && var2 <= 57) {
+            return this.a[var2 - 48];
+         }
+
+         if(var1 == 117) {
+            return 4;
+         }
+
+         if(var1 == 98) {
+            return 1;
+         }
+
+         if(var1 == 105) {
+            return 2;
+         }
+      }
+
+      return -999;
+   }
+
+   public static final int b() {
+      return e;
+   }
+
+   public static final void c(int var0) {
+      e = var0;
+   }
+
+   private void a(String var1, Graphics var2, int var3, int var4, int var5) {
+      for(int var6 = -1; var6 < 2; ++var6) {
+         for(int var7 = -1; var7 < 2; ++var7) {
+            var2.drawString(var1, var3 + var6, var4 + var7, var5);
+         }
+      }
+
+   }
+
+   public final int a(Graphics var1, StringBuffer var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9, int var10, int var11, int var12, int var13, int var14) {
+      if(var2 == null) {
+         return var4;
+      } else {
+         if((var6 & 127) == 0) {
+            var6 = var6 | 16 | 4;
+         }
+
+         if((var6 & 2) != 0) {
+            if((var6 & 512) == 0) {
+               var6 |= 512;
+            }
+
+            var6 = (var6 &= -3) | 16;
+         }
+
+         if((var6 & 512) != 0) {
+            if((var6 & 1) != 0) {
+               var6 = var6 & -128 | 16 | 1;
+            } else if((var6 & 8) != 0) {
+               var6 = var6 & -128 | 16 | 8;
+            }
+         }
+
+         if((var6 & 2048) != 0) {
+            if((var6 & 512) != 0) {
+               var4 -= var10 / 2;
+            }
+
+            this.a(var1, var7, var8, var9, var5);
+            this.a(var2.toString(), var1, var3, var4, var6, var5, var13);
+            return var4 + var10;
+         } else {
+            this.a = new Vector();
+            this.b = new Vector();
+            this.c = new Vector();
+            this.d = new Vector();
+            this.d = 0;
+            this.c = var11;
+            this.b = 0;
+            String var15 = var2.toString();
+            String var16 = "";
+            int var17 = var5;
+            int var18 = var8;
+            int var19 = var4;
+            int var20 = 1;
+            boolean var21 = false;
+            int var22 = 0;
+            boolean var23 = false;
+            byte var24 = 0;
+            int var25 = 0;
+            int var26 = 0;
+            int var27 = 0;
+            Vector var28 = new Vector();
+
+            boolean var29;
+            int var45;
+            int var46;
+            for(var45 = var15.indexOf("\\&"); var45 != -1; var45 = var15.indexOf("\\&", var45 + 2)) {
+               var29 = false;
+               char var30;
+               if((var30 = var15.charAt(var45 + 2)) >= 48 && var30 <= 57 && (var46 = var30 - 48) < a.length) {
+                  if(a[var46] != null) {
+                     var15 = var15.substring(0, var45) + a[var46].toString() + var15.substring(var45 + 3);
+                  } else {
+                     var15 = var15.substring(0, var45) + "***ISSUE WITH TEXT PARAM***" + var15.substring(var45 + 3);
+                  }
+               }
+            }
+
+            int var32;
+            int var48;
+            if((var6 & 1024) != 0 && e > 0) {
+               if(var1 != null) {
+                  String var47;
+                  if(e >= 0 && e <= var15.length()) {
+                     var47 = var15.substring(0, e);
+                  } else {
+                     var47 = "***ISSUE WITH DRAWSTRINGOFFSET***";
+                  }
+
+                  for(var48 = var47.indexOf("\\"); var48 > -1; var48 = var47.indexOf("\\", var48 + 3)) {
+                     char var31;
+                     if(((var31 = var47.charAt(var48 + 1)) == 99 || var31 == 117 || var31 == 105 || var31 == 98) && (var32 = this.a(var31, var47.charAt(var48 + 2))) != -999) {
+                        if(var31 == 99) {
+                           if(var32 == -1) {
+                              var17 = var5;
+                           } else {
+                              var17 = var32;
+                           }
+                        } else if(var32 < 0 && (var18 & -var32) != 0) {
+                           var18 &= ~(-var32);
+                        } else if(var32 >= 0 && (var18 & var32) == 0) {
+                           var18 |= var32;
+                        }
+                     }
+                  }
+               }
+
+               if(e >= 0 && e <= var15.length()) {
+                  var15 = var15.substring(e);
+               } else {
+                  var15 = "***ISSUE WITH DRAWSTRINGOFFSET***";
+               }
+            }
+
+            this.a(var1, var7, var18, var9, var17);
+            if((var6 & 4096) != 0 && (var6 & 127) != 0) {
+               if((var6 & 1) != 0) {
+                  var3 -= var11 / 2;
+                  var6 = (var6 &= -2) | 4;
+               } else if((var6 & 8) != 0) {
+                  var3 -= var11;
+                  var6 = (var6 &= -9) | 4;
+               }
+            }
+
+            int var50;
+            while(var22 < var15.length() || this.a.size() > var27) {
+               char var49 = 120;
+               var48 = 0;
+               var50 = -1;
+               boolean var51 = false;
+               boolean var33 = false;
+               if(var22 < var15.length()) {
+                  int var44;
+                  if((var44 = var15.indexOf(" ", var22)) == -1) {
+                     var33 = true;
+                     var44 = var15.length() - 1;
+                  }
+
+                  if((var45 = (var16 = var15.substring(var22, var44 + 1)).indexOf("\\")) + 1 >= var16.length()) {
+                     var45 = -1;
+                     var33 = true;
+                  }
+               } else {
+                  var45 = -2;
+                  var33 = true;
+               }
+
+               int var34;
+               int var35;
+               if(var45 == -1) {
+                  var24 = 0;
+                  var22 += var16.length();
+                  if(!(var51 = this.a(var16, var17, var7, var18, var9))) {
+                     this.d += this.a(this.d, this.d.size() - 1);
+                  }
+               } else {
+                  var24 = 0;
+                  var25 = 0;
+
+                  while(var45 > -1) {
+                     var49 = var16.charAt(var45 + 1);
+                     var34 = this.a.size();
+                     if(var49 != 99 && var49 != 117 && var49 != 105 && var49 != 98) {
+                        if(var49 != 64 && var49 != 110 && var49 != 112) {
+                           if(var49 == 167) {
+                              if(var16.substring(var45 + 2).indexOf("\\") == -1) {
+                                 var51 = this.a(var16.substring(var48, var45) + " " + var16.substring(var45 + 2), var17, var7, var18, var9);
+                                 var24 = 2;
+                                 --var22;
+                              } else {
+                                 var16 = var16.substring(var48, var45) + " " + var16.substring(var45 + 2);
+                                 var24 = 1;
+                                 var45 = -1;
+                              }
+
+                              ++var25;
+                           } else if(var49 == 116) {
+                              var51 = this.a(var16.substring(var48, var45) + "   ", var17, var7, var18, var9);
+                              var24 = 2;
+                              var22 -= "   ".length();
+                           } else if(var16.substring(var45 + 1).indexOf("\\") == -1) {
+                              var51 = this.a(var16.substring(var48), var17, var7, var18, var9);
+                              var24 = 0;
+                              ++var45;
+                           } else {
+                              var24 = 0;
+                              ++var45;
+                           }
+                        } else if(!(var51 = this.a(var16.substring(var48, var45), var17, var7, var18, var9))) {
+                           var50 = var45;
+                           var24 = 2;
+                        } else {
+                           var50 = -1;
+                           var24 = 0;
+                        }
+                     } else if((var35 = this.a(var49, var16.charAt(var45 + 2))) != -999) {
+                        if(var45 > 0) {
+                           var51 = this.a(var16.substring(var48, var45), var17, var7, var18, var9);
+                        }
+
+                        if(var49 == 99) {
+                           if(var35 == -1) {
+                              var17 = var5;
+                           } else {
+                              var17 = var35;
+                           }
+
+                           var24 = 3;
+                        } else {
+                           if(var35 < 0 && (var18 & -var35) != 0) {
+                              var18 &= ~(-var35);
+                           } else if(var35 >= 0 && (var18 & var35) == 0) {
+                              var18 |= var35;
+                           }
+
+                           if(var35 < 0) {
+                              var24 = 3;
+                           } else {
+                              var24 = 2;
+                           }
+                        }
+                     }
+
+                     var48 = var45 + var24;
+                     var45 += var24;
+                     var22 += var24;
+                     var45 = var16.indexOf("\\", var45);
+                     if(var33 && var45 == -1 && var48 < var16.length()) {
+                        var33 = false;
+                     }
+
+                     if(this.a.size() > var34) {
+                        var22 += ((String)this.a.lastElement()).length();
+                        if(!var51) {
+                           this.d += ((Integer)this.d.lastElement()).intValue();
+                        }
+                     }
+
+                     if(var51 || var50 > -1) {
+                        break;
+                     }
+                  }
+               }
+
+               if(var51 || var33 || var50 > -1) {
+                  if(this.a.size() > var27) {
+                     int var36;
+                     int var37;
+                     if(this.a(this.d, var27) > var11) {
+                        String var52 = this.a(this.a, var27);
+                        var35 = this.a(this.d, var27);
+                        var36 = this.a(this.c, var27);
+
+                        for(var37 = var52.length(); var35 > var11; var35 = this.a(var52.substring(0, var37), var7, var36, var9)) {
+                           if(var37 > 1) {
+                              --var37;
+                           }
+                        }
+
+                        this.a(this.a, var52.substring(0, var37), var27);
+                        this.a(this.d, var35, var27);
+                        this.a.insertElementAt(var52.substring(var37), var27 + 1);
+                        this.b.insertElementAt(new Integer(this.a(this.b, var27)), var27 + 1);
+                        this.c.insertElementAt(new Integer(var36), var27 + 1);
+                        this.d.insertElementAt(new Integer(this.a(var52.substring(var37), var7, var36, var9)), var27 + 1);
+                        this.d = var35;
+                        var26 = var27 + 1;
+                        if(var50 > -1) {
+                           var22 -= 2;
+                        }
+                     } else if(var51) {
+                        var26 = this.a.size() - 1;
+                        if((var6 & 4096) != 0 && this.a(this.a, this.a.size() - 1).endsWith(" ")) {
+                           --this.b;
+                        }
+                     } else {
+                        var26 = this.a.size();
+                     }
+
+                     var34 = var3;
+                     var35 = var6;
+                     if(var6 != 0) {
+                        if(this.b) {
+                           if((var6 & 1) != 0) {
+                              var34 = var3 - this.d / 2;
+                              var35 = (var35 = var6 & -2) | 4;
+                           } else if((var6 & 8) != 0) {
+                              var34 = var3 - this.d;
+                              var35 = (var35 = var6 & -9) | 4;
+                           }
+                        } else if((var6 & 1) != 0) {
+                           var34 = var3 + this.d / 2;
+                           var35 = (var35 = var6 & -2) | 8;
+                        } else if((var6 & 4) != 0) {
+                           var34 = var3 + this.d;
+                           var35 = (var35 = var6 & -5) | 8;
+                        } else if((var6 & 8) != 0) {
+                           var34 = var3 + this.d;
+                        }
+                     }
+
+                     var36 = var11 - this.d;
+                     var37 = 0;
+                     int var38 = 0;
+                     int var39 = 0;
+                     if((var6 & 4096) != 0 && var50 == -1 && var36 < var11 / 3 && this.b > 0) {
+                        var37 = var36 / this.b;
+                        var39 = (var38 = var36 - var37 * this.b) / this.b + 1;
+                     }
+
+                     int var41 = var27;
+
+                     for(int var42 = var27; var42 < var26; ++var42) {
+                        if((var6 & 512) == 0) {
+                           int var40 = this.a(this.b, var27);
+                           this.a(var1, var7, this.a(this.c, var27), var9, var40);
+                           this.a(this.a(this.a, var27), var1, var34, var19, var35, var40, var13);
+                        } else {
+                           var28.addElement(new Integer(var34));
+                           var41 = var42;
+                        }
+
+                        if(this.b) {
+                           var34 += this.a(this.d, var41);
+                        } else {
+                           var34 -= this.a(this.d, var41);
+                        }
+
+                        if((var6 & 4096) != 0 && this.a(this.a, var41).endsWith(" ")) {
+                           var34 += var37;
+                           if(var38 > 0) {
+                              var34 += var39;
+                              if((var38 -= var39) < 0) {
+                                 var38 = 0;
+                                 var39 = 0;
+                              }
+                           }
+                        }
+
+                        if((var6 & 512) == 0) {
+                           this.a.removeElementAt(var27);
+                           this.d.removeElementAt(var27);
+                           this.b.removeElementAt(var27);
+                           this.c.removeElementAt(var27);
+                        }
+                     }
+
+                     if((var6 & 512) == 0) {
+                        var27 = 0;
+                     } else {
+                        var27 = var26;
+                     }
+
+                     this.d = 0;
+                     this.b = 0;
+                     if(this.a.size() > var27) {
+                        for(int var43 = var27; var43 < this.a.size(); ++var43) {
+                           this.d += this.a(this.d, var43);
+                           if((var6 & 4096) != 0 && this.a(this.a, var43).endsWith(" ")) {
+                              ++this.b;
+                           }
+                        }
+                     }
+                  }
+
+                  var19 += var10;
+                  if(var49 == 112 && var50 < var26 && var50 > -1) {
+                     while(var19 < var4 + var12 * var20) {
+                        var19 += var10;
+                     }
+
+                     ++var20;
+                  }
+
+                  if((var6 & 1024) != 0 && var19 + var10 > var4 + var12 && var1 != null) {
+                     break;
+                  }
+               }
+            }
+
+            if((var6 & 512) != 0 && var28.size() > 0) {
+               var29 = false;
+               var48 = this.a(var28, 0);
+               var32 = var4 - (var19 - var4) / 2;
+
+               for(int var53 = 0; var53 < var28.size(); ++var53) {
+                  var50 = this.a(this.b, var53);
+                  this.a(var1, var7, this.a(this.c, var53), var9, var50);
+                  this.a(this.a(this.a, var53), var1, var48, var32, var6 & -640, var50, var13);
+                  if(var53 + 1 < var28.size()) {
+                     var48 = this.a(var28, var53 + 1);
+                  }
+
+                  if(var48 < var48 + this.a(this.d, var53)) {
+                     var32 += var10;
+                  }
+               }
+
+               var19 = var32;
+            }
+
+            if((var6 & 1024) != 0) {
+               if(this.a.size() > var27) {
+                  for(var46 = var27; var46 < this.a.size(); ++var46) {
+                     var22 -= this.a(this.a, var46).length();
+                  }
+
+                  var22 = var22 - var24 - var25;
+               }
+
+               if(var22 < var15.length()) {
+                  e += var22;
+               } else {
+                  e = 0;
+               }
+            }
+
+            this.a = null;
+            this.c = null;
+            this.b = null;
+            this.d = null;
+            return var19;
+         }
+      }
+   }
+
+   public final int a(Graphics var1, StringBuffer var2, int var3, int var4, int var5) {
+      return this.a(var1, var2, var3, var4, var5, 20, 0, 0, k.e(), k.f(), k.a(), k.b(), 0, 0);
+   }
+
+   private void b() {
+      this.a = new byte[4];
+      this.a = 0;
+
+      for(int var1 = 0; var1 < 4; this.a[var1++] = -1) {
+         ;
+      }
+
+      a = new StringBuffer[10];
+   }
+
+   private void ZHRES(int var1, int var2) {
+      DataInputStream var3 = new DataInputStream(this.getClass().getResourceAsStream("/" + Integer.toString(var1)));
+
+      try {
+         int var4 = var3.readInt();
+         String var5 = null;
+
+         for(int var6 = 0; var6 < var4; ++var6) {
+            StringBuffer var7 = new StringBuffer();
+            short var8 = var3.readShort();
+            byte[] var9 = new byte[var8];
+
+            for(int var10 = var8 - 1; var10 > -1; --var10) {
+               var9[var10] = (byte)(~var3.readByte());
+            }
+
+            var5 = new String(var9, "UTF-8");
+            var7.append(var5);
+            this.a[var2][var6] = var7;
+         }
+
+         var3.close();
+      } catch (IOException var11) {
+         var11.printStackTrace();
+      }
+
+   }
 }

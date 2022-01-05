@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+MIDlet-1: 鲁宾逊漂流记-海难生存,/icon24_24.png,Robinson.MyMi
+ dlet
+MIDlet-Data-Size: 4000
+MIDlet-Vendor: Exkee
+MicroEdition-Configuration: CLDC-1.1
+MIDlet-Name: 鲁宾逊漂流记-海难生存
+MIDlet-Version: 1.0.0
+Created-By: Packager v2.4.2
+MIDlet-Icon: /icon24_24.png
+MicroEdition-Profile: MIDP-2.0
+

@@ -1,451 +1,417 @@
-// Decompiled by Jad v1.5.8e2. Copyright 2001 Pavel Kouznetsov.
-// Jad home page: http://kpdus.tripod.com/jad.html
-// Decompiler options: packimports(3) fieldsfirst ansi space 
-
 package data;
 
+import data.b;
+import data.k;
+import data.m;
 import java.io.IOException;
 import java.io.InputStream;
 import javax.microedition.lcdui.Graphics;
 import javax.microedition.lcdui.Image;
 
-// Referenced classes of package data:
-//			b, k, m
+public final class w {
 
-public final class w
-{
+   private static w a = null;
+   private byte[] a;
+   private short[][] a;
+   private short[][] b;
+   private short[][] c;
+   private short[][] d;
+   private short[][] e;
+   private short[][] f;
+   private Image[] a;
+   private int[] a;
+   private int a;
+   private int b;
+   private int c;
+   private int d;
+   private static int e = 0;
+   public boolean a = false;
 
-	private static w a_data_w_static = null;
-	private byte a_byte_array1d[];
-	private short a_short_array2d[][];
-	private short b_short_array2d[][];
-	private short c_short_array2d[][];
-	private short d_short_array2d[][];
-	private short e_short_array2d[][];
-	private short f[][];
-	private Image a_javax_microedition_lcdui_Image_array1d[];
-	private int a_int_array1d[];
-	private int a_int;
-	private int b_int;
-	private int c_int;
-	private int d_int;
-	private static int e_int_static = 0;
-	public boolean a_boolean;
 
-	private w()
-	{
-		a_boolean = false;
-		b(0, 0, k.a(), k.b());
-	}
+   private w() {
+      this.b(0, 0, k.a(), k.b());
+   }
 
-	public static final w a()
-	{
-		if (k.a())
-		{
-			if (a_data_w_static == null)
-				a_data_w_static = new w();
-			return a_data_w_static;
-		} else
-		{
-			throw new b("Unauthorised operation");
-		}
-	}
+   public static final w a() {
+      if(k.a()) {
+         if(a == null) {
+            a = new w();
+         }
 
-	public final int a()
-	{
-		return 15;
-	}
+         return a;
+      } else {
+         throw new b("Unauthorised operation");
+      }
+   }
 
-	public final boolean a()
-	{
-		if (a_byte_array1d[e_int_static] >= 0)
-			a(e_int_static, a_byte_array1d[e_int_static], "");
-		e_int_static++;
-		if (e_int_static == 15)
-		{
-			e_int_static = 0;
-			return true;
-		} else
-		{
-			return false;
-		}
-	}
+   public final int a() {
+      return 15;
+   }
 
-	public final void a(int i)
-	{
-		byte byte0;
-		if ((byte0 = a_byte_array1d[i]) >= 0)
-		{
-			a_javax_microedition_lcdui_Image_array1d[byte0] = null;
-			a_short_array2d[byte0] = b_short_array2d[byte0] = c_short_array2d[byte0] = d_short_array2d[byte0] = e_short_array2d[byte0] = f[byte0] = null;
-			a_byte_array1d[i] = -1;
-			System.gc();
-		}
-	}
+   public final boolean a() {
+      if(this.a[e] >= 0) {
+         this.a(e, this.a[e], "");
+      }
 
-	public final int a(int i)
-	{
-		return a(i, "");
-	}
+      ++e;
+      if(e == 15) {
+         e = 0;
+         return true;
+      } else {
+         return false;
+      }
+   }
 
-	public final int a(int i, String s)
-	{
-		if (a_byte_array1d[i] > 0)
-			return a_byte_array1d[i];
-		for (int j = 1; j < 15; j++)
-			if (a_javax_microedition_lcdui_Image_array1d[j] == null)
-				return a(i, j, s);
+   public final void a(int var1) {
+      byte var2;
+      if((var2 = this.a[var1]) >= 0) {
+         this.a[var2] = null;
+         this.a[var2] = this.b[var2] = this.c[var2] = this.d[var2] = this.e[var2] = this.f[var2] = null;
+         this.a[var1] = -1;
+         System.gc();
+      }
 
-		return a(i, 0, s);
-	}
+   }
 
-	private int a(int i, int j, String s)
-	{
-		boolean flag = false;
-		if (a_byte_array1d[i] == (byte)j && a_javax_microedition_lcdui_Image_array1d[j] != null)
-			return j;
-		do
-		{
-			for (int l = 0; l < 15; l++)
-				if (a_byte_array1d[l] == j)
-					a_byte_array1d[l] = -1;
+   public final int a(int var1) {
+      return this.a(var1, "");
+   }
 
-			if (i >= 15)
-				return j;
-			try
-			{
-				if (j == 0 || a_short_array2d[j] == null)
-				{
-					InputStream inputstream;
-					(inputstream = getClass().getResourceAsStream("/data/D0")).skip(0L);
-					int i1;
-					int k1 = i1 = 0;
-					for (; i1 < i; i1++)
-						k1 += inputstream.read() | inputstream.read() << 8;
+   public final int a(int var1, String var2) {
+      if(this.a[var1] > 0) {
+         return this.a[var1];
+      } else {
+         for(int var3 = 1; var3 < 15; ++var3) {
+            if(this.a[var3] == null) {
+               return this.a(var1, var3, var2);
+            }
+         }
 
-					int l1 = inputstream.read() | inputstream.read() << 8;
-					a_int_array1d[i] = l1;
-					inputstream.skip((15 - i - 1) * 2 + k1 * 12);
-					a_short_array2d[j] = new short[l1];
-					b_short_array2d[j] = new short[l1];
-					c_short_array2d[j] = new short[l1];
-					d_short_array2d[j] = new short[l1];
-					e_short_array2d[j] = new short[l1];
-					f[j] = new short[l1];
-					for (int j1 = 0; j1 < l1; j1++)
-					{
-						a_short_array2d[j][j1] = (short)(inputstream.read() | inputstream.read() << 8);
-						b_short_array2d[j][j1] = (short)(inputstream.read() | inputstream.read() << 8);
-						c_short_array2d[j][j1] = (short)(inputstream.read() | inputstream.read() << 8);
-						d_short_array2d[j][j1] = (short)(inputstream.read() | inputstream.read() << 8);
-						e_short_array2d[j][j1] = (short)(inputstream.read() | inputstream.read() << 8);
-						f[j][j1] = (short)(inputstream.read() | inputstream.read() << 8);
-					}
+         return this.a(var1, 0, var2);
+      }
+   }
 
-					inputstream.close();
-				}
-				if (!s.equals(""))
-				{
-					Object obj = null;
-					int i2 = 0;
-					i2 = a(i, ((byte []) (null)));
-					byte abyte0[] = m.a().a(s);
-					int j2;
-					if ((j2 = a(((byte []) (null)))) != -1)
-					{
-						j2 += 4;
-						try
-						{
-							System.arraycopy(abyte0, 0, null, j2, abyte0.length);
-							a_javax_microedition_lcdui_Image_array1d[j] = Image.createImage(null, 0, i2);
-						}
-						catch (Exception )
-						{
-							a_javax_microedition_lcdui_Image_array1d[j] = Image.createImage("/data/BS" + i + ".png");
-						}
-					} else
-					{
-						a_javax_microedition_lcdui_Image_array1d[j] = Image.createImage("/data/BS" + i + ".png");
-					}
-				} else
-				{
-					a_javax_microedition_lcdui_Image_array1d[j] = Image.createImage("/data/BS" + i + ".png");
-				}
-				a_byte_array1d[i] = (byte)j;
-				break;
-			}
-			catch (Exception ) { }
-		} while (true);
-		return j;
-	}
+   private int a(int var1, int var2, String var3) {
+      boolean var8 = false;
+      if(this.a[var1] == (byte)var2 && this.a[var2] != null) {
+         return var2;
+      } else {
+         while(true) {
+            int var4;
+            for(var4 = 0; var4 < 15; ++var4) {
+               if(this.a[var4] == var2) {
+                  this.a[var4] = -1;
+               }
+            }
 
-	public static final int a(byte abyte0[])
-	{
-		int i = 0;
-		byte byte0;
-		for (byte0 = 0; byte0 == 0;)
-		{
-			if (abyte0[i] == 80 && abyte0[i + 1] == 76 && abyte0[i + 2] == 84 && abyte0[i + 3] == 69)
-				byte0 = 1;
-			if (++i > abyte0.length - 4)
-				byte0 = 2;
-		}
+            if(var1 >= 15) {
+               return var2;
+            }
 
-		if (byte0 == 1)
-			return i - 1;
-		else
-			return -1;
-	}
+            try {
+               if(var2 == 0 || this.a[var2] == null) {
+                  InputStream var7;
+                  (var7 = this.getClass().getResourceAsStream("/data/D0")).skip(0L);
+                  var4 = 0;
 
-	public final void a()
-	{
-		InputStream inputstream = null;
-		(inputstream = getClass().getResourceAsStream("/data/D0")).skip(0L);
-		for (int i = 0; i < 15; i++)
-			a_int_array1d[i] = inputstream.read() | inputstream.read() << 8;
+                  int var5;
+                  for(var5 = 0; var4 < var1; ++var4) {
+                     var5 += var7.read() | var7.read() << 8;
+                  }
 
-		int j1;
-		for (int i1 = j1 = 0; i1 < 15;)
-		{
-			a_javax_microedition_lcdui_Image_array1d[j1] = null;
-			int l = a_int_array1d[j1];
-			a_short_array2d[j1] = new short[l];
-			b_short_array2d[j1] = new short[l];
-			c_short_array2d[j1] = new short[l];
-			d_short_array2d[j1] = new short[l];
-			e_short_array2d[j1] = new short[l];
-			f[j1] = new short[l];
-			for (int j = 0; j < l; j++)
-			{
-				a_short_array2d[j1][j] = (short)(inputstream.read() | inputstream.read() << 8);
-				b_short_array2d[j1][j] = (short)(inputstream.read() | inputstream.read() << 8);
-				c_short_array2d[j1][j] = (short)(inputstream.read() | inputstream.read() << 8);
-				d_short_array2d[j1][j] = (short)(inputstream.read() | inputstream.read() << 8);
-				e_short_array2d[j1][j] = (short)(inputstream.read() | inputstream.read() << 8);
-				f[j1][j] = (short)(inputstream.read() | inputstream.read() << 8);
-			}
+                  int var6 = var7.read() | var7.read() << 8;
+                  this.a[var1] = var6;
+                  var7.skip((long)((15 - var1 - 1) * 2 + var5 * 12));
+                  this.a[var2] = new short[var6];
+                  this.b[var2] = new short[var6];
+                  this.c[var2] = new short[var6];
+                  this.d[var2] = new short[var6];
+                  this.e[var2] = new short[var6];
+                  this.f[var2] = new short[var6];
 
-			a_byte_array1d[i1] = (byte)j1;
-			i1++;
-			j1++;
-		}
+                  for(var4 = 0; var4 < var6; ++var4) {
+                     this.a[var2][var4] = (short)(var7.read() | var7.read() << 8);
+                     this.b[var2][var4] = (short)(var7.read() | var7.read() << 8);
+                     this.c[var2][var4] = (short)(var7.read() | var7.read() << 8);
+                     this.d[var2][var4] = (short)(var7.read() | var7.read() << 8);
+                     this.e[var2][var4] = (short)(var7.read() | var7.read() << 8);
+                     this.f[var2][var4] = (short)(var7.read() | var7.read() << 8);
+                  }
 
-		if (inputstream != null)
-			inputstream.close();
-		break MISSING_BLOCK_LABEL_401;
-		JVM INSTR dup ;
-		IOException ioexception;
-		ioexception;
-		printStackTrace();
-		break MISSING_BLOCK_LABEL_401;
-		JVM INSTR dup ;
-		Exception exception;
-		exception;
-		printStackTrace();
-		if (inputstream != null)
-			inputstream.close();
-		break MISSING_BLOCK_LABEL_401;
-		JVM INSTR dup ;
-		ioexception;
-		printStackTrace();
-		break MISSING_BLOCK_LABEL_401;
-		Exception exception1;
-		exception1;
-		if (inputstream != null)
-			inputstream.close();
-		  goto _L1
-		JVM INSTR dup ;
-		ioexception;
-		printStackTrace();
-_L1:
-		throw exception1;
-		System.gc();
-		return;
-	}
+                  var7.close();
+               }
 
-	public final int a(int i, byte abyte0[])
-	{
-		InputStream inputstream;
-		inputstream = null;
-		boolean flag = false;
-		int j;
-		inputstream = getClass().getResourceAsStream("/data/BS" + i + ".png");
-		int l;
-		if (abyte0 == null)
-			abyte0 = new byte[l = inputstream.available()];
-		l = 0;
-		j = 0;
-		for (int i1 = inputstream.read(); i1 >= 0; i1 = inputstream.read())
-			abyte0[j++] = (byte)i1;
+               if(!var3.equals("")) {
+                  Object var9 = null;
+                  boolean var10 = false;
+                  int var16 = this.a(var1, (byte[])null);
+                  byte[] var11 = m.a().a(var3);
+                  int var12;
+                  if((var12 = a((byte[])null)) != -1) {
+                     var12 += 4;
 
-		if (inputstream != null)
-			inputstream.close();
-		break MISSING_BLOCK_LABEL_158;
-		JVM INSTR dup ;
-		IOException ioexception;
-		ioexception;
-		printStackTrace();
-		break MISSING_BLOCK_LABEL_158;
-		JVM INSTR dup ;
-		Exception exception;
-		exception;
-		printStackTrace();
-		j = 0;
-		if (inputstream != null)
-			inputstream.close();
-		break MISSING_BLOCK_LABEL_158;
-		JVM INSTR dup ;
-		ioexception;
-		printStackTrace();
-		break MISSING_BLOCK_LABEL_158;
-		Exception exception1;
-		exception1;
-		if (inputstream != null)
-			inputstream.close();
-		  goto _L1
-		JVM INSTR dup ;
-		ioexception;
-		printStackTrace();
-_L1:
-		throw exception1;
-		return j;
-	}
+                     try {
+                        System.arraycopy(var11, 0, (Object)null, var12, var11.length);
+                        this.a[var2] = Image.createImage((byte[])null, 0, var16);
+                     } catch (Exception var14) {
+                        this.a[var2] = Image.createImage("/data/BS" + var1 + ".png");
+                     }
+                  } else {
+                     this.a[var2] = Image.createImage("/data/BS" + var1 + ".png");
+                  }
+               } else {
+                  this.a[var2] = Image.createImage("/data/BS" + var1 + ".png");
+               }
 
-	public final void a(int i, int j, int l, int i1)
-	{
-		a_int = i;
-		b_int = j;
-		c_int = l;
-		d_int = i1;
-	}
+               this.a[var1] = (byte)var2;
+               return var2;
+            } catch (Exception var15) {
+               ;
+            }
+         }
+      }
+   }
 
-	public final void a(Graphics g, int i, int j, int l)
-	{
-		a(g, i, j, l, -1);
-	}
+   public static final int a(byte[] var0) {
+      int var1 = 0;
+      boolean var2 = false;
 
-	public final void a(Graphics g, int i, int j, int l, int i1)
-	{
-		int j1;
-		j1 = i >> 16;
-		i &= 0xffff;
-		int k1;
-		if ((k1 = a_byte_array1d[j1]) >= 0) goto _L2; else goto _L1
-_L1:
-		if (a_boolean)
-			k1 = a(j1, "");
-		else
-			k1 = a(j1, 0, "");
-		  goto _L3
-_L2:
-		if (a_javax_microedition_lcdui_Image_array1d[k1] != null) goto _L3; else goto _L4
-_L4:
-		a_javax_microedition_lcdui_Image_array1d[k1] = Image.createImage("/data/BS" + j1 + ".png");
-		  goto _L3
-		JVM INSTR dup ;
-		IOException ioexception;
-		ioexception;
-		printStackTrace();
-_L3:
-		int l2 = 0;
-		if (i1 == -1)
-		{
-			if ((c_short_array2d[k1][i] & 0x8000) != 0)
-				l2 = 2;
-		} else
-		if (i1 >= 0)
-			l2 = i1;
-		j -= e_short_array2d[k1][i];
-		l -= f[k1][i];
-		int l1 = j;
-		int i2 = l;
-		int j2 = c_short_array2d[k1][i] & 0x7fff;
-		int k2 = d_short_array2d[k1][i] & 0x7fff;
-		if (i1 == 5 || i1 == 6 || i1 == 4 || i1 == 7)
-		{
-			int i3 = d_int;
-			d_int = c_int;
-			c_int = i3;
-		}
-		if (l1 + j2 > a_int + c_int)
-			j2 = (a_int + c_int) - l1;
-		if (i2 + k2 > b_int + d_int)
-			k2 = (b_int + d_int) - i2;
-		if (l1 < a_int)
-		{
-			j2 -= a_int - l1;
-			l1 = a_int;
-		}
-		if (i2 < b_int)
-		{
-			k2 -= b_int - i2;
-			i2 = b_int;
-		}
-		if (j2 > 0 && k2 > 0)
-		{
-			if (l2 != 0)
-			{
-				g.drawRegion(a_javax_microedition_lcdui_Image_array1d[k1], (a_short_array2d[k1][i] + (((c_short_array2d[k1][i] & 0x7fff) - l1) + j)) - j2, (b_short_array2d[k1][i] + i2) - l, j2, k2, l2, l1, i2, 0);
-				return;
-			}
-			g.drawRegion(a_javax_microedition_lcdui_Image_array1d[k1], (a_short_array2d[k1][i] + l1) - j, (b_short_array2d[k1][i] + i2) - l, j2, k2, l2, l1, i2, 0);
-		}
-		return;
-	}
+      while(!var2) {
+         if(var0[var1] == 80 && var0[var1 + 1] == 76 && var0[var1 + 2] == 84 && var0[var1 + 3] == 69) {
+            var2 = true;
+         }
 
-	public final Image a(int i)
-	{
-		int j = i >> 16;
-		byte byte0 = a_byte_array1d[j];
-		i &= 0xffff;
-		if (a_javax_microedition_lcdui_Image_array1d[byte0] != null)
-			return Image.createImage(a_javax_microedition_lcdui_Image_array1d[byte0], a_short_array2d[byte0][i], b_short_array2d[byte0][i], c_short_array2d[byte0][i] & 0x7fff, d_short_array2d[byte0][i] & 0x7fff, 0);
-		else
-			return null;
-	}
+         ++var1;
+         if(var1 > var0.length - 4) {
+            var2 = true;
+         }
+      }
 
-	public final void a(Graphics g, Image image, int i, int j)
-	{
-		if (g != null && image != null)
-			a(g, image, i, j, -1);
-	}
+      if(var2) {
+         return var1 - 1;
+      } else {
+         return -1;
+      }
+   }
 
-	public final void a(Graphics g, Image image, int i, int j, int l)
-	{
-		int i1 = 0;
-		if (l >= 0 && l >= 0)
-			i1 = l;
-		g.drawRegion(image, 0, 0, image.getWidth(), image.getHeight(), i1, i, j, 0);
-	}
+   public final void a() {
+      InputStream var6 = null;
 
-	private void b(int i, int j, int l, int i1)
-	{
-		a(i, j, l, i1);
-		a_byte_array1d = new byte[15];
-		a_short_array2d = new short[15][];
-		b_short_array2d = new short[15][];
-		c_short_array2d = new short[15][];
-		d_short_array2d = new short[15][];
-		e_short_array2d = new short[15][];
-		f = new short[15][];
-		a_javax_microedition_lcdui_Image_array1d = new Image[15];
-		a_int_array1d = new int[15];
-		try
-		{
-			InputStream inputstream;
-			(inputstream = getClass().getResourceAsStream("/data/D0")).skip(0L);
-			for (int j1 = 0; j1 < 15; j1++)
-			{
-				a_int_array1d[j1] = inputstream.read();
-				a_int_array1d[j1] |= inputstream.read() << 8;
-			}
+      try {
+         (var6 = this.getClass().getResourceAsStream("/data/D0")).skip(0L);
 
-			inputstream.close();
-		}
-		catch (Exception ) { }
-		for (int k1 = 0; k1 < 15;)
-			a_byte_array1d[k1++] = -1;
+         int var1;
+         for(var1 = 0; var1 < 15; ++var1) {
+            this.a[var1] = var6.read() | var6.read() << 8;
+         }
 
-	}
+         int var8 = 0;
+
+         for(int var7 = 0; var7 < 15; ++var8) {
+            this.a[var8] = null;
+            int var4 = this.a[var8];
+            this.a[var8] = new short[var4];
+            this.b[var8] = new short[var4];
+            this.c[var8] = new short[var4];
+            this.d[var8] = new short[var4];
+            this.e[var8] = new short[var4];
+            this.f[var8] = new short[var4];
+
+            for(var1 = 0; var1 < var4; ++var1) {
+               this.a[var8][var1] = (short)(var6.read() | var6.read() << 8);
+               this.b[var8][var1] = (short)(var6.read() | var6.read() << 8);
+               this.c[var8][var1] = (short)(var6.read() | var6.read() << 8);
+               this.d[var8][var1] = (short)(var6.read() | var6.read() << 8);
+               this.e[var8][var1] = (short)(var6.read() | var6.read() << 8);
+               this.f[var8][var1] = (short)(var6.read() | var6.read() << 8);
+            }
+
+            this.a[var7] = (byte)var8;
+            ++var7;
+         }
+      } catch (Exception var19) {
+         var19.printStackTrace();
+      } finally {
+         try {
+            if(var6 != null) {
+               var6.close();
+            }
+         } catch (IOException var18) {
+            var18.printStackTrace();
+         }
+
+      }
+
+      System.gc();
+   }
+
+   public final int a(int var1, byte[] var2) {
+      InputStream var3 = null;
+      boolean var4 = false;
+
+      int var18;
+      try {
+         var3 = this.getClass().getResourceAsStream("/data/BS" + var1 + ".png");
+         if(var2 == null) {
+            var2 = new byte[var3.available()];
+         }
+
+         boolean var5 = false;
+         var18 = 0;
+
+         for(int var6 = var3.read(); var6 >= 0; var6 = var3.read()) {
+            var2[var18++] = (byte)var6;
+         }
+      } catch (Exception var16) {
+         var16.printStackTrace();
+         var18 = 0;
+      } finally {
+         try {
+            if(var3 != null) {
+               var3.close();
+            }
+         } catch (IOException var15) {
+            var15.printStackTrace();
+         }
+
+      }
+
+      return var18;
+   }
+
+   public final void a(int var1, int var2, int var3, int var4) {
+      this.a = var1;
+      this.b = var2;
+      this.c = var3;
+      this.d = var4;
+   }
+
+   public final void a(Graphics var1, int var2, int var3, int var4) {
+      this.a(var1, var2, var3, var4, -1);
+   }
+
+   public final void a(Graphics var1, int var2, int var3, int var4, int var5) {
+      int var6 = var2 >> 16;
+      var2 &= '\uffff';
+      int var7;
+      if((var7 = this.a[var6]) < 0) {
+         if(this.a) {
+            var7 = this.a(var6, "");
+         } else {
+            var7 = this.a(var6, 0, "");
+         }
+      } else if(this.a[var7] == null) {
+         try {
+            this.a[var7] = Image.createImage("/data/BS" + var6 + ".png");
+         } catch (IOException var18) {
+            var18.printStackTrace();
+         }
+      }
+
+      int var16 = 0;
+      if(var5 == -1) {
+         if((this.c[var7][var2] & '\u8000') != 0) {
+            var16 = 2;
+         }
+      } else if(var5 >= 0) {
+         var16 = var5;
+      }
+
+      var3 -= this.e[var7][var2];
+      var4 -= this.f[var7][var2];
+      int var8 = var3;
+      int var9 = var4;
+      int var10 = this.c[var7][var2] & 32767;
+      int var11 = this.d[var7][var2] & 32767;
+      if(var5 == 5 || var5 == 6 || var5 == 4 || var5 == 7) {
+         int var17 = this.d;
+         this.d = this.c;
+         this.c = var17;
+      }
+
+      if(var3 + var10 > this.a + this.c) {
+         var10 = this.a + this.c - var3;
+      }
+
+      if(var4 + var11 > this.b + this.d) {
+         var11 = this.b + this.d - var4;
+      }
+
+      if(var3 < this.a) {
+         var10 -= this.a - var3;
+         var8 = this.a;
+      }
+
+      if(var4 < this.b) {
+         var11 -= this.b - var4;
+         var9 = this.b;
+      }
+
+      if(var10 > 0 && var11 > 0) {
+         if(var16 != 0) {
+            var1.drawRegion(this.a[var7], this.a[var7][var2] + (this.c[var7][var2] & 32767) - var8 + var3 - var10, this.b[var7][var2] + var9 - var4, var10, var11, var16, var8, var9, 0);
+            return;
+         }
+
+         var1.drawRegion(this.a[var7], this.a[var7][var2] + var8 - var3, this.b[var7][var2] + var9 - var4, var10, var11, var16, var8, var9, 0);
+      }
+
+   }
+
+   public final Image a(int var1) {
+      int var2 = var1 >> 16;
+      byte var3 = this.a[var2];
+      var1 &= '\uffff';
+      return this.a[var3] != null?Image.createImage(this.a[var3], this.a[var3][var1], this.b[var3][var1], this.c[var3][var1] & 32767, this.d[var3][var1] & 32767, 0):null;
+   }
+
+   public final void a(Graphics var1, Image var2, int var3, int var4) {
+      if(var1 != null && var2 != null) {
+         this.a(var1, var2, var3, var4, -1);
+      }
+
+   }
+
+   public final void a(Graphics var1, Image var2, int var3, int var4, int var5) {
+      int var6 = 0;
+      if(var5 >= 0 && var5 >= 0) {
+         var6 = var5;
+      }
+
+      var1.drawRegion(var2, 0, 0, var2.getWidth(), var2.getHeight(), var6, var3, var4, 0);
+   }
+
+   private void b(int var1, int var2, int var3, int var4) {
+      this.a(var1, var2, var3, var4);
+      this.a = new byte[15];
+      this.a = new short[15][];
+      this.b = new short[15][];
+      this.c = new short[15][];
+      this.d = new short[15][];
+      this.e = new short[15][];
+      this.f = new short[15][];
+      this.a = new Image[15];
+      this.a = new int[15];
+
+      int var6;
+      try {
+         InputStream var5;
+         (var5 = this.getClass().getResourceAsStream("/data/D0")).skip(0L);
+
+         for(var6 = 0; var6 < 15; ++var6) {
+            this.a[var6] = var5.read();
+            this.a[var6] |= var5.read() << 8;
+         }
+
+         var5.close();
+      } catch (Exception var7) {
+         ;
+      }
+
+      for(var6 = 0; var6 < 15; this.a[var6++] = -1) {
+         ;
+      }
+
+   }
 
 }

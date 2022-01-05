@@ -1,103 +1,109 @@
-// Decompiled by Jad v1.5.8e2. Copyright 2001 Pavel Kouznetsov.
-// Jad home page: http://kpdus.tripod.com/jad.html
-// Decompiler options: packimports(3) fieldsfirst ansi space 
-
 package data;
 
+import data.b;
+import data.k;
 import java.io.ByteArrayOutputStream;
 import java.io.InputStream;
 
-// Referenced classes of package data:
-//			b, k
+public final class m {
 
-public final class m
-{
+   private static m a = null;
 
-	private static m a = null;
 
-	private m()
-	{
-	}
+   public static final m a() {
+      if(k.a()) {
+         if(a == null) {
+            a = new m();
+         }
 
-	public static final m a()
-	{
-		if (k.a())
-		{
-			if (a == null)
-				a = new m();
-			return a;
-		} else
-		{
-			throw new b("Unauthorised operation");
-		}
-	}
+         return a;
+      } else {
+         throw new b("Unauthorised operation");
+      }
+   }
 
-	public final byte[] a(String s)
-	{
-		byte abyte1[];
-label0:
-		{
-			boolean flag = false;
-			byte abyte0[] = new byte[1024];
-			abyte1 = null;
-			InputStream inputstream = null;
-			ByteArrayOutputStream bytearrayoutputstream = null;
-			try
-			{
-				inputstream = getClass().getResourceAsStream("/" + s);
-				bytearrayoutputstream = new ByteArrayOutputStream();
-				for (int i = 0; i >= 0;)
-					if ((i = inputstream.read(abyte0, 0, 1024)) > 0)
-						bytearrayoutputstream.write(abyte0, 0, i);
+   public final byte[] a(String var1) {
+      boolean var2 = false;
+      byte[] var3 = new byte[1024];
+      byte[] var4 = null;
+      InputStream var5 = null;
+      ByteArrayOutputStream var6 = null;
+      boolean var19 = false;
 
-				abyte1 = bytearrayoutputstream.toByteArray();
-			}
-			catch (Exception )
-			{
-				try
-				{
-					if (bytearrayoutputstream != null)
-						bytearrayoutputstream.close();
-				}
-				catch (Exception 2) { }
-				try
-				{
-					if (inputstream != null)
-						inputstream.close();
-				}
-				catch (Exception 2) { }
-				break label0;
-			}
-			finally
-			{
-				try
-				{
-					if (bytearrayoutputstream != null)
-						bytearrayoutputstream.close();
-				}
-				catch (Exception ) { }
-				try
-				{
-					if (inputstream != null)
-						inputstream.close();
-				}
-				catch (Exception ) { }
-				throw exception;
-			}
-			try
-			{
-				bytearrayoutputstream.close();
-			}
-			catch (Exception ) { }
-			try
-			{
-				if (inputstream != null)
-					inputstream.close();
-			}
-			catch (Exception ) { }
-			break label0;
-		}
-		return abyte1;
-	}
+      label154: {
+         try {
+            var19 = true;
+            var5 = this.getClass().getResourceAsStream("/" + var1);
+            var6 = new ByteArrayOutputStream();
+            int var7 = 0;
+
+            while(var7 >= 0) {
+               if((var7 = var5.read(var3, 0, 1024)) > 0) {
+                  var6.write(var3, 0, var7);
+               }
+            }
+
+            var4 = var6.toByteArray();
+            var19 = false;
+            break label154;
+         } catch (Exception var26) {
+            var19 = false;
+         } finally {
+            if(var19) {
+               try {
+                  if(var6 != null) {
+                     var6.close();
+                  }
+               } catch (Exception var21) {
+                  ;
+               }
+
+               try {
+                  if(var5 != null) {
+                     var5.close();
+                  }
+               } catch (Exception var20) {
+                  ;
+               }
+
+            }
+         }
+
+         try {
+            if(var6 != null) {
+               var6.close();
+            }
+         } catch (Exception var23) {
+            ;
+         }
+
+         try {
+            if(var5 != null) {
+               var5.close();
+               return var4;
+            }
+         } catch (Exception var22) {
+            ;
+         }
+
+         return var4;
+      }
+
+      try {
+         var6.close();
+      } catch (Exception var25) {
+         ;
+      }
+
+      try {
+         if(var5 != null) {
+            var5.close();
+         }
+      } catch (Exception var24) {
+         ;
+      }
+
+      return var4;
+   }
 
 }
