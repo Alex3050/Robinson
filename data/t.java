@@ -1,539 +1,607 @@
-// Decompiled by Jad v1.5.8e2. Copyright 2001 Pavel Kouznetsov.
-// Jad home page: http://kpdus.tripod.com/jad.html
-// Decompiler options: packimports(3) fieldsfirst ansi space 
-
 package data;
 
+import data.e;
+import data.k;
+import data.p;
+import data.z;
 
-// Referenced classes of package data:
-//			e, k, n, p, 
-//			z
+public final class t {
 
-public final class t
-{
+   private p a;
+   private e a = e.a();
+   private byte[] a;
+   private int a = 0;
 
-	private p a_data_p;
-	private e a_data_e;
-	private byte a_byte_array1d[];
-	private int a_int;
 
-	public t(p p1)
-	{
-		a_data_e = e.a();
-		a_int = 0;
-		a_data_p = p1;
-	}
+   public t(p var1) {
+      this.a = var1;
+   }
 
-	public final void a(int i)
-	{
-		byte abyte0[];
-		(abyte0 = new byte[1])[0] = (byte)i;
-		try
-		{
-			a_data_e.a("lang", 0, abyte0.length, abyte0);
-			return;
-		}
-		catch (z )
-		{
-			return;
-		}
-	}
+   public final void a(int var1) {
+      byte[] var2;
+      (var2 = new byte[1])[0] = (byte)var1;
 
-	public final int a()
-	{
-		byte abyte0[] = null;
-		try
-		{
-			abyte0 = a_data_e.a("lang", 0);
-		}
-		catch (z ) { }
-		byte byte0;
-		if (abyte0 != null)
-			byte0 = abyte0[0];
-		else
-			byte0 = 0;
-		return byte0;
-	}
+      try {
+         this.a.a("lang", 0, var2.length, var2);
+      } catch (z var4) {
+         ;
+      }
+   }
 
-	public final void a(boolean flag)
-	{
-		byte abyte0[] = new byte[1];
-		int i;
-		if (flag)
-			i = 1;
-		else
-			i = 0;
-		abyte0[0] = (byte)i;
-		try
-		{
-			a_data_e.a("daylightSaving", 1, abyte0.length, abyte0);
-			return;
-		}
-		catch (z )
-		{
-			return;
-		}
-	}
+   public final int a() {
+      byte[] var1 = null;
 
-	public final boolean a()
-	{
-		byte abyte0[] = null;
-		try
-		{
-			abyte0 = a_data_e.a("daylightSaving", 1);
-		}
-		catch (z ) { }
-		byte byte0;
-		if (abyte0 != null)
-			byte0 = abyte0[0];
-		else
-			byte0 = 1;
-		boolean flag;
-		if (byte0 == 1)
-			flag = true;
-		else
-			flag = false;
-		return flag;
-	}
+      try {
+         var1 = this.a.a("lang", 0);
+      } catch (z var3) {
+         ;
+      }
 
-	public final void b(int i)
-	{
-		byte abyte0[];
-		(abyte0 = new byte[1])[0] = (byte)i;
-		try
-		{
-			a_data_e.a("days", 2, abyte0.length, abyte0);
-			return;
-		}
-		catch (z )
-		{
-			return;
-		}
-	}
+      byte var2;
+      if(var1 != null) {
+         var2 = var1[0];
+      } else {
+         var2 = 0;
+      }
 
-	public final int b()
-	{
-		byte abyte0[] = null;
-		try
-		{
-			abyte0 = a_data_e.a("days", 2);
-		}
-		catch (z ) { }
-		byte byte0;
-		if (abyte0 != null)
-			byte0 = abyte0[0];
-		else
-			byte0 = 1;
-		return byte0;
-	}
+      return var2;
+   }
 
-	public final void a()
-	{
-		a_int = 70 + a_data_p.aB + a_data_p.av_int + a_data_p.aw + a_data_p.s.length * 20 + a_data_p.r.length * 20 + a_data_p.a_int_array1d.length + a_data_p.b_int_array1d.length + a_data_p.c_int_array1d.length + a_data_p.d_int_array1d.length;
-		a_byte_array1d = new byte[a_int];
-		a_int = 0;
-		a_byte_array1d[a_int++] = (byte)a_data_p.ab;
-		a_byte_array1d[a_int++] = (byte)a_data_p.ac;
-		if (a_data_p.ad < 0)
-		{
-			a_byte_array1d[a_int++] = 1;
-			a_data_p.ad = -a_data_p.ad;
-			a_byte_array1d[a_int++] = (byte)a_data_p.ad;
-		} else
-		{
-			a_byte_array1d[a_int++] = 0;
-			a_byte_array1d[a_int++] = (byte)a_data_p.ad;
-		}
-		if (a_data_p.ae < 0)
-		{
-			a_byte_array1d[a_int++] = 1;
-			a_data_p.ae = -a_data_p.ae;
-			a_byte_array1d[a_int++] = (byte)a_data_p.ae;
-		} else
-		{
-			a_byte_array1d[a_int++] = 0;
-			a_byte_array1d[a_int++] = (byte)a_data_p.ae;
-		}
-		a_byte_array1d[a_int++] = (byte)a_data_p.Z;
-		a_byte_array1d[a_int++] = (byte)a_data_p.aa;
-		a_byte_array1d[a_int++] = (byte)a_data_p.aB;
-		for (int i = 0; i < a_data_p.aB; i++)
-			a_byte_array1d[a_int++] = (byte)a_data_p.q[i];
+   public final void a(boolean var1) {
+      byte[] var2 = new byte[1];
+      byte var3;
+      if(var1) {
+         var3 = 1;
+      } else {
+         var3 = 0;
+      }
 
-		for (int j = 0; j < a_data_p.aB; j++)
-		{
-			for (int l = 0; l < a_data_p.b_java_lang_String_array1d.length; l++)
-				if (a_data_p.m[j] == (byte)l)
-					a_byte_array1d[a_int++] = (byte)l;
+      var2[0] = (byte)var3;
 
-		}
+      try {
+         this.a.a("daylightSaving", 1, var2.length, var2);
+      } catch (z var5) {
+         ;
+      }
+   }
 
-		a_byte_array1d[a_int++] = (byte)a_data_p.av_int;
-		for (int i1 = 0; i1 < a_data_p.av_int; i1++)
-			a_byte_array1d[a_int++] = (byte)a_data_p.g_int_array1d[i1];
+   public final boolean a() {
+      byte[] var1 = null;
 
-		for (int j1 = 0; j1 < a_data_p.av_int; j1++)
-		{
-			for (int k1 = 0; k1 < a_data_p.b_java_lang_String_array1d.length; k1++)
-				if (a_data_p.a_byte_array1d[j1] == (byte)k1)
-					a_byte_array1d[a_int++] = (byte)k1;
+      try {
+         var1 = this.a.a("daylightSaving", 1);
+      } catch (z var4) {
+         ;
+      }
 
-		}
+      byte var2;
+      if(var1 != null) {
+         var2 = var1[0];
+      } else {
+         var2 = 1;
+      }
 
-		a_byte_array1d[a_int++] = (byte)a_data_p.aw;
-		for (int l1 = 0; l1 < a_data_p.aw; l1++)
-			a_byte_array1d[a_int++] = (byte)a_data_p.h[l1];
+      boolean var3;
+      if(var2 == 1) {
+         var3 = true;
+      } else {
+         var3 = false;
+      }
 
-		for (int i2 = 0; i2 < a_data_p.aw; i2++)
-		{
-			for (int j2 = 0; j2 < a_data_p.b_java_lang_String_array1d.length; j2++)
-				if (a_data_p.a_java_lang_String_array1d[i2].equals(a_data_p.b_java_lang_String_array1d[j2]))
-					a_byte_array1d[a_int++] = (byte)j2;
+      return var3;
+   }
 
-		}
+   public final void b(int var1) {
+      byte[] var2;
+      (var2 = new byte[1])[0] = (byte)var1;
 
-		a_byte_array1d[a_int++] = (byte)(int)a_data_p.a_float;
-		a_byte_array1d[a_int++] = (byte)(int)a_data_p.b_float;
-		a_byte_array1d[a_int++] = (byte)(int)a_data_p.c_float;
-		a_byte_array1d[a_int++] = (byte)(int)a_data_p.e_float;
-		a_byte_array1d[a_int++] = (byte)(int)a_data_p.f_float;
-		a_byte_array1d[a_int++] = (byte)(int)a_data_p.g_float;
-		a_byte_array1d[a_int++] = (byte)a_data_p.L;
-		a_byte_array1d[a_int++] = (byte)(int)a_data_p.K_long;
-		a_byte_array1d[a_int++] = (byte)(int)a_data_p.J_long;
-		if (a_data_p.f_int_array1d[17] == 0x60003)
-			a_byte_array1d[a_int++] = 17;
-		else
-		if (a_data_p.f_int_array1d[17] == 0x60000)
-			a_byte_array1d[a_int++] = 9;
-		else
-		if (a_data_p.f_int_array1d[17] == 0x60001)
-			a_byte_array1d[a_int++] = 10;
-		for (int k2 = 0; k2 < a_data_p.s.length; k2++)
-			a(a_data_p.s[k2]);
+      try {
+         this.a.a("days", 2, var2.length, var2);
+      } catch (z var4) {
+         ;
+      }
+   }
 
-		a_byte_array1d[a_int++] = (byte)a_data_p.aD;
-		a_byte_array1d[a_int++] = (byte)a_data_p.c_int;
-		for (int l2 = 0; l2 < a_data_p.r.length; l2++)
-			a(a_data_p.r[l2]);
+   public final int b() {
+      byte[] var1 = null;
 
-		a_byte_array1d[a_int++] = (byte)a_data_p.aC;
-		a_byte_array1d[a_int++] = (byte)a_data_p.ap_int;
-		if (a_data_p.T)
-		{
-			a_data_p.b_long = a_data_p.P + 180 + 1;
-		} else
-		{
-			for (int i3 = 0; i3 < a_data_p.l.length; i3++)
-				if (a_data_p.l[i3] == 85 || a_data_p.l[i3] == 95)
-					a_data_p.b_long = i3;
+      try {
+         var1 = this.a.a("days", 2);
+      } catch (z var3) {
+         ;
+      }
 
-		}
-		if (a_data_p.b_long == 14925L)
-			a_data_p.b_long = 14926L;
-		a(a_data_p.b_long);
-		if (a_data_p.T)
-			a_byte_array1d[a_int++] = 1;
-		else
-			a_byte_array1d[a_int++] = 0;
-		for (int j3 = 0; j3 < a_data_p.a_int_array1d.length; j3++)
-			a_byte_array1d[a_int++] = (byte)a_data_p.a_int_array1d[j3];
+      byte var2;
+      if(var1 != null) {
+         var2 = var1[0];
+      } else {
+         var2 = 1;
+      }
 
-		for (int k3 = 0; k3 < a_data_p.b_int_array1d.length; k3++)
-			a_byte_array1d[a_int++] = (byte)a_data_p.b_int_array1d[k3];
+      return var2;
+   }
 
-		for (int l3 = 0; l3 < a_data_p.c_int_array1d.length; l3++)
-			a_byte_array1d[a_int++] = (byte)a_data_p.c_int_array1d[l3];
+   public final void a() {
+      this.a = 70 + this.a.aB + this.a.av + this.a.aw + this.a.s.length * 20 + this.a.r.length * 20 + this.a.a.length + this.a.b.length + this.a.c.length + this.a.d.length;
+      this.a = new byte[this.a];
+      this.a = 0;
+      this.a[this.a++] = (byte)this.a.ab;
+      this.a[this.a++] = (byte)this.a.ac;
+      if(this.a.ad < 0) {
+         this.a[this.a++] = 1;
+         this.a.ad = -this.a.ad;
+         this.a[this.a++] = (byte)this.a.ad;
+      } else {
+         this.a[this.a++] = 0;
+         this.a[this.a++] = (byte)this.a.ad;
+      }
 
-		for (int i4 = 0; i4 < a_data_p.d_int_array1d.length; i4++)
-			a_byte_array1d[a_int++] = (byte)a_data_p.d_int_array1d[i4];
+      if(this.a.ae < 0) {
+         this.a[this.a++] = 1;
+         this.a.ae = -this.a.ae;
+         this.a[this.a++] = (byte)this.a.ae;
+      } else {
+         this.a[this.a++] = 0;
+         this.a[this.a++] = (byte)this.a.ae;
+      }
 
-		a_byte_array1d[a_int++] = (byte)a_data_p.H;
-		a_byte_array1d[a_int++] = (byte)a_data_p.I;
-		a_byte_array1d[a_int++] = (byte)a_data_p.J_int;
-		a_byte_array1d[a_int++] = (byte)a_data_p.K_int;
-		a_byte_array1d[a_int++] = (byte)a_data_p.D;
-		a_byte_array1d[a_int++] = (byte)a_data_p.E;
-		a_byte_array1d[a_int++] = (byte)a_data_p.F;
-		a_byte_array1d[a_int++] = (byte)a_data_p.G;
-		if (a_data_p.aj)
-			a_byte_array1d[a_int++] = 1;
-		else
-			a_byte_array1d[a_int++] = 0;
-		if (a_data_p.ak)
-			a_byte_array1d[a_int++] = 1;
-		else
-			a_byte_array1d[a_int++] = 0;
-		if (a_data_p.al)
-			a_byte_array1d[a_int++] = 1;
-		else
-			a_byte_array1d[a_int++] = 0;
-		if (a_data_p.am)
-			a_byte_array1d[a_int++] = 1;
-		else
-			a_byte_array1d[a_int++] = 0;
-		if (a_data_p.an)
-			a_byte_array1d[a_int++] = 1;
-		else
-			a_byte_array1d[a_int++] = 0;
-		if (a_data_p.ao)
-			a_byte_array1d[a_int++] = 1;
-		else
-			a_byte_array1d[a_int++] = 0;
-		if (a_data_p.ap_boolean)
-			a_byte_array1d[a_int++] = 1;
-		else
-			a_byte_array1d[a_int++] = 0;
-		if (a_data_p.aq)
-			a_byte_array1d[a_int++] = 1;
-		else
-			a_byte_array1d[a_int++] = 0;
-		if (a_data_p.ar)
-			a_byte_array1d[a_int++] = 1;
-		else
-			a_byte_array1d[a_int++] = 0;
-		if (a_data_p.as)
-			a_byte_array1d[a_int++] = 1;
-		else
-			a_byte_array1d[a_int++] = 0;
-		if (a_data_p.at)
-			a_byte_array1d[a_int++] = 1;
-		else
-			a_byte_array1d[a_int++] = 0;
-		if (a_data_p.au)
-			a_byte_array1d[a_int++] = 1;
-		else
-			a_byte_array1d[a_int++] = 0;
-		if (a_data_p.av_boolean)
-			a_byte_array1d[a_int++] = 1;
-		else
-			a_byte_array1d[a_int++] = 0;
-		a_byte_array1d[a_int++] = (byte)a_data_p.a_data_n.a;
-		a(a_data_p.a_long);
-		try
-		{
-			a_data_e.a("RobinsonSave_1", 3, a_byte_array1d.length, a_byte_array1d);
-		}
-		catch (z ) { }
-		a_data_p.b_boolean = true;
-	}
+      this.a[this.a++] = (byte)this.a.Z;
+      this.a[this.a++] = (byte)this.a.aa;
+      this.a[this.a++] = (byte)this.a.aB;
 
-	private void a(long l)
-	{
-		a_byte_array1d[a_int++] = (byte)(int)(l & 127L);
-		a_byte_array1d[a_int++] = (byte)(int)(l >> 7 & 127L);
-		a_byte_array1d[a_int++] = (byte)(int)(l >> 14 & 127L);
-		a_byte_array1d[a_int++] = (byte)(int)(l >> 21 & 127L);
-		a_byte_array1d[a_int++] = (byte)(int)(l >> 28 & 127L);
-		a_byte_array1d[a_int++] = (byte)(int)(l >> 35 & 127L);
-		a_byte_array1d[a_int++] = (byte)(int)(l >> 42 & 127L);
-		a_byte_array1d[a_int++] = (byte)(int)(l >> 49 & 127L);
-		a_byte_array1d[a_int++] = (byte)(int)(l >> 56 & 127L);
-		a_byte_array1d[a_int++] = (byte)(int)(l >> 63 & 1L);
-	}
+      for(int var1 = 0; var1 < this.a.aB; ++var1) {
+         this.a[this.a++] = (byte)this.a.q[var1];
+      }
 
-	private long a()
-	{
-		long l;
-		return l = a_byte_array1d[a_int++] + (a_byte_array1d[a_int++] << 7) + (a_byte_array1d[a_int++] << 14) + (a_byte_array1d[a_int++] << 21) + (a_byte_array1d[a_int++] << 28) + (a_byte_array1d[a_int++] << 35) + (a_byte_array1d[a_int++] << 42) + (a_byte_array1d[a_int++] << 49) + (a_byte_array1d[a_int++] << 56) + (a_byte_array1d[a_int++] << 63);
-	}
+      int var3;
+      for(int var2 = 0; var2 < this.a.aB; ++var2) {
+         for(var3 = 0; var3 < this.a.b.length; ++var3) {
+            if(this.a.m[var2] == (byte)var3) {
+               this.a[this.a++] = (byte)var3;
+            }
+         }
+      }
 
-	public final void a(boolean flag, boolean flag1)
-	{
-		try
-		{
-			a_byte_array1d = a_data_e.a("RobinsonSave_1", 3);
-			flag1 = false;
-		}
-		catch (z )
-		{
-			flag1 = true;
-		}
-		a_data_p.d_boolean = a_data_p.e_boolean = flag1;
-		if (!flag1)
-		{
-			a_int = 0;
-			a_data_p.ab = a_byte_array1d[a_int++];
-			a_data_p.ac = a_byte_array1d[a_int++];
-			if (a_data_p.ab < 0)
-			{
-				int i = 128 + a_data_p.ab;
-				a_data_p.ab = 128 + i;
-			}
-			if (a_data_p.ac < 0)
-			{
-				int j = 128 + a_data_p.ac;
-				a_data_p.ac = 128 + j;
-			}
-			if (a_byte_array1d[a_int++] == 1)
-			{
-				a_data_p.ad = a_byte_array1d[a_int++];
-				a_data_p.ad = -a_data_p.ad;
-			} else
-			{
-				a_data_p.ad = a_byte_array1d[a_int++];
-			}
-			if (a_byte_array1d[a_int++] == 1)
-			{
-				a_data_p.ae = a_byte_array1d[a_int++];
-				a_data_p.ae = -a_data_p.ae;
-			} else
-			{
-				a_data_p.ae = a_byte_array1d[a_int++];
-			}
-			a_data_p.Z = a_byte_array1d[a_int++];
-			a_data_p.aa = a_byte_array1d[a_int++];
-			if (a_data_p.Z < 0)
-			{
-				int l = 128 + a_data_p.Z;
-				a_data_p.Z = 128 + l;
-			}
-			if (a_data_p.aa < 0)
-			{
-				int i1 = 128 + a_data_p.aa;
-				a_data_p.aa = 128 + i1;
-			}
-			a_data_p.aB = a_byte_array1d[a_int++];
-			for (int j1 = 0; j1 < a_data_p.aB; j1++)
-				a_data_p.q[j1] = a_byte_array1d[a_int++];
+      this.a[this.a++] = (byte)this.a.av;
 
-			for (int k1 = 0; k1 < a_data_p.aB; k1++)
-			{
-				int l1 = a_byte_array1d[a_int++];
-				a_data_p.m[k1] = (byte)l1;
-			}
+      for(var3 = 0; var3 < this.a.av; ++var3) {
+         this.a[this.a++] = (byte)this.a.g[var3];
+      }
 
-			a_data_p.av_int = a_byte_array1d[a_int++];
-			for (int i2 = 0; i2 < a_data_p.av_int; i2++)
-				a_data_p.g_int_array1d[i2] = a_byte_array1d[a_int++];
+      int var5;
+      for(int var4 = 0; var4 < this.a.av; ++var4) {
+         for(var5 = 0; var5 < this.a.b.length; ++var5) {
+            if(this.a.a[var4] == (byte)var5) {
+               this.a[this.a++] = (byte)var5;
+            }
+         }
+      }
 
-			for (int j2 = 0; j2 < a_data_p.av_int; j2++)
-			{
-				int k2 = a_byte_array1d[a_int++];
-				a_data_p.a_byte_array1d[j2] = (byte)k2;
-			}
+      this.a[this.a++] = (byte)this.a.aw;
 
-			a_data_p.aw = a_byte_array1d[a_int++];
-			for (int l2 = 0; l2 < a_data_p.aw; l2++)
-				a_data_p.h[l2] = a_byte_array1d[a_int++];
+      for(var5 = 0; var5 < this.a.aw; ++var5) {
+         this.a[this.a++] = (byte)this.a.h[var5];
+      }
 
-			for (int i3 = 0; i3 < a_data_p.aw; i3++)
-			{
-				byte byte0 = a_byte_array1d[a_int++];
-				a_data_p.a_java_lang_String_array1d[i3] = a_data_p.b_java_lang_String_array1d[byte0];
-			}
+      int var7;
+      for(int var6 = 0; var6 < this.a.aw; ++var6) {
+         for(var7 = 0; var7 < this.a.b.length; ++var7) {
+            if(this.a.a[var6].equals(this.a.b[var7])) {
+               this.a[this.a++] = (byte)var7;
+            }
+         }
+      }
 
-			a_data_p.a_float = a_byte_array1d[a_int++];
-			a_data_p.b_float = a_byte_array1d[a_int++];
-			a_data_p.c_float = a_byte_array1d[a_int++];
-			a_data_p.e_float = a_byte_array1d[a_int++];
-			a_data_p.f_float = a_byte_array1d[a_int++];
-			a_data_p.g_float = a_byte_array1d[a_int++];
-			a_data_p.L = a_byte_array1d[a_int++];
-			a_data_p.d_float = (k.a() / 3 - 16) / 1;
-			a_data_p.c_long = a_byte_array1d[a_int++];
-			a_data_p.d_long = a_byte_array1d[a_int++];
-			byte byte1 = a_byte_array1d[a_int++];
-			a_data_p.f_int_array1d[17] = a_data_p.f_int_array1d[byte1];
-			a_data_p.c_java_lang_String_array1d[17] = a_data_p.c_java_lang_String_array1d[byte1];
-			a_data_p.b_java_lang_String_array1d[17] = a_data_p.b_java_lang_String_array1d[byte1];
-			for (int j3 = 0; j3 < a_data_p.s.length; j3++)
-				a_data_p.s[j3] = (int)a();
+      this.a[this.a++] = (byte)((int)this.a.a);
+      this.a[this.a++] = (byte)((int)this.a.b);
+      this.a[this.a++] = (byte)((int)this.a.c);
+      this.a[this.a++] = (byte)((int)this.a.e);
+      this.a[this.a++] = (byte)((int)this.a.f);
+      this.a[this.a++] = (byte)((int)this.a.g);
+      this.a[this.a++] = (byte)this.a.L;
+      this.a[this.a++] = (byte)((int)this.a.K);
+      this.a[this.a++] = (byte)((int)this.a.J);
+      if(this.a.f[17] == 393219) {
+         this.a[this.a++] = 17;
+      } else if(this.a.f[17] == 393216) {
+         this.a[this.a++] = 9;
+      } else if(this.a.f[17] == 393217) {
+         this.a[this.a++] = 10;
+      }
 
-			a_data_p.aD = a_byte_array1d[a_int++];
-			a_data_p.c_int = a_byte_array1d[a_int++];
-			for (int k3 = 0; k3 < a_data_p.r.length; k3++)
-				a_data_p.r[k3] = (int)a();
+      for(var7 = 0; var7 < this.a.s.length; ++var7) {
+         this.a((long)this.a.s[var7]);
+      }
 
-			a_data_p.aC = a_byte_array1d[a_int++];
-			a_data_p.ap_int = a_byte_array1d[a_int++];
-			a_data_p.b_long = a();
-			if (a_byte_array1d[a_int++] == 1)
-				a_data_p.T = true;
-			else
-				a_data_p.T = false;
-			for (int l3 = 0; l3 < a_data_p.a_int_array1d.length; l3++)
-				a_data_p.a_int_array1d[l3] = a_byte_array1d[a_int++];
+      this.a[this.a++] = (byte)this.a.aD;
+      this.a[this.a++] = (byte)this.a.c;
 
-			for (int i4 = 0; i4 < a_data_p.b_int_array1d.length; i4++)
-				a_data_p.b_int_array1d[i4] = a_byte_array1d[a_int++];
+      for(int var8 = 0; var8 < this.a.r.length; ++var8) {
+         this.a((long)this.a.r[var8]);
+      }
 
-			for (int j4 = 0; j4 < a_data_p.c_int_array1d.length; j4++)
-				a_data_p.c_int_array1d[j4] = a_byte_array1d[a_int++];
+      this.a[this.a++] = (byte)this.a.aC;
+      this.a[this.a++] = (byte)this.a.ap;
+      if(this.a.T) {
+         this.a.b = (long)(this.a.P + 180 + 1);
+      } else {
+         for(int var9 = 0; var9 < this.a.l.length; ++var9) {
+            if(this.a.l[var9] == 85 || this.a.l[var9] == 95) {
+               this.a.b = (long)var9;
+            }
+         }
+      }
 
-			for (int k4 = 0; k4 < a_data_p.d_int_array1d.length; k4++)
-				a_data_p.d_int_array1d[k4] = a_byte_array1d[a_int++];
+      if(this.a.b == 14925L) {
+         this.a.b = 14926L;
+      }
 
-			a_data_p.H = a_byte_array1d[a_int++];
-			a_data_p.I = a_byte_array1d[a_int++];
-			a_data_p.J_int = a_byte_array1d[a_int++];
-			a_data_p.K_int = a_byte_array1d[a_int++];
-			a_data_p.D = a_byte_array1d[a_int++];
-			a_data_p.E = a_byte_array1d[a_int++];
-			a_data_p.F = a_byte_array1d[a_int++];
-			a_data_p.G = a_byte_array1d[a_int++];
-			if (a_byte_array1d[a_int++] == 1)
-				a_data_p.aj = true;
-			else
-				a_data_p.aj = false;
-			if (a_byte_array1d[a_int++] == 1)
-				a_data_p.ak = true;
-			else
-				a_data_p.ak = false;
-			if (a_byte_array1d[a_int++] == 1)
-				a_data_p.al = true;
-			else
-				a_data_p.al = false;
-			if (a_byte_array1d[a_int++] == 1)
-				a_data_p.am = true;
-			else
-				a_data_p.am = false;
-			if (a_byte_array1d[a_int++] == 1)
-				a_data_p.an = true;
-			else
-				a_data_p.an = false;
-			if (a_byte_array1d[a_int++] == 1)
-				a_data_p.ao = true;
-			else
-				a_data_p.ao = false;
-			if (a_byte_array1d[a_int++] == 1)
-				a_data_p.ap_boolean = true;
-			else
-				a_data_p.ap_boolean = false;
-			if (a_byte_array1d[a_int++] == 1)
-				a_data_p.aq = true;
-			else
-				a_data_p.aq = false;
-			if (a_byte_array1d[a_int++] == 1)
-				a_data_p.ar = true;
-			else
-				a_data_p.ar = false;
-			if (a_byte_array1d[a_int++] == 1)
-				a_data_p.as = true;
-			else
-				a_data_p.as = false;
-			if (a_byte_array1d[a_int++] == 1)
-				a_data_p.at = true;
-			else
-				a_data_p.at = false;
-			if (a_byte_array1d[a_int++] == 1)
-				a_data_p.au = true;
-			else
-				a_data_p.au = false;
-			if (a_byte_array1d[a_int++] == 1)
-				a_data_p.av_boolean = true;
-			else
-				a_data_p.av_boolean = false;
-			a_data_p.a_data_n.a = a_byte_array1d[a_int++];
-			a_data_p.a_long = a();
-			return;
-		} else
-		{
-			a_data_p.Z = 8;
-			a_data_p.aa = 148;
-			a_data_p.ab = a_data_p.Z - a_data_p.N / 2;
-			a_data_p.ac = a_data_p.aa - a_data_p.O / 2;
-			return;
-		}
-	}
+      this.a(this.a.b);
+      if(this.a.T) {
+         this.a[this.a++] = 1;
+      } else {
+         this.a[this.a++] = 0;
+      }
+
+      for(int var10 = 0; var10 < this.a.a.length; ++var10) {
+         this.a[this.a++] = (byte)this.a.a[var10];
+      }
+
+      for(int var11 = 0; var11 < this.a.b.length; ++var11) {
+         this.a[this.a++] = (byte)this.a.b[var11];
+      }
+
+      for(int var12 = 0; var12 < this.a.c.length; ++var12) {
+         this.a[this.a++] = (byte)this.a.c[var12];
+      }
+
+      for(int var13 = 0; var13 < this.a.d.length; ++var13) {
+         this.a[this.a++] = (byte)this.a.d[var13];
+      }
+
+      this.a[this.a++] = (byte)this.a.H;
+      this.a[this.a++] = (byte)this.a.I;
+      this.a[this.a++] = (byte)this.a.J;
+      this.a[this.a++] = (byte)this.a.K;
+      this.a[this.a++] = (byte)this.a.D;
+      this.a[this.a++] = (byte)this.a.E;
+      this.a[this.a++] = (byte)this.a.F;
+      this.a[this.a++] = (byte)this.a.G;
+      if(this.a.aj) {
+         this.a[this.a++] = 1;
+      } else {
+         this.a[this.a++] = 0;
+      }
+
+      if(this.a.ak) {
+         this.a[this.a++] = 1;
+      } else {
+         this.a[this.a++] = 0;
+      }
+
+      if(this.a.al) {
+         this.a[this.a++] = 1;
+      } else {
+         this.a[this.a++] = 0;
+      }
+
+      if(this.a.am) {
+         this.a[this.a++] = 1;
+      } else {
+         this.a[this.a++] = 0;
+      }
+
+      if(this.a.an) {
+         this.a[this.a++] = 1;
+      } else {
+         this.a[this.a++] = 0;
+      }
+
+      if(this.a.ao) {
+         this.a[this.a++] = 1;
+      } else {
+         this.a[this.a++] = 0;
+      }
+
+      if(this.a.ap) {
+         this.a[this.a++] = 1;
+      } else {
+         this.a[this.a++] = 0;
+      }
+
+      if(this.a.aq) {
+         this.a[this.a++] = 1;
+      } else {
+         this.a[this.a++] = 0;
+      }
+
+      if(this.a.ar) {
+         this.a[this.a++] = 1;
+      } else {
+         this.a[this.a++] = 0;
+      }
+
+      if(this.a.as) {
+         this.a[this.a++] = 1;
+      } else {
+         this.a[this.a++] = 0;
+      }
+
+      if(this.a.at) {
+         this.a[this.a++] = 1;
+      } else {
+         this.a[this.a++] = 0;
+      }
+
+      if(this.a.au) {
+         this.a[this.a++] = 1;
+      } else {
+         this.a[this.a++] = 0;
+      }
+
+      if(this.a.av) {
+         this.a[this.a++] = 1;
+      } else {
+         this.a[this.a++] = 0;
+      }
+
+      this.a[this.a++] = (byte)this.a.a.a;
+      this.a(this.a.a);
+
+      try {
+         this.a.a("RobinsonSave_1", 3, this.a.length, this.a);
+      } catch (z var15) {
+         ;
+      }
+
+      this.a.b = true;
+   }
+
+   private void a(long var1) {
+      this.a[this.a++] = (byte)((int)(var1 & 127L));
+      this.a[this.a++] = (byte)((int)(var1 >> 7 & 127L));
+      this.a[this.a++] = (byte)((int)(var1 >> 14 & 127L));
+      this.a[this.a++] = (byte)((int)(var1 >> 21 & 127L));
+      this.a[this.a++] = (byte)((int)(var1 >> 28 & 127L));
+      this.a[this.a++] = (byte)((int)(var1 >> 35 & 127L));
+      this.a[this.a++] = (byte)((int)(var1 >> 42 & 127L));
+      this.a[this.a++] = (byte)((int)(var1 >> 49 & 127L));
+      this.a[this.a++] = (byte)((int)(var1 >> 56 & 127L));
+      this.a[this.a++] = (byte)((int)(var1 >> 63 & 1L));
+   }
+
+   private long a() {
+      return (long)(this.a[this.a++] + (this.a[this.a++] << 7) + (this.a[this.a++] << 14) + (this.a[this.a++] << 21) + (this.a[this.a++] << 28) + (this.a[this.a++] << 35) + (this.a[this.a++] << 42) + (this.a[this.a++] << 49) + (this.a[this.a++] << 56) + (this.a[this.a++] << 63));
+   }
+
+   public final void a(boolean var1, boolean var2) {
+      try {
+         this.a = this.a.a("RobinsonSave_1", 3);
+         var2 = false;
+      } catch (z var16) {
+         var2 = true;
+      }
+
+      this.a.d = this.a.e = var2;
+      if(var2) {
+         this.a.Z = 8;
+         this.a.aa = 148;
+         this.a.ab = this.a.Z - this.a.N / 2;
+         this.a.ac = this.a.aa - this.a.O / 2;
+      } else {
+         this.a = 0;
+         this.a.ab = this.a[this.a++];
+         this.a.ac = this.a[this.a++];
+         int var3;
+         if(this.a.ab < 0) {
+            var3 = 128 + this.a.ab;
+            this.a.ab = 128 + var3;
+         }
+
+         if(this.a.ac < 0) {
+            var3 = 128 + this.a.ac;
+            this.a.ac = 128 + var3;
+         }
+
+         if(this.a[this.a++] == 1) {
+            this.a.ad = this.a[this.a++];
+            this.a.ad = -this.a.ad;
+         } else {
+            this.a.ad = this.a[this.a++];
+         }
+
+         if(this.a[this.a++] == 1) {
+            this.a.ae = this.a[this.a++];
+            this.a.ae = -this.a.ae;
+         } else {
+            this.a.ae = this.a[this.a++];
+         }
+
+         this.a.Z = this.a[this.a++];
+         this.a.aa = this.a[this.a++];
+         if(this.a.Z < 0) {
+            var3 = 128 + this.a.Z;
+            this.a.Z = 128 + var3;
+         }
+
+         if(this.a.aa < 0) {
+            var3 = 128 + this.a.aa;
+            this.a.aa = 128 + var3;
+         }
+
+         this.a.aB = this.a[this.a++];
+
+         for(var3 = 0; var3 < this.a.aB; ++var3) {
+            this.a.q[var3] = this.a[this.a++];
+         }
+
+         for(int var4 = 0; var4 < this.a.aB; ++var4) {
+            byte var5 = this.a[this.a++];
+            this.a.m[var4] = (byte)var5;
+         }
+
+         this.a.av = this.a[this.a++];
+
+         for(int var17 = 0; var17 < this.a.av; ++var17) {
+            this.a.g[var17] = this.a[this.a++];
+         }
+
+         for(int var6 = 0; var6 < this.a.av; ++var6) {
+            byte var7 = this.a[this.a++];
+            this.a.a[var6] = (byte)var7;
+         }
+
+         this.a.aw = this.a[this.a++];
+
+         for(int var18 = 0; var18 < this.a.aw; ++var18) {
+            this.a.h[var18] = this.a[this.a++];
+         }
+
+         byte var9;
+         for(int var8 = 0; var8 < this.a.aw; ++var8) {
+            var9 = this.a[this.a++];
+            this.a.a[var8] = this.a.b[var9];
+         }
+
+         this.a.a = (float)this.a[this.a++];
+         this.a.b = (float)this.a[this.a++];
+         this.a.c = (float)this.a[this.a++];
+         this.a.e = (float)this.a[this.a++];
+         this.a.f = (float)this.a[this.a++];
+         this.a.g = (float)this.a[this.a++];
+         this.a.L = this.a[this.a++];
+         this.a.d = (float)((k.a() / 3 - 16) / 1);
+         this.a.c = (long)this.a[this.a++];
+         this.a.d = (long)this.a[this.a++];
+         var9 = this.a[this.a++];
+         this.a.f[17] = this.a.f[var9];
+         this.a.c[17] = this.a.c[var9];
+         this.a.b[17] = this.a.b[var9];
+
+         for(int var10 = 0; var10 < this.a.s.length; ++var10) {
+            this.a.s[var10] = (int)this.a();
+         }
+
+         this.a.aD = this.a[this.a++];
+         this.a.c = this.a[this.a++];
+
+         for(int var11 = 0; var11 < this.a.r.length; ++var11) {
+            this.a.r[var11] = (int)this.a();
+         }
+
+         this.a.aC = this.a[this.a++];
+         this.a.ap = this.a[this.a++];
+         this.a.b = this.a();
+         if(this.a[this.a++] == 1) {
+            this.a.T = true;
+         } else {
+            this.a.T = false;
+         }
+
+         for(int var12 = 0; var12 < this.a.a.length; ++var12) {
+            this.a.a[var12] = this.a[this.a++];
+         }
+
+         for(int var13 = 0; var13 < this.a.b.length; ++var13) {
+            this.a.b[var13] = this.a[this.a++];
+         }
+
+         for(int var14 = 0; var14 < this.a.c.length; ++var14) {
+            this.a.c[var14] = this.a[this.a++];
+         }
+
+         for(int var15 = 0; var15 < this.a.d.length; ++var15) {
+            this.a.d[var15] = this.a[this.a++];
+         }
+
+         this.a.H = this.a[this.a++];
+         this.a.I = this.a[this.a++];
+         this.a.J = this.a[this.a++];
+         this.a.K = this.a[this.a++];
+         this.a.D = this.a[this.a++];
+         this.a.E = this.a[this.a++];
+         this.a.F = this.a[this.a++];
+         this.a.G = this.a[this.a++];
+         if(this.a[this.a++] == 1) {
+            this.a.aj = true;
+         } else {
+            this.a.aj = false;
+         }
+
+         if(this.a[this.a++] == 1) {
+            this.a.ak = true;
+         } else {
+            this.a.ak = false;
+         }
+
+         if(this.a[this.a++] == 1) {
+            this.a.al = true;
+         } else {
+            this.a.al = false;
+         }
+
+         if(this.a[this.a++] == 1) {
+            this.a.am = true;
+         } else {
+            this.a.am = false;
+         }
+
+         if(this.a[this.a++] == 1) {
+            this.a.an = true;
+         } else {
+            this.a.an = false;
+         }
+
+         if(this.a[this.a++] == 1) {
+            this.a.ao = true;
+         } else {
+            this.a.ao = false;
+         }
+
+         if(this.a[this.a++] == 1) {
+            this.a.ap = true;
+         } else {
+            this.a.ap = false;
+         }
+
+         if(this.a[this.a++] == 1) {
+            this.a.aq = true;
+         } else {
+            this.a.aq = false;
+         }
+
+         if(this.a[this.a++] == 1) {
+            this.a.ar = true;
+         } else {
+            this.a.ar = false;
+         }
+
+         if(this.a[this.a++] == 1) {
+            this.a.as = true;
+         } else {
+            this.a.as = false;
+         }
+
+         if(this.a[this.a++] == 1) {
+            this.a.at = true;
+         } else {
+            this.a.at = false;
+         }
+
+         if(this.a[this.a++] == 1) {
+            this.a.au = true;
+         } else {
+            this.a.au = false;
+         }
+
+         if(this.a[this.a++] == 1) {
+            this.a.av = true;
+         } else {
+            this.a.av = false;
+         }
+
+         this.a.a.a = this.a[this.a++];
+         this.a.a = this.a();
+      }
+   }
 }

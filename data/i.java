@@ -1,220 +1,209 @@
-// Decompiled by Jad v1.5.8e2. Copyright 2001 Pavel Kouznetsov.
-// Jad home page: http://kpdus.tripod.com/jad.html
-// Decompiler options: packimports(3) fieldsfirst ansi space 
-
 package data;
 
+import data.p;
 import java.util.Random;
 
-// Referenced classes of package data:
-//			g, k, p, w
+public final class i {
 
-public final class i
-{
+   public byte a;
+   public int a;
+   public int b;
+   public int c;
+   public int d;
+   public int e;
+   public int[] a = new int[3];
+   public int[] b = new int[3];
+   public int f;
+   public int g;
+   public int h;
+   public boolean a = true;
+   public boolean b = true;
+   private Random a = new Random();
+   private p a;
 
-	public byte a_byte;
-	public int a_int;
-	public int b_int;
-	public int c;
-	public int d;
-	public int e;
-	public int a_int_array1d[];
-	public int b_int_array1d[];
-	public int f;
-	public int g;
-	public int h;
-	public boolean a_boolean;
-	public boolean b_boolean;
-	private Random a_java_util_Random;
-	private p a_data_p;
 
-	public i(p p1, byte byte0, int j, int l, int i1, int ai[], int ai1[])
-	{
-		a_int_array1d = new int[3];
-		b_int_array1d = new int[3];
-		a_boolean = true;
-		b_boolean = true;
-		a_java_util_Random = new Random();
-		a_data_p = p1;
-		a_byte = byte0;
-		a_int = j;
-		b_int = l;
-		c = p1.M >> 1;
-		d = p1.M >> 1;
-		switch (i1)
-		{
-		case 1: // '\001'
-			e = p1.aj / 6;
-			break;
+   public i(p var1, byte var2, int var3, int var4, int var5, int[] var6, int[] var7) {
+      this.a = var1;
+      this.a = var2;
+      this.a = var3;
+      this.b = var4;
+      this.c = var1.M >> 1;
+      this.d = var1.M >> 1;
+      switch(var5) {
+      case 1:
+         this.e = var1.aj / 6;
+         break;
+      case 2:
+         this.e = var1.aj / 5;
+         break;
+      case 3:
+         this.e = var1.aj / 4;
+         break;
+      case 4:
+         this.e = var1.aj / 3;
+         break;
+      case 5:
+         this.e = var1.aj / 2;
+      }
 
-		case 2: // '\002'
-			e = p1.aj / 5;
-			break;
+      this.a = var6;
+      this.b = var7;
+      this.f = 0;
+      this.b();
+   }
 
-		case 3: // '\003'
-			e = p1.aj / 4;
-			break;
+   public final void a() {
+      if(Math.abs(this.a - this.a.Z) <= 2 && Math.abs(this.b - this.a.aa) <= 2) {
+         this.g = this.a.Z - this.a;
+         this.h = this.a.aa - this.b;
+         this.a = true;
+         this.b = true;
+      }
 
-		case 4: // '\004'
-			e = p1.aj / 3;
-			break;
+      if(this.a) {
+         if(this.g > 0) {
+            if(this.c < this.a.M - this.e) {
+               this.g -= this.e;
+               this.c += this.e;
+            } else {
+               this.a = this.a + 1 < 180 && this.a.k[this.b * 180 + this.a + 1] >= 5 && this.a.k[this.b * 180 + this.a + 1] <= 6 && this.a.a.e(this.b * 180 + this.a + 1, 1) && this.a.a.d(this.b * 180 + this.a + 1, 1) && this.a.a.c(this.b * 180 + this.a + 1, 1) && (this.a + 1 != this.a.Z || this.b != this.a.aa);
+               if(this.a) {
+                  this.g -= this.e;
+                  this.c = this.c + this.e - this.a.M;
+                  this.a.l[this.b * 180 + this.a] = 0;
+                  if(this.a < 179) {
+                     ++this.a;
+                  }
 
-		case 5: // '\005'
-			e = p1.aj / 2;
-			break;
-		}
-		a_int_array1d = ai;
-		b_int_array1d = ai1;
-		f = 0;
-		b();
-	}
+                  this.a.l[this.b * 180 + this.a] = this.a;
+               }
+            }
 
-	public final void a()
-	{
-		if (Math.abs(a_int - a_data_p.Z) <= 2 && Math.abs(b_int - a_data_p.aa) <= 2)
-		{
-			g = a_data_p.Z - a_int;
-			h = a_data_p.aa - b_int;
-			a_boolean = true;
-			b_boolean = true;
-		}
-		if (a_boolean)
-			if (g > 0)
-			{
-				if (c < a_data_p.M - e)
-				{
-					g -= e;
-					c += e;
-				} else
-				{
-					a_boolean = a_int + 1 < 180 && a_data_p.k[b_int * 180 + a_int + 1] >= 5 && a_data_p.k[b_int * 180 + a_int + 1] <= 6 && a_data_p.a_data_g.e(b_int * 180 + a_int + 1, 1) && a_data_p.a_data_g.d(b_int * 180 + a_int + 1, 1) && a_data_p.a_data_g.c(b_int * 180 + a_int + 1, 1) && (a_int + 1 != a_data_p.Z || b_int != a_data_p.aa);
-					if (a_boolean)
-					{
-						g -= e;
-						c = (c + e) - a_data_p.M;
-						a_data_p.l[b_int * 180 + a_int] = 0;
-						if (a_int < 179)
-							a_int++;
-						a_data_p.l[b_int * 180 + a_int] = a_byte;
-					}
-				}
-				if (g <= 0)
-					a_boolean = false;
-			} else
-			{
-				if (c > 0)
-				{
-					g += e;
-					c -= e;
-				} else
-				{
-					a_boolean = a_int - 2 > 0 && a_data_p.k[(b_int * 180 + a_int) - 1] >= 5 && a_data_p.k[(b_int * 180 + a_int) - 1] <= 6 && a_data_p.a_data_g.e((b_int * 180 + a_int) - 1, 0) && a_data_p.a_data_g.d((b_int * 180 + a_int) - 1, 0) && a_data_p.a_data_g.c((b_int * 180 + a_int) - 1, 0) && (a_int - 1 != a_data_p.Z || b_int != a_data_p.aa);
-					if (a_boolean)
-					{
-						g += e;
-						c = (c - e) + a_data_p.M;
-						a_data_p.l[b_int * 180 + a_int] = 0;
-						if (a_int > 0)
-							a_int--;
-						a_data_p.l[b_int * 180 + a_int] = a_byte;
-					}
-				}
-				if (g > 0)
-					a_boolean = false;
-			}
-		if (b_boolean)
-			if (h > 0)
-			{
-				if (d < a_data_p.M - e)
-				{
-					h -= e;
-					d += e;
-				} else
-				{
-					b_boolean = b_int + 1 < 180 && a_data_p.k[b_int * 180 + a_int + 180] >= 5 && a_data_p.k[b_int * 180 + a_int + 180] <= 6 && a_data_p.a_data_g.e(b_int * 180 + a_int + 180, 3) && a_data_p.a_data_g.d(b_int * 180 + a_int + 180, 3) && a_data_p.a_data_g.c(b_int * 180 + a_int + 180, 3) && (a_int != a_data_p.Z || b_int + 1 != a_data_p.aa);
-					if (b_boolean)
-					{
-						h -= e;
-						d = (d + e) - a_data_p.M;
-						a_data_p.l[b_int * 180 + a_int] = 0;
-						if (b_int < 179)
-							b_int++;
-						a_data_p.l[b_int * 180 + a_int] = a_byte;
-					}
-				}
-				if (h <= 0)
-					b_boolean = false;
-			} else
-			{
-				if (d > 0)
-				{
-					h += e;
-					d -= e;
-				} else
-				{
-					b_boolean = b_int - 1 > 0 && a_data_p.k[(b_int * 180 + a_int) - 180] >= 5 && a_data_p.k[(b_int * 180 + a_int) - 180] <= 6 && a_data_p.a_data_g.e((b_int * 180 + a_int) - 180, 2) && a_data_p.a_data_g.d((b_int * 180 + a_int) - 180, 2) && a_data_p.a_data_g.c((b_int * 180 + a_int) - 180, 2) && (a_int != a_data_p.Z || b_int - 1 != a_data_p.aa);
-					if (b_boolean)
-					{
-						h += e;
-						d = (d - e) + a_data_p.M;
-						a_data_p.l[b_int * 180 + a_int] = 0;
-						if (b_int > 0)
-							b_int--;
-						a_data_p.l[b_int * 180 + a_int] = a_byte;
-					}
-				}
-				if (h > 0)
-					b_boolean = false;
-			}
-		if (!a_boolean && !b_boolean)
-		{
-			b();
-			a_boolean = true;
-			b_boolean = true;
-		}
-		if (Math.abs(a_int - a_data_p.Z) <= 1 && Math.abs(b_int - a_data_p.aa) <= 1)
-		{
-			a_data_p.c = 0.0F;
-			a_data_p.aO = true;
-		}
-	}
+            if(this.g <= 0) {
+               this.a = false;
+            }
+         } else {
+            if(this.c > 0) {
+               this.g += this.e;
+               this.c -= this.e;
+            } else {
+               this.a = this.a - 2 > 0 && this.a.k[this.b * 180 + this.a - 1] >= 5 && this.a.k[this.b * 180 + this.a - 1] <= 6 && this.a.a.e(this.b * 180 + this.a - 1, 0) && this.a.a.d(this.b * 180 + this.a - 1, 0) && this.a.a.c(this.b * 180 + this.a - 1, 0) && (this.a - 1 != this.a.Z || this.b != this.a.aa);
+               if(this.a) {
+                  this.g += this.e;
+                  this.c = this.c - this.e + this.a.M;
+                  this.a.l[this.b * 180 + this.a] = 0;
+                  if(this.a > 0) {
+                     --this.a;
+                  }
 
-	public final void a(int j, int l)
-	{
-		if (g > 0 && a_boolean || g <= 0 && !a_boolean)
-		{
-			if (f < 2)
-				a_data_p.a_data_w.a(a_data_p.a(), b_int_array1d[0], ((a_data_p.aM + a_data_p.M * j) - a_data_p.M) + a_data_p.U + c, ((a_data_p.aN + a_data_p.M * l) - a_data_p.M) + a_data_p.V + d);
-			else
-			if (f < 4)
-				a_data_p.a_data_w.a(a_data_p.a(), b_int_array1d[1], ((a_data_p.aM + a_data_p.M * j) - a_data_p.M) + a_data_p.U + c, ((a_data_p.aN + a_data_p.M * l) - a_data_p.M) + a_data_p.V + d);
-			else
-				a_data_p.a_data_w.a(a_data_p.a(), b_int_array1d[2], ((a_data_p.aM + a_data_p.M * j) - a_data_p.M) + a_data_p.U + c, ((a_data_p.aN + a_data_p.M * l) - a_data_p.M) + a_data_p.V + d);
-			if (f < 3)
-				a_data_p.a_data_w.a(a_data_p.a(), 0x90009, ((a_data_p.aM + a_data_p.M * j) - a_data_p.M) + a_data_p.U + c, ((a_data_p.aN + a_data_p.M * l) - a_data_p.M) + a_data_p.V + d);
-			else
-				a_data_p.a_data_w.a(a_data_p.a(), 0x9000a, ((a_data_p.aM + a_data_p.M * j) - a_data_p.M) + a_data_p.U + c, ((a_data_p.aN + a_data_p.M * l) - a_data_p.M) + a_data_p.V + d);
-		} else
-		{
-			if (f < 2)
-				a_data_p.a_data_w.a(a_data_p.a(), a_int_array1d[0], ((a_data_p.aM + a_data_p.M * j) - a_data_p.M) + a_data_p.U + c, ((a_data_p.aN + a_data_p.M * l) - a_data_p.M) + a_data_p.V + d);
-			else
-			if (f < 4)
-				a_data_p.a_data_w.a(a_data_p.a(), a_int_array1d[1], ((a_data_p.aM + a_data_p.M * j) - a_data_p.M) + a_data_p.U + c, ((a_data_p.aN + a_data_p.M * l) - a_data_p.M) + a_data_p.V + d);
-			else
-				a_data_p.a_data_w.a(a_data_p.a(), a_int_array1d[2], ((a_data_p.aM + a_data_p.M * j) - a_data_p.M) + a_data_p.U + c, ((a_data_p.aN + a_data_p.M * l) - a_data_p.M) + a_data_p.V + d);
-			if (f < 3)
-				a_data_p.a_data_w.a(a_data_p.a(), 0x90007, ((a_data_p.aM + a_data_p.M * j) - a_data_p.M) + a_data_p.U + c, ((a_data_p.aN + a_data_p.M * l) - a_data_p.M) + a_data_p.V + d);
-			else
-				a_data_p.a_data_w.a(a_data_p.a(), 0x90008, ((a_data_p.aM + a_data_p.M * j) - a_data_p.M) + a_data_p.U + c, ((a_data_p.aN + a_data_p.M * l) - a_data_p.M) + a_data_p.V + d);
-		}
-		if (++f == 6)
-			f = 0;
-	}
+                  this.a.l[this.b * 180 + this.a] = this.a;
+               }
+            }
 
-	public final void b()
-	{
-		g = a_data_p.M * 10 - a_data_p.M * (Math.abs(a_java_util_Random.nextInt()) % 20);
-		h = a_data_p.M * 10 - a_data_p.M * (Math.abs(a_java_util_Random.nextInt()) % 20);
-	}
+            if(this.g > 0) {
+               this.a = false;
+            }
+         }
+      }
+
+      if(this.b) {
+         if(this.h > 0) {
+            if(this.d < this.a.M - this.e) {
+               this.h -= this.e;
+               this.d += this.e;
+            } else {
+               this.b = this.b + 1 < 180 && this.a.k[this.b * 180 + this.a + 180] >= 5 && this.a.k[this.b * 180 + this.a + 180] <= 6 && this.a.a.e(this.b * 180 + this.a + 180, 3) && this.a.a.d(this.b * 180 + this.a + 180, 3) && this.a.a.c(this.b * 180 + this.a + 180, 3) && (this.a != this.a.Z || this.b + 1 != this.a.aa);
+               if(this.b) {
+                  this.h -= this.e;
+                  this.d = this.d + this.e - this.a.M;
+                  this.a.l[this.b * 180 + this.a] = 0;
+                  if(this.b < 179) {
+                     ++this.b;
+                  }
+
+                  this.a.l[this.b * 180 + this.a] = this.a;
+               }
+            }
+
+            if(this.h <= 0) {
+               this.b = false;
+            }
+         } else {
+            if(this.d > 0) {
+               this.h += this.e;
+               this.d -= this.e;
+            } else {
+               this.b = this.b - 1 > 0 && this.a.k[this.b * 180 + this.a - 180] >= 5 && this.a.k[this.b * 180 + this.a - 180] <= 6 && this.a.a.e(this.b * 180 + this.a - 180, 2) && this.a.a.d(this.b * 180 + this.a - 180, 2) && this.a.a.c(this.b * 180 + this.a - 180, 2) && (this.a != this.a.Z || this.b - 1 != this.a.aa);
+               if(this.b) {
+                  this.h += this.e;
+                  this.d = this.d - this.e + this.a.M;
+                  this.a.l[this.b * 180 + this.a] = 0;
+                  if(this.b > 0) {
+                     --this.b;
+                  }
+
+                  this.a.l[this.b * 180 + this.a] = this.a;
+               }
+            }
+
+            if(this.h > 0) {
+               this.b = false;
+            }
+         }
+      }
+
+      if(!this.a && !this.b) {
+         this.b();
+         this.a = true;
+         this.b = true;
+      }
+
+      if(Math.abs(this.a - this.a.Z) <= 1 && Math.abs(this.b - this.a.aa) <= 1) {
+         this.a.c = 0.0F;
+         this.a.aO = true;
+      }
+
+   }
+
+   public final void a(int var1, int var2) {
+      if((this.g <= 0 || !this.a) && (this.g > 0 || this.a)) {
+         if(this.f < 2) {
+            this.a.a.a(this.a.a(), this.a[0], this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.c, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.d);
+         } else if(this.f < 4) {
+            this.a.a.a(this.a.a(), this.a[1], this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.c, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.d);
+         } else {
+            this.a.a.a(this.a.a(), this.a[2], this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.c, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.d);
+         }
+
+         if(this.f < 3) {
+            this.a.a.a(this.a.a(), 589831, this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.c, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.d);
+         } else {
+            this.a.a.a(this.a.a(), 589832, this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.c, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.d);
+         }
+      } else {
+         if(this.f < 2) {
+            this.a.a.a(this.a.a(), this.b[0], this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.c, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.d);
+         } else if(this.f < 4) {
+            this.a.a.a(this.a.a(), this.b[1], this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.c, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.d);
+         } else {
+            this.a.a.a(this.a.a(), this.b[2], this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.c, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.d);
+         }
+
+         if(this.f < 3) {
+            this.a.a.a(this.a.a(), 589833, this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.c, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.d);
+         } else {
+            this.a.a.a(this.a.a(), 589834, this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.c, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.d);
+         }
+      }
+
+      if(++this.f == 6) {
+         this.f = 0;
+      }
+
+   }
+
+   public final void b() {
+      this.g = this.a.M * 10 - this.a.M * (Math.abs(this.a.nextInt()) % 20);
+      this.h = this.a.M * 10 - this.a.M * (Math.abs(this.a.nextInt()) % 20);
+   }
 }

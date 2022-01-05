@@ -1,1095 +1,1054 @@
-// Decompiled by Jad v1.5.8e2. Copyright 2001 Pavel Kouznetsov.
-// Jad home page: http://kpdus.tripod.com/jad.html
-// Decompiler options: packimports(3) fieldsfirst ansi space 
-
 package data;
 
-import Robinson.MyMidlet;
-import java.util.Vector;
-import javax.microedition.lcdui.Canvas;
-import javax.microedition.lcdui.Graphics;
+import data.k;
+import data.p;
 
-// Referenced classes of package data:
-//			a, aa, ab, ac, 
-//			ad, c, g, j, 
-//			k, n, p, r, 
-//			s, t, w, x, 
-//			y
+public final class v {
 
-public final class v
-{
+   private p a;
+   public boolean a = false;
+   public int a = -2;
+   private boolean b = false;
+   private boolean c = false;
+   public long a = 0L;
+   private boolean d = true;
+   private boolean e = true;
+   private int b = '\u99ff';
 
-	private p a_data_p;
-	public boolean a_boolean;
-	public int a_int;
-	private boolean b_boolean;
-	private boolean c;
-	public long a_long;
-	private boolean d;
-	private boolean e;
-	private int b_int;
 
-	public v(p p1)
-	{
-		a_boolean = false;
-		a_int = -2;
-		b_boolean = false;
-		c = false;
-		a_long = 0L;
-		d = true;
-		e = true;
-		b_int = 39423;
-		a_data_p = p1;
-	}
+   public v(p var1) {
+      this.a = var1;
+   }
 
-	public final void a()
-	{
-		a_data_p.a_data_ad.s();
-		a_data_p.a_data_g.h();
-		if (a_data_p.z_boolean)
-			a_data_p.a_data_g.g();
-		if (a_data_p.y_boolean)
-			a_data_p.a_data_g.f();
-		if (a_data_p.x)
-			a_data_p.a_data_y.e();
-		if (a_data_p.B_boolean)
-			a_data_p.a_data_r.g();
-		a_data_p.a_data_g.i();
-		a_data_p.a_data_y.f();
-		a_data_p.a_data_c.b();
-		a_data_p.a_data_c.c();
-		a_data_p.a_data_c.a();
-		a_data_p.a_data_aa.b();
-		if (a_boolean)
-			a_data_p.a_data_r.d();
-		if (a_data_p.B_boolean)
-			a_data_p.a_data_r.e();
-		if (a_data_p.C_boolean)
-			a_data_p.a_data_r.f();
-	}
+   public final void a() {
+      this.a.a.s();
+      this.a.a.h();
+      if(this.a.z) {
+         this.a.a.g();
+      }
 
-	public final void b()
-	{
-		switch (a_data_p.l_int)
-		{
-		default:
-			break;
+      if(this.a.y) {
+         this.a.a.f();
+      }
 
-		case 0: // '\0'
-			return;
+      if(this.a.x) {
+         this.a.a.e();
+      }
 
-		case 1: // '\001'
-			if (!a_data_p.c_boolean)
-				if (a_data_p.b_boolean)
-					a_data_p.r_int = a_data_p.a_data_a.a(a_data_p.r_int, 0, a_data_p.b_int - 1);
-				else
-					a_data_p.r_int = a_data_p.a_data_a.a(a_data_p.r_int, 1, a_data_p.b_int - 1);
-			a_data_p.a_data_a.e();
-			return;
+      if(this.a.B) {
+         this.a.a.g();
+      }
 
-		case 11: // '\013'
-			if (a_data_p.a_int == 1)
-			{
-				if ((((k) (a_data_p)).bu & 0x4000) != 0 || (((k) (a_data_p)).bu & 0x10) != 0 || a_data_p.a_data_j.e == 1)
-				{
-					a_data_p.ax_boolean = true;
-					a_data_p.a_data_r.a(1);
-					a_data_p.a_data_v.e();
-					a_data_p.a_data_v.a(false);
-					a_data_p.l_int = 1;
-					return;
-				}
-				if ((((k) (a_data_p)).bu & 0x8000) != 0 || a_data_p.a_data_j.e == 3)
-				{
-					a_data_p.l_int = 1;
-					a_data_p.aw_boolean = true;
-					return;
-				}
-				break;
-			}
-			if ((((k) (a_data_p)).bu & 0x4000) != 0 || (((k) (a_data_p)).bu & 0x10) != 0 || a_data_p.a_data_j.e == 1)
-			{
-				a_data_p.a_Robinson_MyMidlet.destroyApp(true);
-				return;
-			}
-			if ((((k) (a_data_p)).bu & 0x8000) != 0 || a_data_p.a_data_j.e == 3)
-			{
-				a_data_p.l_int = 1;
-				a_data_p.aw_boolean = true;
-				return;
-			}
-			break;
+      this.a.a.i();
+      this.a.a.f();
+      this.a.a.b();
+      this.a.a.c();
+      this.a.a.a();
+      this.a.a.b();
+      if(this.a) {
+         this.a.a.d();
+      }
 
-		case 2: // '\002'
-			a_data_p.A = a_data_p.a_data_a.a(a_data_p.A, 0, 1);
-			a_data_p.a_data_a.g();
-			return;
+      if(this.a.B) {
+         this.a.a.e();
+      }
 
-		case 3: // '\003'
-			a_data_p.d_int = a_data_p.a_data_a.a(a_data_p.d_int, 0, a_data_p.e_int - 1);
-			if (a_data_p.hasPointerEvents() && a_data_p.d_int > a_data_p.e_int - 1)
-				if (a_data_p.a_data_j.b)
-				{
-					a_data_p.d_int = ((Integer)a_data_p.a_java_util_Vector.elementAt(a_data_p.f_int)).intValue();
-					a_data_p.a_data_j.b = false;
-				} else
-				{
-					a_data_p.d_int = ((Integer)a_data_p.a_java_util_Vector.elementAt(a_data_p.g_int)).intValue();
-				}
-			a_data_p.a_data_a.a();
-			a_data_p.a_data_a.f();
-			return;
+      if(this.a.C) {
+         this.a.a.f();
+      }
 
-		case 10: // '\n'
-			a_data_p.a_data_a.q();
-			return;
+   }
 
-		case 4: // '\004'
-			a_data_p.a_data_a.q();
-			return;
+   public final void b() {
+      switch(this.a.l) {
+      case 0:
+         return;
+      case 1:
+         if(!this.a.c) {
+            if(this.a.b) {
+               this.a.r = this.a.a.a(this.a.r, 0, this.a.b - 1);
+            } else {
+               this.a.r = this.a.a.a(this.a.r, 1, this.a.b - 1);
+            }
+         }
 
-		case 5: // '\005'
-			if ((((k) (a_data_p)).bu & 0x4000) != 0 || (((k) (a_data_p)).bu & 0x10) != 0 || a_data_p.a_data_j.e == 1)
-			{
-				a_data_p.l_int = 6;
-				a_data_p.a();
-			}
-			if ((((k) (a_data_p)).bu & 0x8000) != 0 || a_data_p.a_data_j.e == 3)
-			{
-				a_data_p.a_data_ad.r();
-				a_data_p.a_data_t.a();
-				a_data_p.a_data_t.b(a_data_p.aG_int);
-				g();
-				a_data_p.l_int = 1;
-				a_data_p.a_data_aa.h();
-				a_data_p.a();
-				return;
-			}
-			break;
+         this.a.a.e();
+         return;
+      case 2:
+         this.a.A = this.a.a.a(this.a.A, 0, 1);
+         this.a.a.g();
+         return;
+      case 3:
+         this.a.d = this.a.a.a(this.a.d, 0, this.a.e - 1);
+         if(this.a.hasPointerEvents() && this.a.d > this.a.e - 1) {
+            if(this.a.a.b) {
+               this.a.d = ((Integer)this.a.a.elementAt(this.a.f)).intValue();
+               this.a.a.b = false;
+            } else {
+               this.a.d = ((Integer)this.a.a.elementAt(this.a.g)).intValue();
+            }
+         }
 
-		case 6: // '\006'
-			a_data_p.a_data_ad.f();
-			switch (a_data_p.m_int)
-			{
-			default:
-				break;
+         this.a.a.a();
+         this.a.a.f();
+         return;
+      case 4:
+         this.a.a.q();
+         return;
+      case 5:
+         if((this.a.bu & 16384) != 0 || (this.a.bu & 16) != 0 || this.a.a.e == 1) {
+            this.a.l = 6;
+            this.a.a();
+         }
 
-			case 2: // '\002'
-				if (!a_data_p.aM)
-				{
-					a_data_p.a_data_a.h();
-					a_data_p.a_data_a.i();
-					if ((((k) (a_data_p)).bu & 0x8000) != 0 || (((k) (a_data_p)).bu & 4) != 0 || (((k) (a_data_p)).bu & 8) != 0 || a_data_p.a_data_j.e == 3 || a_data_p.a_data_j.e == 2 || a_data_p.a_data_j.e == 8)
-					{
-						a_data_p.m_int = 0;
-						a_data_p.a_data_aa.f();
-						a_data_p.aK = true;
-						a_data_p.aw_boolean = true;
-					}
-				}
-				a_data_p.o_boolean = true;
-				break;
+         if((this.a.bu & '\u8000') != 0 || this.a.a.e == 3) {
+            this.a.a.r();
+            this.a.a.a();
+            this.a.a.b(this.a.aG);
+            this.g();
+            this.a.l = 1;
+            this.a.a.h();
+            this.a.a();
+            return;
+         }
+         break;
+      case 6:
+         this.a.a.f();
+         switch(this.a.m) {
+         case 0:
+            this.a.o = false;
+            this.b = true;
+            this.a.az = true;
+            if(!this.a.aK && !this.a.aF) {
+               if(!this.a && !this.a.U && !this.a.aN) {
+                  this.a.a.c();
+               }
 
-			case 1: // '\001'
-				if (a_data_p.n_int != 1 && !a_data_p.S && !a_data_p.v_boolean)
-					a_data_p.s_int = a_data_p.a_data_a.b(a_data_p.s_int, 0, 5);
-				switch (a_data_p.n_int)
-				{
-				default:
-					break;
+               if(this.a.U) {
+                  this.a.a.d();
+               }
 
-				case 0: // '\0'
-					b_boolean = false;
-					a_data_p.z_int = a_data_p.a_data_a.a(a_data_p.z_int, 0, a_data_p.aB_int - 1);
-					a_data_p.a_data_a.b();
-					a_data_p.a_data_a.a(0);
-					if ((((k) (a_data_p)).bu & 0x8000) != 0 || a_data_p.a_data_j.e == 3)
-					{
-						a_data_p.m_int = 0;
-						a_data_p.a_data_aa.f();
-						a_data_p.z_int = 0;
-						a_data_p.au_int = 0;
-					}
-					break;
+               if(this.a.aN) {
+                  this.a.a.e();
+               }
 
-				case 1: // '\001'
-					a_data_p.a_data_a.h();
-					a_data_p.a_data_a.i();
-					if ((((k) (a_data_p)).bu & 0x8000) != 0 || (((k) (a_data_p)).bu & 4) != 0 || (((k) (a_data_p)).bu & 8) != 0 || a_data_p.a_data_j.e == 3 || a_data_p.a_data_j.e == 2 || a_data_p.a_data_j.e == 8)
-					{
-						a_data_p.n_int = a_data_p.o_int;
-						a_data_p.aw_boolean = true;
-						a_data_p.aK = true;
-					}
-					break;
+               if((this.a.bu & '\u8000') != 0 || this.a.a.e == 3) {
+                  this.a.l = 5;
+                  this.a.aL = true;
+                  this.a.aw = true;
+               }
 
-				case 2: // '\002'
-					if ((((k) (a_data_p)).bu & 0x8000) != 0 || a_data_p.a_data_j.e == 3)
-					{
-						a_data_p.m_int = 0;
-						a_data_p.n_int = 0;
-						a_data_p.a_data_aa.f();
-					}
-					break;
+               if(this.a && ((this.a.bu & 16384) != 0 || (this.a.bu & 16) != 0 || this.a.a.e == 1)) {
+                  this.a.c = 0;
+                  this.a.a.a();
+                  this.a.a.b(this.a.aG);
+                  this.g();
+                  this.a.l = 1;
+               }
 
-				case 3: // '\003'
-					if (a_data_p.v_boolean)
-					{
-						a_data_p.u = a_data_p.a_data_a.a(a_data_p.u, 0, 3);
-						a_data_p.a_data_a.p();
-						if ((((k) (a_data_p)).bu & 0x8000) != 0 || a_data_p.a_data_j.e == 3)
-						{
-							a_data_p.v_boolean = false;
-							a_data_p.u = -1;
-							a_data_p.aw_boolean = true;
-						}
-						break;
-					}
-					if ((((k) (a_data_p)).bu & 0x4000) != 0 || (((k) (a_data_p)).bu & 0x10) != 0 || a_data_p.a_data_j.e == 1)
-					{
-						a_data_p.v_boolean = true;
-						a_data_p.u = 0;
-						a_data_p.aw_boolean = true;
-					}
-					if ((((k) (a_data_p)).bu & 0x8000) != 0 || a_data_p.a_data_j.e == 3)
-					{
-						a_data_p.m_int = 0;
-						a_data_p.n_int = 0;
-						a_data_p.a_data_aa.f();
-					}
-					break;
+               if(!this.a && !this.a.U && ((this.a.bu & 16) != 0 || (this.a.bu & 16384) != 0 || this.a.a.e == 1)) {
+                  this.a.m = 2;
+               }
+            }
 
-				case 4: // '\004'
-					b_boolean = false;
-					a_data_p.v_int = a_data_p.a_data_a.a(a_data_p.v_int, 0, a_data_p.av_int - 1);
-					a_data_p.a_data_a.c();
-					a_data_p.a_data_a.a(4);
-					if ((((k) (a_data_p)).bu & 0x8000) != 0 || a_data_p.a_data_j.e == 3)
-					{
-						a_data_p.m_int = 0;
-						a_data_p.n_int = 0;
-						a_data_p.a_data_aa.f();
-						a_data_p.v_int = 0;
-						a_data_p.au_int = 0;
-					}
-					break;
+            if(this.a.aF && this.a.H > 8000L) {
+               this.a.l = 9;
+               this.a.y = 0L;
+               this.a.aw = true;
+            }
 
-				case 5: // '\005'
-					if (a_data_p.S)
-					{
-						if ((((k) (a_data_p)).bu & 4) != 0)
-						{
-							if (a_data_p.R > 0)
-								a_data_p.R = a_data_p.R - 60;
-							a_data_p.aw_boolean = true;
-							a_data_p.o_long = 0L;
-							a_data_p.aI = true;
-							if (a_data_p.aO_int - 3 > 0)
-								a_data_p.aO_int = a_data_p.aO_int - 3;
-						}
-						if ((((k) (a_data_p)).bu & 8) != 0)
-						{
-							if (a_data_p.R < 120)
-								a_data_p.R = a_data_p.R + 60;
-							a_data_p.aw_boolean = true;
-							a_data_p.o_long = 0L;
-							a_data_p.aJ_boolean = true;
-							if (a_data_p.aO_int + 3 <= 9)
-								a_data_p.aO_int = a_data_p.aO_int + 3;
-						}
-						if ((((k) (a_data_p)).bu & 1) != 0)
-						{
-							if (a_data_p.Q > 0)
-								a_data_p.Q = a_data_p.Q - 60;
-							a_data_p.aw_boolean = true;
-							a_data_p.o_long = 0L;
-							a_data_p.aG_boolean = true;
-							if (a_data_p.aO_int - 1 == 2 || a_data_p.aO_int - 1 == 1 || a_data_p.aO_int - 1 == 4 || a_data_p.aO_int - 1 == 5 || a_data_p.aO_int - 1 == 7 || a_data_p.aO_int - 1 == 8)
-								a_data_p.aO_int = a_data_p.aO_int - 1;
-						}
-						if ((((k) (a_data_p)).bu & 2) != 0)
-						{
-							if (a_data_p.Q < 120)
-								a_data_p.Q = a_data_p.Q + 60;
-							a_data_p.aw_boolean = true;
-							a_data_p.o_long = 0L;
-							a_data_p.aH = true;
-							if (a_data_p.aO_int + 1 == 2 || a_data_p.aO_int + 1 == 3 || a_data_p.aO_int + 1 == 5 || a_data_p.aO_int + 1 == 6 || a_data_p.aO_int + 1 == 8 || a_data_p.aO_int + 1 == 9)
-								a_data_p.aO_int = a_data_p.aO_int + 1;
-						}
-						if ((((k) (a_data_p)).bu & 0x8000) != 0 || a_data_p.a_data_j.e == 3)
-						{
-							a_data_p.S = false;
-							a_data_p.aw_boolean = true;
-						}
-						break;
-					}
-					if ((((k) (a_data_p)).bu & 0x4000) != 0 || (((k) (a_data_p)).bu & 0x10) != 0 || a_data_p.a_data_j.e == 1)
-					{
-						a_data_p.S = true;
-						a_data_p.aw_boolean = true;
-					}
-					if ((((k) (a_data_p)).bu & 0x8000) != 0 || a_data_p.a_data_j.e == 3)
-					{
-						a_data_p.m_int = 0;
-						a_data_p.n_int = 0;
-						a_data_p.a_data_aa.f();
-					}
-					break;
+            this.a.aK = false;
+            break;
+         case 1:
+            if(this.a.n != 1 && !this.a.S && !this.a.v) {
+               this.a.s = this.a.a.b(this.a.s, 0, 5);
+            }
 
-				case 6: // '\006'
-					if ((((k) (a_data_p)).bu & 0x8000) != 0 || a_data_p.a_data_j.e == 3)
-					{
-						a_data_p.m_int = 0;
-						a_data_p.n_int = 0;
-						a_data_p.a_data_aa.f();
-					}
-					break;
-				}
-				a_data_p.o_boolean = true;
-				break;
+            switch(this.a.n) {
+            case 0:
+               this.b = false;
+               this.a.z = this.a.a.a(this.a.z, 0, this.a.aB - 1);
+               this.a.a.b();
+               this.a.a.a(0);
+               if((this.a.bu & '\u8000') != 0 || this.a.a.e == 3) {
+                  this.a.m = 0;
+                  this.a.a.f();
+                  this.a.z = 0;
+                  this.a.au = 0;
+               }
+               break;
+            case 1:
+               this.a.a.h();
+               this.a.a.i();
+               if((this.a.bu & '\u8000') != 0 || (this.a.bu & 4) != 0 || (this.a.bu & 8) != 0 || this.a.a.e == 3 || this.a.a.e == 2 || this.a.a.e == 8) {
+                  this.a.n = this.a.o;
+                  this.a.aw = true;
+                  this.a.aK = true;
+               }
+               break;
+            case 2:
+               if((this.a.bu & '\u8000') != 0 || this.a.a.e == 3) {
+                  this.a.m = 0;
+                  this.a.n = 0;
+                  this.a.a.f();
+               }
+               break;
+            case 3:
+               if(this.a.v) {
+                  this.a.u = this.a.a.a(this.a.u, 0, 3);
+                  this.a.a.p();
+                  if((this.a.bu & '\u8000') != 0 || this.a.a.e == 3) {
+                     this.a.v = false;
+                     this.a.u = -1;
+                     this.a.aw = true;
+                  }
+               } else {
+                  if((this.a.bu & 16384) != 0 || (this.a.bu & 16) != 0 || this.a.a.e == 1) {
+                     this.a.v = true;
+                     this.a.u = 0;
+                     this.a.aw = true;
+                  }
 
-			case 0: // '\0'
-				a_data_p.o_boolean = false;
-				b_boolean = true;
-				a_data_p.az = true;
-				if (!a_data_p.aK && !a_data_p.aF)
-				{
-					if (!a_boolean && !a_data_p.U && !a_data_p.aN)
-						a_data_p.a_data_ab.c();
-					if (a_data_p.U)
-						a_data_p.a_data_ad.d();
-					if (a_data_p.aN)
-						a_data_p.a_data_ad.e();
-					if ((((k) (a_data_p)).bu & 0x8000) != 0 || a_data_p.a_data_j.e == 3)
-					{
-						a_data_p.l_int = 5;
-						a_data_p.aL = true;
-						a_data_p.aw_boolean = true;
-					}
-					if (a_boolean && ((((k) (a_data_p)).bu & 0x4000) != 0 || (((k) (a_data_p)).bu & 0x10) != 0 || a_data_p.a_data_j.e == 1))
-					{
-						a_data_p.c_int = 0;
-						a_data_p.a_data_t.a();
-						a_data_p.a_data_t.b(a_data_p.aG_int);
-						g();
-						a_data_p.l_int = 1;
-					}
-					if (!a_boolean && !a_data_p.U && ((((k) (a_data_p)).bu & 0x10) != 0 || (((k) (a_data_p)).bu & 0x4000) != 0 || a_data_p.a_data_j.e == 1))
-						a_data_p.m_int = 2;
-				}
-				if (a_data_p.aF && a_data_p.H_long > 8000L)
-				{
-					a_data_p.l_int = 9;
-					a_data_p.y_long = 0L;
-					a_data_p.aw_boolean = true;
-				}
-				a_data_p.aK = false;
-				break;
+                  if((this.a.bu & '\u8000') != 0 || this.a.a.e == 3) {
+                     this.a.m = 0;
+                     this.a.n = 0;
+                     this.a.a.f();
+                  }
+               }
+               break;
+            case 4:
+               this.b = false;
+               this.a.v = this.a.a.a(this.a.v, 0, this.a.av - 1);
+               this.a.a.c();
+               this.a.a.a(4);
+               if((this.a.bu & '\u8000') != 0 || this.a.a.e == 3) {
+                  this.a.m = 0;
+                  this.a.n = 0;
+                  this.a.a.f();
+                  this.a.v = 0;
+                  this.a.au = 0;
+               }
+               break;
+            case 5:
+               if(this.a.S) {
+                  if((this.a.bu & 4) != 0) {
+                     if(this.a.R > 0) {
+                        this.a.R -= 60;
+                     }
 
-			case 3: // '\003'
-				if ((((k) (a_data_p)).bu & 0x8000) != 0 || (((k) (a_data_p)).bu & 0x10) != 0 || (((k) (a_data_p)).bu & 0x4000) != 0 || a_data_p.a_data_j.e == 1 || a_data_p.a_data_j.e == 3)
-				{
-					if (b_boolean)
-					{
-						if (c)
-						{
-							a_data_p.p_int = 0;
-							a_data_p.m_int = 8;
-							a_data_p.w = 0;
-							a_data_p.a_data_aa.f();
-							c = false;
-						} else
-						{
-							a_data_p.n_int = 0;
-							a_data_p.m_int = 0;
-							a_data_p.a_data_aa.f();
-							a_data_p.aB_boolean = false;
-							a_data_p.aC_boolean = false;
-							a_data_p.aD_boolean = false;
-						}
-						b_boolean = false;
-					} else
-					{
-						a_data_p.m_int = 1;
-						a_data_p.n_int = a_data_p.o_int;
-						if (a_data_p.o_int == 0)
-							a_data_p.s_int = 0;
-						if (a_data_p.o_int == 4)
-							a_data_p.s_int = 5;
-						a_data_p.a_data_aa.f();
-					}
-					a_data_p.aw_boolean = true;
-					a_data_p.a();
-				}
-				a_data_p.a_data_a.q();
-				a_data_p.o_boolean = true;
-				break;
+                     this.a.aw = true;
+                     this.a.o = 0L;
+                     this.a.aI = true;
+                     if(this.a.aO - 3 > 0) {
+                        this.a.aO -= 3;
+                     }
+                  }
 
-			case 4: // '\004'
-				a_data_p.t = a_data_p.a_data_a.a(a_data_p.t, 0, 1);
-				a_data_p.a_data_a.m();
-				if ((((k) (a_data_p)).bu & 0x8000) != 0 || a_data_p.a_data_j.e == 3)
-				{
-					a_data_p.m_int = 0;
-					a_data_p.a_data_aa.f();
-				}
-				a_data_p.o_boolean = true;
-				break;
+                  if((this.a.bu & 8) != 0) {
+                     if(this.a.R < 120) {
+                        this.a.R += 60;
+                     }
 
-			case 5: // '\005'
-				if (a_data_p.aB_boolean)
-					a_data_p.y_int = a_data_p.a_data_a.a(a_data_p.y_int, 0, a_data_p.ay - 1);
-				else
-					a_data_p.y_int = a_data_p.a_data_a.a(a_data_p.y_int, 0, a_data_p.ax_int - 1);
-				a_data_p.a_data_a.d();
-				a_data_p.a_data_a.n();
-				if ((((k) (a_data_p)).bu & 0x8000) != 0 || a_data_p.a_data_j.e == 3)
-				{
-					a_data_p.a_data_aa.k();
-					a_data_p.a_data_aa.f();
-				}
-				a_data_p.o_boolean = true;
-				break;
+                     this.a.aw = true;
+                     this.a.o = 0L;
+                     this.a.aJ = true;
+                     if(this.a.aO + 3 <= 9) {
+                        this.a.aO += 3;
+                     }
+                  }
 
-			case 6: // '\006'
-				a_data_p.a_data_a.o();
-				if ((((k) (a_data_p)).bu & 8) != 0 || a_data_p.a_data_j.e == 8)
-				{
-					if (a_data_p.B_int < a_data_p.aA - a_data_p.as_int)
-						a_data_p.B_int++;
-					a_data_p.aw_boolean = true;
-					a_data_p.n_long = 0L;
-					a_data_p.i = true;
-					a_data_p.aA = 0;
-				}
-				if ((((k) (a_data_p)).bu & 4) != 0 || a_data_p.a_data_j.e == 2)
-				{
-					if (a_data_p.B_int > 0)
-						a_data_p.B_int--;
-					a_data_p.aw_boolean = true;
-					a_data_p.n_long = 0L;
-					a_data_p.h_boolean = true;
-					a_data_p.aA = 0;
-				}
-				if (!a_data_p.ae && ((((k) (a_data_p)).bu & 0x8000) != 0 || a_data_p.a_data_j.e == 3))
-				{
-					if (a_data_p.aC_boolean || a_data_p.aD_boolean)
-					{
-						a_data_p.m_int = 0;
-						a_data_p.aD_boolean = false;
-						a_data_p.aC_boolean = false;
-						a_data_p.a_data_aa.f();
-					} else
-					{
-						a_data_p.m_int = 5;
-					}
-					a_data_p.aw_boolean = true;
-					a_data_p.B_int = 0;
-					a_data_p.a_data_aa.f();
-				}
-				a_data_p.o_boolean = true;
-				break;
+                  if((this.a.bu & 1) != 0) {
+                     if(this.a.Q > 0) {
+                        this.a.Q -= 60;
+                     }
 
-			case 7: // '\007'
-				switch (a_data_p.q_int)
-				{
-				default:
-					break;
+                     this.a.aw = true;
+                     this.a.o = 0L;
+                     this.a.aG = true;
+                     if(this.a.aO - 1 == 2 || this.a.aO - 1 == 1 || this.a.aO - 1 == 4 || this.a.aO - 1 == 5 || this.a.aO - 1 == 7 || this.a.aO - 1 == 8) {
+                        --this.a.aO;
+                     }
+                  }
 
-				case 0: // '\0'
-					a_data_p.a_data_x.b();
-					if (a_data_p.a_data_x.a_boolean)
-					{
-						a_data_p.a_data_x.a_boolean = false;
-						if ((((k) (a_data_p)).bu & 0x8000) != 0 || (((k) (a_data_p)).bu & 0x4000) != 0 || a_data_p.a_data_j.e == 1 || a_data_p.a_data_j.e == 3)
-						{
-							if (a_data_p.a_data_x.a_int > 0)
-							{
-								a_data_p.q_int_array1d[a_data_p.a_data_x.b]--;
-								if (a_data_p.q_int_array1d[a_data_p.a_data_x.b] == 0)
-								{
-									for (int i = a_data_p.a_data_x.b; i < a_data_p.aB_int - 1; i++)
-									{
-										a_data_p.m_byte_array1d[i] = a_data_p.m_byte_array1d[i + 1];
-										a_data_p.q_int_array1d[i] = a_data_p.q_int_array1d[i + 1];
-									}
+                  if((this.a.bu & 2) != 0) {
+                     if(this.a.Q < 120) {
+                        this.a.Q += 60;
+                     }
 
-									a_data_p.aB_int--;
-								}
-							}
-							a_data_p.m_int = 0;
-							a_data_p.a_data_aa.f();
-						}
-					}
-					break;
+                     this.a.aw = true;
+                     this.a.o = 0L;
+                     this.a.aH = true;
+                     if(this.a.aO + 1 == 2 || this.a.aO + 1 == 3 || this.a.aO + 1 == 5 || this.a.aO + 1 == 6 || this.a.aO + 1 == 8 || this.a.aO + 1 == 9) {
+                        ++this.a.aO;
+                     }
+                  }
 
-				case 1: // '\001'
-					a_data_p.a_data_x.e();
-					if (!a_data_p.a_data_x.a_boolean)
-						break;
-					a_data_p.a_data_x.a_boolean = false;
-					if ((((k) (a_data_p)).bu & 0x8000) == 0 && (((k) (a_data_p)).bu & 0x4000) == 0 && (((k) (a_data_p)).bu & 0x10) == 0 && a_data_p.a_data_j.e != 1 && a_data_p.a_data_j.e != 3)
-						break;
-					if (a_data_p.a_data_x.a_int > 0)
-					{
-						a_data_p.q_int_array1d[a_data_p.a_data_x.b]--;
-						if (a_data_p.q_int_array1d[a_data_p.a_data_x.b] == 0)
-						{
-							for (int l = a_data_p.a_data_x.b; l < a_data_p.aB_int - 1; l++)
-							{
-								a_data_p.m_byte_array1d[l] = a_data_p.m_byte_array1d[l + 1];
-								a_data_p.q_int_array1d[l] = a_data_p.q_int_array1d[l + 1];
-							}
+                  if((this.a.bu & '\u8000') != 0 || this.a.a.e == 3) {
+                     this.a.S = false;
+                     this.a.aw = true;
+                  }
+               } else {
+                  if((this.a.bu & 16384) != 0 || (this.a.bu & 16) != 0 || this.a.a.e == 1) {
+                     this.a.S = true;
+                     this.a.aw = true;
+                  }
 
-							a_data_p.aB_int--;
-						}
-					}
-					a_data_p.m_int = 0;
-					a_data_p.a_data_aa.f();
-					break;
+                  if((this.a.bu & '\u8000') != 0 || this.a.a.e == 3) {
+                     this.a.m = 0;
+                     this.a.n = 0;
+                     this.a.a.f();
+                  }
+               }
+               break;
+            case 6:
+               if((this.a.bu & '\u8000') != 0 || this.a.a.e == 3) {
+                  this.a.m = 0;
+                  this.a.n = 0;
+                  this.a.a.f();
+               }
+            }
 
-				case 2: // '\002'
-					a_data_p.a_data_n.d();
-					if (!a_data_p.a_data_x.a_boolean)
-						break;
-					a_data_p.a_data_x.a_boolean = false;
-					if ((((k) (a_data_p)).bu & 0x8000) == 0 && (((k) (a_data_p)).bu & 0x4000) == 0 && (((k) (a_data_p)).bu & 0x10) == 0 && a_data_p.a_data_j.e != 1 && a_data_p.a_data_j.e != 3)
-						break;
-					if (a_data_p.a_data_x.a_int > 0)
-					{
-						a_data_p.q_int_array1d[a_data_p.a_data_x.b]--;
-						if (a_data_p.q_int_array1d[a_data_p.a_data_x.b] == 0)
-						{
-							for (int i1 = a_data_p.a_data_x.b; i1 < a_data_p.aB_int - 1; i1++)
-							{
-								a_data_p.m_byte_array1d[i1] = a_data_p.m_byte_array1d[i1 + 1];
-								a_data_p.q_int_array1d[i1] = a_data_p.q_int_array1d[i1 + 1];
-							}
+            this.a.o = true;
+            break;
+         case 2:
+            if(!this.a.aM) {
+               this.a.a.h();
+               this.a.a.i();
+               if((this.a.bu & '\u8000') != 0 || (this.a.bu & 4) != 0 || (this.a.bu & 8) != 0 || this.a.a.e == 3 || this.a.a.e == 2 || this.a.a.e == 8) {
+                  this.a.m = 0;
+                  this.a.a.f();
+                  this.a.aK = true;
+                  this.a.aw = true;
+               }
+            }
 
-							a_data_p.aB_int--;
-						}
-					}
-					a_data_p.m_int = 0;
-					a_data_p.a_data_aa.f();
-					break;
+            this.a.o = true;
+            break;
+         case 3:
+            if((this.a.bu & '\u8000') != 0 || (this.a.bu & 16) != 0 || (this.a.bu & 16384) != 0 || this.a.a.e == 1 || this.a.a.e == 3) {
+               if(this.b) {
+                  if(this.c) {
+                     this.a.p = 0;
+                     this.a.m = 8;
+                     this.a.w = 0;
+                     this.a.a.f();
+                     this.c = false;
+                  } else {
+                     this.a.n = 0;
+                     this.a.m = 0;
+                     this.a.a.f();
+                     this.a.aB = false;
+                     this.a.aC = false;
+                     this.a.aD = false;
+                  }
 
-				case 3: // '\003'
-					a_data_p.a_data_s.d();
-					if (!a_data_p.a_data_x.a_boolean)
-						break;
-					a_data_p.a_data_x.a_boolean = false;
-					if ((((k) (a_data_p)).bu & 0x8000) == 0 && (((k) (a_data_p)).bu & 0x4000) == 0 && (((k) (a_data_p)).bu & 0x10) == 0 && a_data_p.a_data_j.e != 1 && a_data_p.a_data_j.e != 3)
-						break;
-					if (a_data_p.a_data_x.a_int > 0)
-					{
-						a_data_p.q_int_array1d[a_data_p.a_data_x.b]--;
-						if (a_data_p.q_int_array1d[a_data_p.a_data_x.b] == 0)
-						{
-							for (int j1 = a_data_p.a_data_x.b; j1 < a_data_p.aB_int - 1; j1++)
-							{
-								a_data_p.m_byte_array1d[j1] = a_data_p.m_byte_array1d[j1 + 1];
-								a_data_p.q_int_array1d[j1] = a_data_p.q_int_array1d[j1 + 1];
-							}
+                  this.b = false;
+               } else {
+                  this.a.m = 1;
+                  this.a.n = this.a.o;
+                  if(this.a.o == 0) {
+                     this.a.s = 0;
+                  }
 
-							a_data_p.aB_int--;
-						}
-					}
-					a_data_p.m_int = 0;
-					a_data_p.a_data_aa.f();
-					break;
-				}
-				a_data_p.aw_boolean = true;
-				a_data_p.o_boolean = true;
-				a_data_p.aK = false;
-				break;
+                  if(this.a.o == 4) {
+                     this.a.s = 5;
+                  }
 
-			case 8: // '\b'
-				switch (a_data_p.p_int)
-				{
-				default:
-					break;
+                  this.a.a.f();
+               }
 
-				case 0: // '\0'
-					b_boolean = c = true;
-					a_data_p.w = a_data_p.a_data_a.a(a_data_p.w, 0, a_data_p.aw_int - 1);
-					a_data_p.a_data_a.l();
-					if ((((k) (a_data_p)).bu & 0x8000) != 0 || a_data_p.a_data_j.e == 3)
-					{
-						a_data_p.m_int = 0;
-						b_boolean = c = false;
-						a_data_p.aB_boolean = false;
-						a_data_p.a_data_aa.f();
-					}
-					break;
+               this.a.aw = true;
+               this.a.a();
+            }
 
-				case 1: // '\001'
-					a_data_p.a_data_a.h();
-					a_data_p.a_data_a.i();
-					if ((((k) (a_data_p)).bu & 0x8000) != 0 || (((k) (a_data_p)).bu & 4) != 0 || (((k) (a_data_p)).bu & 8) != 0 || a_data_p.a_data_j.e == 3 || a_data_p.a_data_j.e == 2 || a_data_p.a_data_j.e == 8)
-					{
-						a_data_p.p_int = 0;
-						c = false;
-						a_data_p.aw_boolean = true;
-					}
-					break;
-				}
-				a_data_p.o_boolean = true;
-				break;
+            this.a.a.q();
+            this.a.o = true;
+            break;
+         case 4:
+            this.a.t = this.a.a.a(this.a.t, 0, 1);
+            this.a.a.m();
+            if((this.a.bu & '\u8000') != 0 || this.a.a.e == 3) {
+               this.a.m = 0;
+               this.a.a.f();
+            }
 
-			case 9: // '\t'
-				a_data_p.a_data_a.q();
-				break;
+            this.a.o = true;
+            break;
+         case 5:
+            if(this.a.aB) {
+               this.a.y = this.a.a.a(this.a.y, 0, this.a.ay - 1);
+            } else {
+               this.a.y = this.a.a.a(this.a.y, 0, this.a.ax - 1);
+            }
 
-			case 10: // '\n'
-				if (a_data_p.p_boolean)
-				{
-					a_data_p.aw_boolean = true;
-					if ((((k) (a_data_p)).bu & 0x8000) != 0 || (((k) (a_data_p)).bu & 0x10) != 0 || (((k) (a_data_p)).bu & 0x4000) != 0 || a_data_p.a_data_j.e == 1 || a_data_p.a_data_j.e == 3)
-						a_data_p.g_long = 4001L;
-					if (a_data_p.g_long > 4000L)
-					{
-						a_data_p.aK = false;
-						a_data_p.g_long = 0L;
-						a_data_p.p_boolean = false;
-						a_data_p.n_boolean = true;
-						a_data_p.m_boolean = true;
-						a_data_p.m_int = a_data_p.j;
-						a_data_p.b();
-					}
-				}
-				if (!a_data_p.q_boolean)
-					break;
-				a_data_p.aw_boolean = true;
-				if ((((k) (a_data_p)).bu & 0x8000) != 0 || (((k) (a_data_p)).bu & 0x10) != 0 || (((k) (a_data_p)).bu & 0x4000) != 0 || a_data_p.a_data_j.e == 1 || a_data_p.a_data_j.e == 3)
-					a_data_p.g_long = 8001L;
-				if (a_data_p.g_long > 8000L)
-				{
-					a_data_p.aK = false;
-					a_data_p.g_long = 0L;
-					a_data_p.q_boolean = false;
-					a_data_p.n_boolean = true;
-					a_data_p.m_boolean = true;
-					a_data_p.m_int = a_data_p.j;
-					a_data_p.b();
-				}
-				break;
-			}
-			return;
+            this.a.a.d();
+            this.a.a.n();
+            if((this.a.bu & '\u8000') != 0 || this.a.a.e == 3) {
+               this.a.a.k();
+               this.a.a.f();
+            }
 
-		case 7: // '\007'
-			return;
+            this.a.o = true;
+            break;
+         case 6:
+            this.a.a.o();
+            if((this.a.bu & 8) != 0 || this.a.a.e == 8) {
+               if(this.a.B < this.a.aA - this.a.as) {
+                  ++this.a.B;
+               }
 
-		case 8: // '\b'
-			if ((((k) (a_data_p)).bu & 0x8000) != 0 || (((k) (a_data_p)).bu & 0x10) != 0 || (((k) (a_data_p)).bu & 0x4000) != 0 || a_data_p.a_data_j.e == 1 || a_data_p.a_data_j.e == 3)
-				a_data_p.y_long = 8001L;
-			if (a_data_p.y_long > 8000L)
-				g();
-			a_data_p.a_data_aa.h();
-			return;
+               this.a.aw = true;
+               this.a.n = 0L;
+               this.a.i = true;
+               this.a.aA = 0;
+            }
 
-		case 9: // '\t'
-			if ((((k) (a_data_p)).bu & 0x8000) != 0 || (((k) (a_data_p)).bu & 0x10) != 0 || (((k) (a_data_p)).bu & 0x4000) != 0 || a_data_p.a_data_j.e == 1 || a_data_p.a_data_j.e == 3)
-				a_data_p.y_long = 8001L;
-			if (a_data_p.y_long > 8000L)
-				g();
-			a_data_p.a_data_aa.h();
-			break;
-		}
-	}
+            if((this.a.bu & 4) != 0 || this.a.a.e == 2) {
+               if(this.a.B > 0) {
+                  --this.a.B;
+               }
 
-	public final void c()
-	{
-		if (a_data_p.aw_boolean)
-		{
-			((k) (a_data_p)).a.setColor(13158);
-			((k) (a_data_p)).a.fillRect(0, 0, k.a(), k.b());
-			a_data_p.a_data_ac.a(((k) (a_data_p)).a, a_data_p.a_data_ac.a(94), k.a() >> 1, (k.b() >> 1) - 30, 0xffffff, 17, 0, 1, 8, a_data_p.aJ_int, k.a(), k.b(), 0, 0);
-			if (a_data_p.aO_boolean)
-			{
-				a_data_p.a_data_ac.a(((k) (a_data_p)).a, a_data_p.a_data_ac.a(95), k.a() >> 1, k.b() >> 1, 0xffffff, 17, 0, 1, 8, a_data_p.aJ_int, k.a(), k.b(), 0, 0);
-				return;
-			}
-			if (a_data_p.aP)
-			{
-				a_data_p.a_data_ac.a(((k) (a_data_p)).a, a_data_p.a_data_ac.a(110), k.a() >> 1, k.b() >> 1, 0xffffff, 17, 0, 1, 8, a_data_p.aJ_int, k.a(), k.b(), 0, 0);
-				return;
-			}
-			a_data_p.a_data_ac.a(((k) (a_data_p)).a, a_data_p.a_data_ac.a(96), k.a() >> 1, k.b() >> 1, 0xffffff, 17, 0, 1, 8, a_data_p.aJ_int, k.a(), k.b(), 0, 0);
-		}
-	}
+               this.a.aw = true;
+               this.a.n = 0L;
+               this.a.h = true;
+               this.a.aA = 0;
+            }
 
-	public final void d()
-	{
-		if (a_data_p.aw_boolean)
-		{
-			a_data_p.aw_boolean = false;
-			((k) (a_data_p)).a.setColor(13158);
-			((k) (a_data_p)).a.fillRect(0, 0, k.a(), k.b());
-			a_data_p.a_data_ac.a(((k) (a_data_p)).a, a_data_p.a_data_ac.a(97), k.a() >> 1, k.b() / 4, 0xffffff, 17, 0, 1, 8, a_data_p.aJ_int, k.a(), k.b(), 0, 0);
-			a_data_p.a_data_ac.a(((k) (a_data_p)).a, a_data_p.a_data_ac.a(98), k.a() >> 1, k.b() / 4 + 20, 0xffffff, 17, 0, 1, 8, a_data_p.aJ_int, k.a(), k.b(), 0, 0);
-		}
-	}
+            if(!this.a.ae && ((this.a.bu & '\u8000') != 0 || this.a.a.e == 3)) {
+               if(!this.a.aC && !this.a.aD) {
+                  this.a.m = 5;
+               } else {
+                  this.a.m = 0;
+                  this.a.aD = false;
+                  this.a.aC = false;
+                  this.a.a.f();
+               }
 
-	public final void a(boolean flag)
-	{
-		b(flag);
-		if (flag)
-		{
-			if (a_int == 70)
-				if (a_data_p.c_int == 0)
-				{
-					c(false);
-					return;
-				} else
-				{
-					c(true);
-					return;
-				}
-			if (a_int == 80)
-				return;
-			if (a_int == 100)
-			{
-				a_data_p.a_data_t.a(true, true);
-				a_long = a_data_p.a_data_t.b();
-				a_data_p.a_data_ad.q();
-				a_data_p.a_data_aa.d();
-				a_data_p.a_data_ad.p();
-				a_data_p.a_data_ad.t();
-				return;
-			}
-		} else
-		{
-			if (a_int == 80)
-			{
-				a_data_p.a_data_g.d();
-				a_data_p.a_data_y.b();
-				return;
-			}
-			if (a_int == 100)
-			{
-				a_data_p.Z = 8;
-				a_data_p.aa = 148;
-				a_data_p.ab = a_data_p.Z - a_data_p.N / 2;
-				a_data_p.ac = a_data_p.aa - a_data_p.O / 2;
-				a_data_p.a_data_ad.q();
-				a_data_p.d_boolean = true;
-			}
-		}
-	}
+               this.a.aw = true;
+               this.a.B = 0;
+               this.a.a.f();
+            }
 
-	private void b(boolean flag)
-	{
-		a_data_p.p_boolean = false;
-		a_data_p.c_boolean = true;
-		if (a_int == 0)
-		{
-			a_data_p.aj_boolean = false;
-			a_data_p.ak = false;
-			a_data_p.al = false;
-			a_data_p.am = false;
-			a_data_p.an = false;
-			a_data_p.ao = false;
-			a_data_p.ap_boolean = false;
-			a_data_p.aq = false;
-			a_data_p.ar = false;
-			a_data_p.as_boolean = false;
-			a_data_p.at = false;
-			a_data_p.au_boolean = false;
-			a_data_p.av_boolean = false;
-			a_data_p.a();
-			if (!flag)
-				a_data_p.ad = true;
-			else
-			if (a_data_p.ag)
-			{
-				for (int i = 0; i < 120; i++)
-					if (a_data_p.c_java_lang_String_array1d[i] != null)
-						a_data_p.c_java_lang_String_array1d[i] = null;
+            this.a.o = true;
+            break;
+         case 7:
+            int var1;
+            switch(this.a.q) {
+            case 0:
+               this.a.a.b();
+               if(this.a.a.a) {
+                  this.a.a.a = false;
+                  if((this.a.bu & '\u8000') != 0 || (this.a.bu & 16384) != 0 || this.a.a.e == 1 || this.a.a.e == 3) {
+                     if(this.a.a.a > 0) {
+                        --this.a.q[this.a.a.b];
+                        if(this.a.q[this.a.a.b] == 0) {
+                           for(var1 = this.a.a.b; var1 < this.a.aB - 1; ++var1) {
+                              this.a.m[var1] = this.a.m[var1 + 1];
+                              this.a.q[var1] = this.a.q[var1 + 1];
+                           }
 
-				a_data_p.a_data_y.d();
-			}
-			if (!d)
-				a_data_p.a_data_g.a("BIGislandObjects", a_data_p.l_byte_array1d);
-			a_data_p.a_data_ab.d();
-			a_data_p.a_data_y.a();
-			a_data_p.aj_int = a_data_p.M / 2;
-			a_data_p.a();
-			return;
-		}
-		if (a_int == 20)
-		{
-			if (d)
-			{
-				a_data_p.a_data_g.e();
-				d = false;
-				e = false;
-				a_data_p.a();
-				return;
-			}
-			if (!flag && e)
-			{
-				e = false;
-				a_data_p.a_data_g.a = 0;
-				a_data_p.a_data_g.b = 0;
-				a_data_p.a_data_g.c = 0;
-				a_data_p.a_data_g.d = 0;
-				a_data_p.a_data_g.e = 0;
-				a_data_p.a_data_g.f = 0;
-				a_data_p.a_data_g.g = 0;
-				a_data_p.a_data_g.h = 0;
-				a_data_p.a_data_g.i = 0;
-				a_data_p.a_data_g.j = 0;
-				a_data_p.a_data_g.k = 0;
-				a_data_p.a_data_g.l = 0;
-				a_data_p.a_data_g.m = 0;
-				a_data_p.a_data_g.n = 0;
-				a_data_p.a_data_g.o = 0;
-				a_data_p.a_data_g.p = 0;
-				a_data_p.a_data_g.q = 0;
-				a_data_p.a_data_g.r = 0;
-				a_data_p.a_data_g.s = 0;
-				a_data_p.a_data_g.t = 0;
-				a_data_p.a_data_g.u = 0;
-				a_data_p.a_data_g.v = 0;
-				a_data_p.a_data_g.w = 0;
-				a_data_p.a_data_g.x = 0;
-				a_data_p.a_data_g.e();
-				a_data_p.a();
-				return;
-			}
-		} else
-		{
-			if (a_int == 40)
-			{
-				a_data_p.a_data_y.c();
-				a_data_p.a_data_aa.f();
-				a_data_p.a_data_aa.g();
-				a_data_p.a();
-				return;
-			}
-			if (a_int == 60)
-			{
-				if (!flag)
-				{
-					a_data_p.a_data_aa.d();
-					a_data_p.a_data_ad.p();
-				}
-				a_data_p.m_int = 0;
-				a_data_p.n_int = 0;
-				a_data_p.a_float = (k.a() / 3 - 16) / 1;
-				a_data_p.b_float = a_data_p.a_float;
-				a_data_p.c_float = a_data_p.a_float;
-				a_data_p.e_float = 0.0F;
-				a_data_p.f_float = 0.0F;
-				a_data_p.g_float = 0.0F;
-				a_data_p.L = 0;
-				a_data_p.a();
-			}
-		}
-	}
+                           --this.a.aB;
+                        }
+                     }
 
-	public final void e()
-	{
-		a_int = a_int + 2;
-		if (a_int <= 100)
-		{
-			if (a_data_p.r_int == 0)
-				a_data_p.a_data_r.a(0);
-			else
-			if (a_data_p.r_int == 1)
-				a_data_p.a_data_r.a(1);
-			a_data_p.a(((k) (a_data_p)).a, 20, (k.b() / 3) * 2, k.a() - 40, 12, a_int, 100, 0, b_int);
-			return;
-		}
-		a_int = -2;
-		a_data_p.a_data_aa.h();
-		if (a_data_p.e_boolean)
-		{
-			a_data_p.aw_boolean = true;
-			a_data_p.C_long = 0L;
-			a_data_p.c_boolean = false;
-			a_data_p.e_boolean = false;
-		} else
-		{
-			a_data_p.l_int = 6;
-		}
-		a_data_p.a();
-	}
+                     this.a.m = 0;
+                     this.a.a.f();
+                  }
+               }
+               break;
+            case 1:
+               this.a.a.e();
+               if(this.a.a.a) {
+                  this.a.a.a = false;
+                  if((this.a.bu & '\u8000') != 0 || (this.a.bu & 16384) != 0 || (this.a.bu & 16) != 0 || this.a.a.e == 1 || this.a.a.e == 3) {
+                     if(this.a.a.a > 0) {
+                        --this.a.q[this.a.a.b];
+                        if(this.a.q[this.a.a.b] == 0) {
+                           for(var1 = this.a.a.b; var1 < this.a.aB - 1; ++var1) {
+                              this.a.m[var1] = this.a.m[var1 + 1];
+                              this.a.q[var1] = this.a.q[var1 + 1];
+                           }
 
-	private void c(boolean flag)
-	{
-		long l = (long)a_data_p.aG_int - a_long;
-		int i = 0;
-		long l1;
-		if (a_data_p.K_long < a_data_p.c_long)
-		{
-			if (l > 0L)
-				l--;
-			l1 = (24L - a_data_p.c_long) + a_data_p.K_long;
-		} else
-		{
-			l1 = a_data_p.K_long - a_data_p.c_long;
-		}
-		if (a_data_p.J_long < a_data_p.d_long)
-		{
-			if (l1 > 0L)
-				l1--;
-			long l2 = 0L;
-		}
-		long l3 = 0L;
-		long l4;
-		if ((l4 = 24L * l + l1) >= 1L && l4 <= 15L)
-			i = 10;
-		else
-		if (l4 >= 16L && l4 <= 35L)
-			i = 20;
-		else
-		if (l4 >= 36L && l4 <= 72L)
-			i = 30;
-		else
-		if (l4 >= 73L && l4 <= 119L)
-			i = 40;
-		else
-		if (l4 > 119L)
-			i = 50;
-		if (flag)
-		{
-			a_data_p.a_float = a_data_p.a_float + (a_data_p.d_float / 100F) * (float)i;
-			a_data_p.b_float = a_data_p.b_float + (a_data_p.d_float / 100F) * (float)i;
-			a_data_p.c_float = a_data_p.c_float + (a_data_p.d_float / 100F) * (float)i;
-			if (a_data_p.a_float >= a_data_p.d_float)
-				a_data_p.a_float = a_data_p.d_float;
-			if (a_data_p.b_float >= a_data_p.d_float)
-				a_data_p.b_float = a_data_p.d_float;
-			if (a_data_p.c_float >= a_data_p.d_float)
-			{
-				a_data_p.c_float = a_data_p.d_float;
-				return;
-			}
-		} else
-		{
-			if (a_data_p.a_float > 10F)
-			{
-				a_data_p.a_float = a_data_p.a_float - (a_data_p.d_float / 100F) * (float)i;
-				if (a_data_p.a_float < 10F)
-					a_data_p.a_float = 10F;
-			}
-			if (a_data_p.b_float > 10F)
-			{
-				a_data_p.b_float = a_data_p.b_float - (a_data_p.d_float / 100F) * (float)i;
-				if (a_data_p.b_float < 0.0F)
-					a_data_p.b_float = 10F;
-			}
-			if (a_data_p.c_float > 10F)
-			{
-				a_data_p.c_float = a_data_p.c_float - (a_data_p.d_float / 100F) * (float)i;
-				if (a_data_p.c_float < 0.0F)
-					a_data_p.c_float = 10F;
-			}
-		}
-	}
+                           --this.a.aB;
+                        }
+                     }
 
-	public final void a(int i)
-	{
-		a_data_p.L = a_data_p.L + i;
-		if (a_data_p.L >= 50)
-		{
-			a_data_p.L = a_data_p.L - 50;
-			if (a_data_p.g_float < a_data_p.d_float)
-				a_data_p.g_float = a_data_p.g_float + 1.0F;
-		}
-	}
+                     this.a.m = 0;
+                     this.a.a.f();
+                  }
+               }
+               break;
+            case 2:
+               this.a.a.d();
+               if(this.a.a.a) {
+                  this.a.a.a = false;
+                  if((this.a.bu & '\u8000') != 0 || (this.a.bu & 16384) != 0 || (this.a.bu & 16) != 0 || this.a.a.e == 1 || this.a.a.e == 3) {
+                     if(this.a.a.a > 0) {
+                        --this.a.q[this.a.a.b];
+                        if(this.a.q[this.a.a.b] == 0) {
+                           for(var1 = this.a.a.b; var1 < this.a.aB - 1; ++var1) {
+                              this.a.m[var1] = this.a.m[var1 + 1];
+                              this.a.q[var1] = this.a.q[var1 + 1];
+                           }
 
-	public final void f()
-	{
-		if (!a_data_p.D_boolean)
-		{
-			if (a_data_p.k >= 60000L)
-			{
-				a_data_p.a_data_aa.d();
-				if (a_data_p.J_long < 10L)
-					a_data_p.a_java_lang_StringBuffer = (new StringBuffer()).append(a_data_p.K_long + ":0" + a_data_p.J_long);
-				else
-					a_data_p.a_java_lang_StringBuffer = (new StringBuffer()).append(a_data_p.K_long + ":" + a_data_p.J_long);
-				a_data_p.k = 0L;
-				a_data_p.aw_boolean = true;
-				return;
-			}
-		} else
-		if (a_data_p.e_long > 4000L)
-		{
-			if (a_data_p.J_long < 60L)
-				a_data_p.J_long++;
-			if (a_data_p.J_long == 60L)
-			{
-				a_data_p.J_long = 0L;
-				a_data_p.K_long++;
-				if (a_data_p.K_long == 24L)
-					a_data_p.K_long = 0L;
-			}
-			a_data_p.e_long = 0L;
-			a_data_p.aw_boolean = true;
-			if (a_data_p.J_long < 10L)
-			{
-				a_data_p.a_java_lang_StringBuffer = (new StringBuffer()).append(a_data_p.K_long + ":0" + a_data_p.J_long);
-				return;
-			}
-			a_data_p.a_java_lang_StringBuffer = (new StringBuffer()).append(a_data_p.K_long + ":" + a_data_p.J_long);
-		}
-	}
+                           --this.a.aB;
+                        }
+                     }
 
-	public final void g()
-	{
-		a_data_p.a_data_w.a(14);
-		a_data_p.l_int = 1;
-		a_data_p.ap_int = 0;
-		a_data_p.b_long = 0L;
-		a_data_p.aO_boolean = false;
-		a_data_p.aP = false;
-		if (a_data_p.b_boolean)
-			a_data_p.r_int = 0;
-		else
-			a_data_p.r_int = 1;
-		a_boolean = false;
-		a_data_p.aF = false;
-		a_data_p.c_boolean = false;
-		a_data_p.aw_boolean = true;
-		a_data_p.T = false;
-		a_data_p.aB_int = 0;
-		for (int i = 0; i < a_data_p.m_byte_array1d.length; i++)
-			a_data_p.q_int_array1d[i] = 0;
+                     this.a.m = 0;
+                     this.a.a.f();
+                  }
+               }
+               break;
+            case 3:
+               this.a.a.d();
+               if(this.a.a.a) {
+                  this.a.a.a = false;
+                  if((this.a.bu & '\u8000') != 0 || (this.a.bu & 16384) != 0 || (this.a.bu & 16) != 0 || this.a.a.e == 1 || this.a.a.e == 3) {
+                     if(this.a.a.a > 0) {
+                        --this.a.q[this.a.a.b];
+                        if(this.a.q[this.a.a.b] == 0) {
+                           for(var1 = this.a.a.b; var1 < this.a.aB - 1; ++var1) {
+                              this.a.m[var1] = this.a.m[var1 + 1];
+                              this.a.q[var1] = this.a.q[var1 + 1];
+                           }
 
-		a_data_p.av_int = 0;
-		for (int l = 0; l < a_data_p.a_byte_array1d.length; l++)
-			a_data_p.g_int_array1d[l] = 0;
+                           --this.a.aB;
+                        }
+                     }
 
-		a_data_p.aw_int = 0;
-		for (int i1 = 0; i1 < a_data_p.a_java_lang_String_array1d.length; i1++)
-		{
-			a_data_p.a_java_lang_String_array1d[i1] = null;
-			a_data_p.h_int_array1d[i1] = 0;
-		}
+                     this.a.m = 0;
+                     this.a.a.f();
+                  }
+               }
+            }
 
-		for (int j1 = 0; j1 < a_data_p.r_int_array1d.length; j1++)
-			a_data_p.r_int_array1d[j1] = 0;
+            this.a.aw = true;
+            this.a.o = true;
+            this.a.aK = false;
+            break;
+         case 8:
+            switch(this.a.p) {
+            case 0:
+               this.b = this.c = true;
+               this.a.w = this.a.a.a(this.a.w, 0, this.a.aw - 1);
+               this.a.a.l();
+               if((this.a.bu & '\u8000') != 0 || this.a.a.e == 3) {
+                  this.a.m = 0;
+                  this.b = this.c = false;
+                  this.a.aB = false;
+                  this.a.a.f();
+               }
+               break;
+            case 1:
+               this.a.a.h();
+               this.a.a.i();
+               if((this.a.bu & '\u8000') != 0 || (this.a.bu & 4) != 0 || (this.a.bu & 8) != 0 || this.a.a.e == 3 || this.a.a.e == 2 || this.a.a.e == 8) {
+                  this.a.p = 0;
+                  this.c = false;
+                  this.a.aw = true;
+               }
+            }
 
-		a_data_p.aC_int = 0;
-		for (int k1 = 0; k1 < a_data_p.s_int_array1d.length; k1++)
-			a_data_p.s_int_array1d[k1] = 0;
+            this.a.o = true;
+            break;
+         case 9:
+            this.a.a.q();
+            break;
+         case 10:
+            if(this.a.p) {
+               this.a.aw = true;
+               if((this.a.bu & '\u8000') != 0 || (this.a.bu & 16) != 0 || (this.a.bu & 16384) != 0 || this.a.a.e == 1 || this.a.a.e == 3) {
+                  this.a.g = 4001L;
+               }
 
-		a_data_p.aD_int = 0;
-		a_data_p.a_int_array1d = new int[5];
-		a_data_p.b_int_array1d = new int[5];
-		a_data_p.c_int_array1d = new int[5];
-		a_data_p.d_int_array1d = new int[5];
-		a_data_p.H_int = 1;
-		a_data_p.I = 1;
-		a_data_p.J_int = 1;
-		a_data_p.K_int = 1;
-		a_data_p.D_int = 0;
-		a_data_p.E = 0;
-		a_data_p.F = 0;
-		a_data_p.G = 0;
-	}
+               if(this.a.g > 4000L) {
+                  this.a.aK = false;
+                  this.a.g = 0L;
+                  this.a.p = false;
+                  this.a.n = true;
+                  this.a.m = true;
+                  this.a.m = this.a.j;
+                  this.a.b();
+               }
+            }
+
+            if(this.a.q) {
+               this.a.aw = true;
+               if((this.a.bu & '\u8000') != 0 || (this.a.bu & 16) != 0 || (this.a.bu & 16384) != 0 || this.a.a.e == 1 || this.a.a.e == 3) {
+                  this.a.g = 8001L;
+               }
+
+               if(this.a.g > 8000L) {
+                  this.a.aK = false;
+                  this.a.g = 0L;
+                  this.a.q = false;
+                  this.a.n = true;
+                  this.a.m = true;
+                  this.a.m = this.a.j;
+                  this.a.b();
+               }
+            }
+         }
+
+         return;
+      case 7:
+         return;
+      case 8:
+         if((this.a.bu & '\u8000') != 0 || (this.a.bu & 16) != 0 || (this.a.bu & 16384) != 0 || this.a.a.e == 1 || this.a.a.e == 3) {
+            this.a.y = 8001L;
+         }
+
+         if(this.a.y > 8000L) {
+            this.g();
+         }
+
+         this.a.a.h();
+         return;
+      case 9:
+         if((this.a.bu & '\u8000') != 0 || (this.a.bu & 16) != 0 || (this.a.bu & 16384) != 0 || this.a.a.e == 1 || this.a.a.e == 3) {
+            this.a.y = 8001L;
+         }
+
+         if(this.a.y > 8000L) {
+            this.g();
+         }
+
+         this.a.a.h();
+         break;
+      case 10:
+         this.a.a.q();
+         return;
+      case 11:
+         if(this.a.a == 1) {
+            if((this.a.bu & 16384) != 0 || (this.a.bu & 16) != 0 || this.a.a.e == 1) {
+               this.a.ax = true;
+               this.a.a.a(1);
+               this.a.a.e();
+               this.a.a.a(false);
+               this.a.l = 1;
+               return;
+            }
+
+            if((this.a.bu & '\u8000') != 0 || this.a.a.e == 3) {
+               this.a.l = 1;
+               this.a.aw = true;
+               return;
+            }
+         } else {
+            if((this.a.bu & 16384) != 0 || (this.a.bu & 16) != 0 || this.a.a.e == 1) {
+               this.a.a.destroyApp(true);
+               return;
+            }
+
+            if((this.a.bu & '\u8000') != 0 || this.a.a.e == 3) {
+               this.a.l = 1;
+               this.a.aw = true;
+               return;
+            }
+         }
+      }
+
+   }
+
+   public final void c() {
+      if(this.a.aw) {
+         this.a.a.setColor(13158);
+         this.a.a.fillRect(0, 0, k.a(), k.b());
+         this.a.a.a(this.a.a, this.a.a.a(94), k.a() >> 1, (k.b() >> 1) - 30, 16777215, 17, 0, 1, 8, this.a.aJ, k.a(), k.b(), 0, 0);
+         if(this.a.aO) {
+            this.a.a.a(this.a.a, this.a.a.a(95), k.a() >> 1, k.b() >> 1, 16777215, 17, 0, 1, 8, this.a.aJ, k.a(), k.b(), 0, 0);
+            return;
+         }
+
+         if(this.a.aP) {
+            this.a.a.a(this.a.a, this.a.a.a(110), k.a() >> 1, k.b() >> 1, 16777215, 17, 0, 1, 8, this.a.aJ, k.a(), k.b(), 0, 0);
+            return;
+         }
+
+         this.a.a.a(this.a.a, this.a.a.a(96), k.a() >> 1, k.b() >> 1, 16777215, 17, 0, 1, 8, this.a.aJ, k.a(), k.b(), 0, 0);
+      }
+
+   }
+
+   public final void d() {
+      if(this.a.aw) {
+         this.a.aw = false;
+         this.a.a.setColor(13158);
+         this.a.a.fillRect(0, 0, k.a(), k.b());
+         this.a.a.a(this.a.a, this.a.a.a(97), k.a() >> 1, k.b() / 4, 16777215, 17, 0, 1, 8, this.a.aJ, k.a(), k.b(), 0, 0);
+         this.a.a.a(this.a.a, this.a.a.a(98), k.a() >> 1, k.b() / 4 + 20, 16777215, 17, 0, 1, 8, this.a.aJ, k.a(), k.b(), 0, 0);
+      }
+
+   }
+
+   public final void a(boolean var1) {
+      this.b(var1);
+      if(var1) {
+         if(this.a == 70) {
+            if(this.a.c == 0) {
+               this.c(false);
+               return;
+            }
+
+            this.c(true);
+            return;
+         }
+
+         if(this.a == 80) {
+            return;
+         }
+
+         if(this.a == 100) {
+            this.a.a.a(true, true);
+            this.a = (long)this.a.a.b();
+            this.a.a.q();
+            this.a.a.d();
+            this.a.a.p();
+            this.a.a.t();
+            return;
+         }
+      } else {
+         if(this.a == 80) {
+            this.a.a.d();
+            this.a.a.b();
+            return;
+         }
+
+         if(this.a == 100) {
+            this.a.Z = 8;
+            this.a.aa = 148;
+            this.a.ab = this.a.Z - this.a.N / 2;
+            this.a.ac = this.a.aa - this.a.O / 2;
+            this.a.a.q();
+            this.a.d = true;
+         }
+      }
+
+   }
+
+   private void b(boolean var1) {
+      this.a.p = false;
+      this.a.c = true;
+      if(this.a != 0) {
+         if(this.a == 20) {
+            if(this.d) {
+               this.a.a.e();
+               this.d = false;
+               this.e = false;
+               this.a.a();
+               return;
+            }
+
+            if(!var1 && this.e) {
+               this.e = false;
+               this.a.a.a = 0;
+               this.a.a.b = 0;
+               this.a.a.c = 0;
+               this.a.a.d = 0;
+               this.a.a.e = 0;
+               this.a.a.f = 0;
+               this.a.a.g = 0;
+               this.a.a.h = 0;
+               this.a.a.i = 0;
+               this.a.a.j = 0;
+               this.a.a.k = 0;
+               this.a.a.l = 0;
+               this.a.a.m = 0;
+               this.a.a.n = 0;
+               this.a.a.o = 0;
+               this.a.a.p = 0;
+               this.a.a.q = 0;
+               this.a.a.r = 0;
+               this.a.a.s = 0;
+               this.a.a.t = 0;
+               this.a.a.u = 0;
+               this.a.a.v = 0;
+               this.a.a.w = 0;
+               this.a.a.x = 0;
+               this.a.a.e();
+               this.a.a();
+               return;
+            }
+         } else {
+            if(this.a == 40) {
+               this.a.a.c();
+               this.a.a.f();
+               this.a.a.g();
+               this.a.a();
+               return;
+            }
+
+            if(this.a == 60) {
+               if(!var1) {
+                  this.a.a.d();
+                  this.a.a.p();
+               }
+
+               this.a.m = 0;
+               this.a.n = 0;
+               this.a.a = (float)((k.a() / 3 - 16) / 1);
+               this.a.b = this.a.a;
+               this.a.c = this.a.a;
+               this.a.e = 0.0F;
+               this.a.f = 0.0F;
+               this.a.g = 0.0F;
+               this.a.L = 0;
+               this.a.a();
+            }
+         }
+
+      } else {
+         this.a.aj = false;
+         this.a.ak = false;
+         this.a.al = false;
+         this.a.am = false;
+         this.a.an = false;
+         this.a.ao = false;
+         this.a.ap = false;
+         this.a.aq = false;
+         this.a.ar = false;
+         this.a.as = false;
+         this.a.at = false;
+         this.a.au = false;
+         this.a.av = false;
+         this.a.a();
+         if(!var1) {
+            this.a.ad = true;
+         } else if(this.a.ag) {
+            for(int var2 = 0; var2 < 120; ++var2) {
+               if(this.a.c[var2] != null) {
+                  this.a.c[var2] = null;
+               }
+            }
+
+            this.a.a.d();
+         }
+
+         if(!this.d) {
+            this.a.a.a("BIGislandObjects", this.a.l);
+         }
+
+         this.a.a.d();
+         this.a.a.a();
+         this.a.aj = this.a.M / 2;
+         this.a.a();
+      }
+   }
+
+   public final void e() {
+      this.a += 2;
+      if(this.a <= 100) {
+         if(this.a.r == 0) {
+            this.a.a.a(0);
+         } else if(this.a.r == 1) {
+            this.a.a.a(1);
+         }
+
+         this.a.a(this.a.a, 20, k.b() / 3 * 2, k.a() - 40, 12, this.a, 100, 0, this.b);
+      } else {
+         this.a = -2;
+         this.a.a.h();
+         if(this.a.e) {
+            this.a.aw = true;
+            this.a.C = 0L;
+            this.a.c = false;
+            this.a.e = false;
+         } else {
+            this.a.l = 6;
+         }
+
+         this.a.a();
+      }
+   }
+
+   private void c(boolean var1) {
+      long var2 = (long)this.a.aG - this.a;
+      byte var10 = 0;
+      long var4;
+      if(this.a.K < this.a.c) {
+         if(var2 > 0L) {
+            --var2;
+         }
+
+         var4 = 24L - this.a.c + this.a.K;
+      } else {
+         var4 = this.a.K - this.a.c;
+      }
+
+      long var6;
+      if(this.a.J < this.a.d) {
+         if(var4 > 0L) {
+            --var4;
+         }
+
+         var6 = 0L;
+      }
+
+      var6 = 0L;
+      long var8;
+      if((var8 = 24L * var2 + var4) >= 1L && var8 <= 15L) {
+         var10 = 10;
+      } else if(var8 >= 16L && var8 <= 35L) {
+         var10 = 20;
+      } else if(var8 >= 36L && var8 <= 72L) {
+         var10 = 30;
+      } else if(var8 >= 73L && var8 <= 119L) {
+         var10 = 40;
+      } else if(var8 > 119L) {
+         var10 = 50;
+      }
+
+      if(var1) {
+         this.a.a += this.a.d / 100.0F * (float)var10;
+         this.a.b += this.a.d / 100.0F * (float)var10;
+         this.a.c += this.a.d / 100.0F * (float)var10;
+         if(this.a.a >= this.a.d) {
+            this.a.a = this.a.d;
+         }
+
+         if(this.a.b >= this.a.d) {
+            this.a.b = this.a.d;
+         }
+
+         if(this.a.c >= this.a.d) {
+            this.a.c = this.a.d;
+            return;
+         }
+      } else {
+         if(this.a.a > 10.0F) {
+            this.a.a -= this.a.d / 100.0F * (float)var10;
+            if(this.a.a < 10.0F) {
+               this.a.a = 10.0F;
+            }
+         }
+
+         if(this.a.b > 10.0F) {
+            this.a.b -= this.a.d / 100.0F * (float)var10;
+            if(this.a.b < 0.0F) {
+               this.a.b = 10.0F;
+            }
+         }
+
+         if(this.a.c > 10.0F) {
+            this.a.c -= this.a.d / 100.0F * (float)var10;
+            if(this.a.c < 0.0F) {
+               this.a.c = 10.0F;
+            }
+         }
+      }
+
+   }
+
+   public final void a(int var1) {
+      this.a.L += var1;
+      if(this.a.L >= 50) {
+         this.a.L -= 50;
+         if(this.a.g < this.a.d) {
+            ++this.a.g;
+         }
+      }
+
+   }
+
+   public final void f() {
+      if(!this.a.D) {
+         if(this.a.k >= 60000L) {
+            this.a.a.d();
+            if(this.a.J < 10L) {
+               this.a.a = (new StringBuffer()).append(this.a.K + ":0" + this.a.J);
+            } else {
+               this.a.a = (new StringBuffer()).append(this.a.K + ":" + this.a.J);
+            }
+
+            this.a.k = 0L;
+            this.a.aw = true;
+            return;
+         }
+      } else if(this.a.e > 4000L) {
+         if(this.a.J < 60L) {
+            ++this.a.J;
+         }
+
+         if(this.a.J == 60L) {
+            this.a.J = 0L;
+            ++this.a.K;
+            if(this.a.K == 24L) {
+               this.a.K = 0L;
+            }
+         }
+
+         this.a.e = 0L;
+         this.a.aw = true;
+         if(this.a.J < 10L) {
+            this.a.a = (new StringBuffer()).append(this.a.K + ":0" + this.a.J);
+            return;
+         }
+
+         this.a.a = (new StringBuffer()).append(this.a.K + ":" + this.a.J);
+      }
+
+   }
+
+   public final void g() {
+      this.a.a.a(14);
+      this.a.l = 1;
+      this.a.ap = 0;
+      this.a.b = 0L;
+      this.a.aO = false;
+      this.a.aP = false;
+      if(this.a.b) {
+         this.a.r = 0;
+      } else {
+         this.a.r = 1;
+      }
+
+      this.a = false;
+      this.a.aF = false;
+      this.a.c = false;
+      this.a.aw = true;
+      this.a.T = false;
+      this.a.aB = 0;
+
+      for(int var1 = 0; var1 < this.a.m.length; ++var1) {
+         this.a.q[var1] = 0;
+      }
+
+      this.a.av = 0;
+
+      for(int var2 = 0; var2 < this.a.a.length; ++var2) {
+         this.a.g[var2] = 0;
+      }
+
+      this.a.aw = 0;
+
+      for(int var3 = 0; var3 < this.a.a.length; ++var3) {
+         this.a.a[var3] = null;
+         this.a.h[var3] = 0;
+      }
+
+      for(int var4 = 0; var4 < this.a.r.length; ++var4) {
+         this.a.r[var4] = 0;
+      }
+
+      this.a.aC = 0;
+
+      for(int var5 = 0; var5 < this.a.s.length; ++var5) {
+         this.a.s[var5] = 0;
+      }
+
+      this.a.aD = 0;
+      this.a.a = new int[5];
+      this.a.b = new int[5];
+      this.a.c = new int[5];
+      this.a.d = new int[5];
+      this.a.H = 1;
+      this.a.I = 1;
+      this.a.J = 1;
+      this.a.K = 1;
+      this.a.D = 0;
+      this.a.E = 0;
+      this.a.F = 0;
+      this.a.G = 0;
+   }
 }

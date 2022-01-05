@@ -1,464 +1,431 @@
-// Decompiled by Jad v1.5.8e2. Copyright 2001 Pavel Kouznetsov.
-// Jad home page: http://kpdus.tripod.com/jad.html
-// Decompiler options: packimports(3) fieldsfirst ansi space 
-
 package data;
 
+import data.p;
 import java.util.Random;
 
-// Referenced classes of package data:
-//			g, k, p, w
+public final class u {
 
-public final class u
-{
+   public byte a;
+   public int a;
+   public int b;
+   public int c;
+   public int d;
+   public int e;
+   public int f;
+   public int g;
+   public int h;
+   public int[] a = new int[2];
+   public int[] b = new int[2];
+   public int[] c = new int[2];
+   public int[] d = new int[2];
+   public int[] e = new int[2];
+   public int i;
+   public int j;
+   public long a;
+   public long b;
+   public int k;
+   public int l;
+   public boolean a = true;
+   public boolean b = true;
+   public int m;
+   private Random a = new Random();
+   private p a;
 
-	public byte a_byte;
-	public int a_int;
-	public int b_int;
-	public int c_int;
-	public int d_int;
-	public int e_int;
-	public int f;
-	public int g;
-	public int h;
-	public int a_int_array1d[];
-	public int b_int_array1d[];
-	public int c_int_array1d[];
-	public int d_int_array1d[];
-	public int e_int_array1d[];
-	public int i;
-	public int j;
-	public long a_long;
-	public long b_long;
-	public int k;
-	public int l;
-	public boolean a_boolean;
-	public boolean b_boolean;
-	public int m;
-	private Random a_java_util_Random;
-	private p a_data_p;
 
-	public u(p p1, byte byte0, int i1, int j1, int k1, int l1, int i2, 
-			int ai[], int ai1[], int ai2[], int ai3[], int ai4[])
-	{
-		a_int_array1d = new int[2];
-		b_int_array1d = new int[2];
-		c_int_array1d = new int[2];
-		d_int_array1d = new int[2];
-		e_int_array1d = new int[2];
-		a_boolean = true;
-		b_boolean = true;
-		a_java_util_Random = new Random();
-		a_data_p = p1;
-		a_byte = byte0;
-		a_int = i1;
-		b_int = j1;
-		c_int = i1;
-		d_int = j1;
-		e_int = p1.M >> 1;
-		f = p1.M >> 1;
-		g = k1;
-		switch (l1)
-		{
-		case 1: // '\001'
-			h = p1.aj / 6;
-			break;
+   public u(p var1, byte var2, int var3, int var4, int var5, int var6, int var7, int[] var8, int[] var9, int[] var10, int[] var11, int[] var12) {
+      this.a = var1;
+      this.a = var2;
+      this.a = var3;
+      this.b = var4;
+      this.c = var3;
+      this.d = var4;
+      this.e = var1.M >> 1;
+      this.f = var1.M >> 1;
+      this.g = var5;
+      switch(var6) {
+      case 1:
+         this.h = var1.aj / 6;
+         break;
+      case 2:
+         this.h = var1.aj / 5;
+         break;
+      case 3:
+         this.h = var1.aj / 4;
+         break;
+      case 4:
+         this.h = var1.aj / 3;
+         break;
+      case 5:
+         this.h = var1.aj / 2;
+      }
 
-		case 2: // '\002'
-			h = p1.aj / 5;
-			break;
+      this.j = var7;
+      this.a = var8;
+      this.b = var9;
+      this.c = var10;
+      this.d = var11;
+      this.e = var12;
+      this.i = 0;
+      this.a = 0L;
+      this.b();
+      this.m = 0;
+   }
 
-		case 3: // '\003'
-			h = p1.aj / 4;
-			break;
+   public final void a() {
+      if(this.m != 1 && Math.abs(this.c - this.a.Z) <= 2 && Math.abs(this.d - this.a.aa) <= 2) {
+         if(this.c > this.a.Z) {
+            if(this.c - this.a.Z + this.c - this.a < this.g) {
+               this.k = (this.c - this.a.Z) * this.a.M;
+            } else {
+               this.k = (this.a + this.g - this.c) * this.a.M;
+            }
+         } else if(this.c - this.a.Z + this.c - this.a > -this.g) {
+            this.k = (this.c - this.a.Z) * this.a.M;
+         } else {
+            this.k = (this.a - this.g - this.c) * this.a.M;
+         }
 
-		case 4: // '\004'
-			h = p1.aj / 3;
-			break;
+         if(this.d > this.a.aa) {
+            if(this.d - this.a.aa + this.d - this.b < this.g) {
+               this.l = (this.d - this.a.aa) * this.a.M;
+            } else {
+               this.l = (this.b + this.g - this.d) * this.a.M;
+            }
+         } else if(this.d - this.a.aa + this.d - this.b > -this.g) {
+            this.l = (this.d - this.a.aa) * this.a.M;
+         } else {
+            this.l = (this.b - this.g - this.d) * this.a.M;
+         }
 
-		case 5: // '\005'
-			h = p1.aj / 2;
-			break;
-		}
-		j = i2;
-		a_int_array1d = ai;
-		b_int_array1d = ai1;
-		c_int_array1d = ai2;
-		d_int_array1d = ai3;
-		e_int_array1d = ai4;
-		i = 0;
-		a_long = 0L;
-		b();
-		m = 0;
-	}
+         this.a = true;
+         this.b = true;
+         this.b = (long)((70 + Math.abs(this.a.nextInt()) % 50) * 100);
+         this.a = 0L;
+         this.m = 1;
+         this.a.l[this.d * 180 + this.c] = 0;
+      }
 
-	public final void a()
-	{
-		if (m != 1 && Math.abs(c_int - a_data_p.Z) <= 2 && Math.abs(d_int - a_data_p.aa) <= 2)
-		{
-			if (c_int > a_data_p.Z)
-			{
-				if (((c_int - a_data_p.Z) + c_int) - a_int < g)
-					k = (c_int - a_data_p.Z) * a_data_p.M;
-				else
-					k = ((a_int + g) - c_int) * a_data_p.M;
-			} else
-			if (((c_int - a_data_p.Z) + c_int) - a_int > -g)
-				k = (c_int - a_data_p.Z) * a_data_p.M;
-			else
-				k = (a_int - g - c_int) * a_data_p.M;
-			if (d_int > a_data_p.aa)
-			{
-				if (((d_int - a_data_p.aa) + d_int) - b_int < g)
-					l = (d_int - a_data_p.aa) * a_data_p.M;
-				else
-					l = ((b_int + g) - d_int) * a_data_p.M;
-			} else
-			if (((d_int - a_data_p.aa) + d_int) - b_int > -g)
-				l = (d_int - a_data_p.aa) * a_data_p.M;
-			else
-				l = (b_int - g - d_int) * a_data_p.M;
-			a_boolean = true;
-			b_boolean = true;
-			b_long = (70 + Math.abs(a_java_util_Random.nextInt()) % 50) * 100;
-			a_long = 0L;
-			m = 1;
-			a_data_p.l[d_int * 180 + c_int] = 0;
-		}
-		switch (m)
-		{
-		default:
-			break;
+      int var1;
+      switch(this.m) {
+      case 0:
+         if(this.a) {
+            if(this.k > 0) {
+               if(this.e < this.a.M - this.h) {
+                  this.k -= this.h;
+                  this.e += this.h;
+               } else {
+                  this.a = this.a.a.a(this.d * 180 + this.c + 1, 1) && this.a.a.e(this.d * 180 + this.c + 1, 1) && this.a.a.d(this.d * 180 + this.c + 1, 1) && this.a.a.c(this.d * 180 + this.c + 1, 1) && (this.c + 1 != this.a.Z || this.d != this.a.aa);
+                  if(this.a) {
+                     this.k -= this.h;
+                     this.e = this.e + this.h - this.a.M;
+                     this.a.l[this.d * 180 + this.c] = 0;
+                     ++this.c;
+                     this.a.l[this.d * 180 + this.c] = this.a;
+                  }
+               }
 
-		case 0: // '\0'
-			if (a_boolean)
-				if (k > 0)
-				{
-					if (e_int < a_data_p.M - h)
-					{
-						k -= h;
-						e_int += h;
-					} else
-					{
-						a_boolean = a_data_p.a_data_g.a(d_int * 180 + c_int + 1, 1) && a_data_p.a_data_g.e(d_int * 180 + c_int + 1, 1) && a_data_p.a_data_g.d(d_int * 180 + c_int + 1, 1) && a_data_p.a_data_g.c(d_int * 180 + c_int + 1, 1) && (c_int + 1 != a_data_p.Z || d_int != a_data_p.aa);
-						if (a_boolean)
-						{
-							k -= h;
-							e_int = (e_int + h) - a_data_p.M;
-							a_data_p.l[d_int * 180 + c_int] = 0;
-							c_int++;
-							a_data_p.l[d_int * 180 + c_int] = a_byte;
-						}
-					}
-					if (k <= 0)
-						a_boolean = false;
-				} else
-				{
-					if (e_int > 0)
-					{
-						k += h;
-						e_int -= h;
-					} else
-					{
-						a_boolean = a_data_p.a_data_g.a((d_int * 180 + c_int) - 1, 0) && a_data_p.a_data_g.e((d_int * 180 + c_int) - 1, 0) && a_data_p.a_data_g.d((d_int * 180 + c_int) - 1, 0) && a_data_p.a_data_g.c((d_int * 180 + c_int) - 1, 0) && (c_int - 1 != a_data_p.Z || d_int != a_data_p.aa);
-						if (a_boolean)
-						{
-							k += h;
-							e_int = (e_int - h) + a_data_p.M;
-							a_data_p.l[d_int * 180 + c_int] = 0;
-							c_int--;
-							a_data_p.l[d_int * 180 + c_int] = a_byte;
-						}
-					}
-					if (k > 0)
-						a_boolean = false;
-				}
-			if (b_boolean)
-				if (l > 0)
-				{
-					if (f < a_data_p.M - h)
-					{
-						l -= h;
-						f += h;
-					} else
-					{
-						b_boolean = a_data_p.a_data_g.a(d_int * 180 + c_int + 180, 3) && a_data_p.a_data_g.e(d_int * 180 + c_int + 180, 3) && a_data_p.a_data_g.d(d_int * 180 + c_int + 180, 3) && a_data_p.a_data_g.c(d_int * 180 + c_int + 180, 3) && (c_int != a_data_p.Z || d_int + 1 != a_data_p.aa);
-						if (b_boolean)
-						{
-							l -= h;
-							f = (f + h) - a_data_p.M;
-							a_data_p.l[d_int * 180 + c_int] = 0;
-							d_int++;
-							a_data_p.l[d_int * 180 + c_int] = a_byte;
-						}
-					}
-					if (l <= 0)
-						b_boolean = false;
-				} else
-				{
-					if (f > 0)
-					{
-						l += h;
-						f -= h;
-					} else
-					{
-						b_boolean = a_data_p.a_data_g.a((d_int * 180 + c_int) - 180, 2) && a_data_p.a_data_g.e((d_int * 180 + c_int) - 180, 2) && a_data_p.a_data_g.d((d_int * 180 + c_int) - 180, 2) && a_data_p.a_data_g.c((d_int * 180 + c_int) - 180, 2) && (c_int != a_data_p.Z || d_int - 1 != a_data_p.aa);
-						if (b_boolean)
-						{
-							l += h;
-							f = (f - h) + a_data_p.M;
-							a_data_p.l[d_int * 180 + c_int] = 0;
-							d_int--;
-							a_data_p.l[d_int * 180 + c_int] = a_byte;
-						}
-					}
-					if (l > 0)
-						b_boolean = false;
-				}
-			int i1;
-			if (!a_boolean && !b_boolean)
-				if ((i1 = Math.abs(a_java_util_Random.nextInt()) % 5) == 0)
-				{
-					b_long = (j + Math.abs(a_java_util_Random.nextInt()) % 50) * 100;
-					a_long = 0L;
-					m = 2;
-				} else
-				if (i1 == 1)
-				{
-					b_long = (70 + Math.abs(a_java_util_Random.nextInt()) % 50) * 100;
-					a_long = 0L;
-					m = 1;
-					a_data_p.l[d_int * 180 + c_int] = 0;
-					b();
-					a_boolean = true;
-					b_boolean = true;
-				} else
-				{
-					b();
-					a_boolean = true;
-					b_boolean = true;
-				}
-			break;
+               if(this.k <= 0) {
+                  this.a = false;
+               }
+            } else {
+               if(this.e > 0) {
+                  this.k += this.h;
+                  this.e -= this.h;
+               } else {
+                  this.a = this.a.a.a(this.d * 180 + this.c - 1, 0) && this.a.a.e(this.d * 180 + this.c - 1, 0) && this.a.a.d(this.d * 180 + this.c - 1, 0) && this.a.a.c(this.d * 180 + this.c - 1, 0) && (this.c - 1 != this.a.Z || this.d != this.a.aa);
+                  if(this.a) {
+                     this.k += this.h;
+                     this.e = this.e - this.h + this.a.M;
+                     this.a.l[this.d * 180 + this.c] = 0;
+                     --this.c;
+                     this.a.l[this.d * 180 + this.c] = this.a;
+                  }
+               }
 
-		case 1: // '\001'
-			if (a_boolean)
-				if (k > 0)
-				{
-					if (e_int < a_data_p.M - h)
-					{
-						k -= h;
-						e_int += h;
-					} else
-					{
-						k -= h;
-						e_int = (e_int + h) - a_data_p.M;
-						if (c_int < 179)
-							c_int++;
-						else
-							k = -k;
-					}
-					if (k <= 0)
-						a_boolean = false;
-				} else
-				{
-					if (e_int > 0)
-					{
-						k += h;
-						e_int -= h;
-					} else
-					{
-						k += h;
-						e_int = (e_int - h) + a_data_p.M;
-						if (c_int > 0)
-							c_int--;
-						else
-							k = -k;
-					}
-					if (k > 0)
-						a_boolean = false;
-				}
-			if (b_boolean)
-				if (l > 0)
-				{
-					if (f < a_data_p.M - h)
-					{
-						l -= h;
-						f += h;
-					} else
-					{
-						l -= h;
-						f = (f + h) - a_data_p.M;
-						if (d_int < 179)
-							d_int++;
-						else
-							l = -l;
-					}
-					if (l <= 0)
-						b_boolean = false;
-				} else
-				{
-					if (f > 0)
-					{
-						l += h;
-						f -= h;
-					} else
-					{
-						l += 2;
-						f = (f - h) + a_data_p.M;
-						if (d_int > 0)
-							d_int--;
-						else
-							l = -l;
-					}
-					if (l > 0)
-						b_boolean = false;
-				}
-			if (!a_boolean && !b_boolean)
-			{
-				b();
-				a_boolean = true;
-				b_boolean = true;
-			}
-			boolean flag;
-			if (a_long <= b_long || !(flag = a_data_p.a_data_g.a(d_int * 180 + c_int, 3) && a_data_p.a_data_g.e(d_int * 180 + c_int, 3) && a_data_p.a_data_g.d(d_int * 180 + c_int, 3) && a_data_p.a_data_g.c(d_int * 180 + c_int, 3) && (c_int != a_data_p.Z || d_int != a_data_p.aa)))
-				break;
-			int k1;
-			if ((k1 = Math.abs(a_java_util_Random.nextInt()) % 5) == 0)
-			{
-				b_long = (j + Math.abs(a_java_util_Random.nextInt()) % 50) * 100;
-				a_long = 0L;
-				m = 2;
-				a_data_p.l[d_int * 180 + c_int] = a_byte;
-				break;
-			}
-			if (k1 == 1)
-			{
-				b_long = (70 + Math.abs(a_java_util_Random.nextInt()) % 50) * 100;
-				a_long = 0L;
-				b();
-				a_boolean = true;
-				b_boolean = true;
-			} else
-			{
-				b();
-				a_boolean = true;
-				b_boolean = true;
-				m = 0;
-				a_data_p.l[d_int * 180 + c_int] = a_byte;
-			}
-			break;
+               if(this.k > 0) {
+                  this.a = false;
+               }
+            }
+         }
 
-		case 2: // '\002'
-			if (a_long <= b_long)
-				break;
-			int j1;
-			if ((j1 = Math.abs(a_java_util_Random.nextInt()) % 5) == 0)
-			{
-				b_long = (j + Math.abs(a_java_util_Random.nextInt()) % 50) * 100;
-				a_long = 0L;
-				break;
-			}
-			if (j1 == 1)
-			{
-				b_long = (70 + Math.abs(a_java_util_Random.nextInt()) % 50) * 100;
-				a_long = 0L;
-				m = 1;
-				b();
-				a_boolean = true;
-				b_boolean = true;
-				a_data_p.l[d_int * 180 + c_int] = 0;
-			} else
-			{
-				b();
-				a_boolean = true;
-				b_boolean = true;
-				m = 0;
-			}
-			break;
-		}
-		a_long += a_data_p.f;
-	}
+         if(this.b) {
+            if(this.l > 0) {
+               if(this.f < this.a.M - this.h) {
+                  this.l -= this.h;
+                  this.f += this.h;
+               } else {
+                  this.b = this.a.a.a(this.d * 180 + this.c + 180, 3) && this.a.a.e(this.d * 180 + this.c + 180, 3) && this.a.a.d(this.d * 180 + this.c + 180, 3) && this.a.a.c(this.d * 180 + this.c + 180, 3) && (this.c != this.a.Z || this.d + 1 != this.a.aa);
+                  if(this.b) {
+                     this.l -= this.h;
+                     this.f = this.f + this.h - this.a.M;
+                     this.a.l[this.d * 180 + this.c] = 0;
+                     ++this.d;
+                     this.a.l[this.d * 180 + this.c] = this.a;
+                  }
+               }
 
-	public final void a(int i1, int j1)
-	{
-		switch (m)
-		{
-		case 0: // '\0'
-			if (a_data_p.k[d_int * 180 + c_int] != a_data_p.e[4] && a_data_p.k[d_int * 180 + c_int] != a_data_p.e[5] && a_data_p.k[d_int * 180 + c_int] != a_data_p.e[6])
-				a_data_p.a_data_w.a(((k) (a_data_p)).a, 0x90003, ((a_data_p.aM + a_data_p.M * i1) - a_data_p.M) + a_data_p.U + e_int, ((a_data_p.aN + a_data_p.M * j1) - a_data_p.M) + a_data_p.V + f);
-			if (k > 0 && a_boolean || k <= 0 && !a_boolean)
-			{
-				if (i < 2)
-					a_data_p.a_data_w.a(((k) (a_data_p)).a, b_int_array1d[0], ((a_data_p.aM + a_data_p.M * i1) - a_data_p.M) + a_data_p.U + e_int, ((a_data_p.aN + a_data_p.M * j1) - a_data_p.M) + a_data_p.V + f);
-				else
-					a_data_p.a_data_w.a(((k) (a_data_p)).a, b_int_array1d[1], ((a_data_p.aM + a_data_p.M * i1) - a_data_p.M) + a_data_p.U + e_int, ((a_data_p.aN + a_data_p.M * j1) - a_data_p.M) + a_data_p.V + f);
-			} else
-			if (i < 2)
-				a_data_p.a_data_w.a(((k) (a_data_p)).a, a_int_array1d[0], ((a_data_p.aM + a_data_p.M * i1) - a_data_p.M) + a_data_p.U + e_int, ((a_data_p.aN + a_data_p.M * j1) - a_data_p.M) + a_data_p.V + f);
-			else
-				a_data_p.a_data_w.a(((k) (a_data_p)).a, a_int_array1d[1], ((a_data_p.aM + a_data_p.M * i1) - a_data_p.M) + a_data_p.U + e_int, ((a_data_p.aN + a_data_p.M * j1) - a_data_p.M) + a_data_p.V + f);
-			if (a_data_p.k[d_int * 180 + c_int] == a_data_p.e[4] || a_data_p.k[d_int * 180 + c_int] == a_data_p.e[5] || a_data_p.k[d_int * 180 + c_int] == a_data_p.e[6])
-				if (i < 2)
-					a_data_p.a_data_w.a(((k) (a_data_p)).a, 0x90002, ((a_data_p.aM + a_data_p.M * i1) - a_data_p.M) + a_data_p.U + e_int, ((a_data_p.aN + a_data_p.M * j1) - a_data_p.M) + a_data_p.V + f);
-				else
-					a_data_p.a_data_w.a(((k) (a_data_p)).a, 0x90006, ((a_data_p.aM + a_data_p.M * i1) - a_data_p.M) + a_data_p.U + e_int, ((a_data_p.aN + a_data_p.M * j1) - a_data_p.M) + a_data_p.V + f);
-			break;
+               if(this.l <= 0) {
+                  this.b = false;
+               }
+            } else {
+               if(this.f > 0) {
+                  this.l += this.h;
+                  this.f -= this.h;
+               } else {
+                  this.b = this.a.a.a(this.d * 180 + this.c - 180, 2) && this.a.a.e(this.d * 180 + this.c - 180, 2) && this.a.a.d(this.d * 180 + this.c - 180, 2) && this.a.a.c(this.d * 180 + this.c - 180, 2) && (this.c != this.a.Z || this.d - 1 != this.a.aa);
+                  if(this.b) {
+                     this.l += this.h;
+                     this.f = this.f - this.h + this.a.M;
+                     this.a.l[this.d * 180 + this.c] = 0;
+                     --this.d;
+                     this.a.l[this.d * 180 + this.c] = this.a;
+                  }
+               }
 
-		case 1: // '\001'
-			if (k > 0 && a_boolean || k <= 0 && !a_boolean)
-			{
-				if (i < 2)
-					a_data_p.a_data_w.a(((k) (a_data_p)).a, d_int_array1d[0], ((a_data_p.aM + a_data_p.M * i1) - a_data_p.M) + a_data_p.U + e_int, ((a_data_p.aN + a_data_p.M * j1) - a_data_p.M) + a_data_p.V + f);
-				else
-					a_data_p.a_data_w.a(((k) (a_data_p)).a, d_int_array1d[1], ((a_data_p.aM + a_data_p.M * i1) - a_data_p.M) + a_data_p.U + e_int, ((a_data_p.aN + a_data_p.M * j1) - a_data_p.M) + a_data_p.V + f);
-			} else
-			if (i < 2)
-				a_data_p.a_data_w.a(((k) (a_data_p)).a, c_int_array1d[0], ((a_data_p.aM + a_data_p.M * i1) - a_data_p.M) + a_data_p.U + e_int, ((a_data_p.aN + a_data_p.M * j1) - a_data_p.M) + a_data_p.V + f);
-			else
-				a_data_p.a_data_w.a(((k) (a_data_p)).a, c_int_array1d[1], ((a_data_p.aM + a_data_p.M * i1) - a_data_p.M) + a_data_p.U + e_int, ((a_data_p.aN + a_data_p.M * j1) - a_data_p.M) + a_data_p.V + f);
-			break;
+               if(this.l > 0) {
+                  this.b = false;
+               }
+            }
+         }
 
-		case 2: // '\002'
-			if (a_data_p.k[d_int * 180 + c_int] != a_data_p.e[4] && a_data_p.k[d_int * 180 + c_int] != a_data_p.e[5] && a_data_p.k[d_int * 180 + c_int] != a_data_p.e[6])
-				a_data_p.a_data_w.a(((k) (a_data_p)).a, 0x90003, ((a_data_p.aM + a_data_p.M * i1) - a_data_p.M) + a_data_p.U + e_int, ((a_data_p.aN + a_data_p.M * j1) - a_data_p.M) + a_data_p.V + f);
-			if (i < 2)
-				a_data_p.a_data_w.a(((k) (a_data_p)).a, e_int_array1d[0], ((a_data_p.aM + a_data_p.M * i1) - a_data_p.M) + a_data_p.U + e_int, ((a_data_p.aN + a_data_p.M * j1) - a_data_p.M) + a_data_p.V + f);
-			else
-				a_data_p.a_data_w.a(((k) (a_data_p)).a, e_int_array1d[1], ((a_data_p.aM + a_data_p.M * i1) - a_data_p.M) + a_data_p.U + e_int, ((a_data_p.aN + a_data_p.M * j1) - a_data_p.M) + a_data_p.V + f);
-			if (a_data_p.k[d_int * 180 + c_int] == a_data_p.e[4] || a_data_p.k[d_int * 180 + c_int] == a_data_p.e[5] || a_data_p.k[d_int * 180 + c_int] == a_data_p.e[6])
-				if (i < 2)
-					a_data_p.a_data_w.a(((k) (a_data_p)).a, 0x90002, ((a_data_p.aM + a_data_p.M * i1) - a_data_p.M) + a_data_p.U + e_int, ((a_data_p.aN + a_data_p.M * j1) - a_data_p.M) + a_data_p.V + f);
-				else
-					a_data_p.a_data_w.a(((k) (a_data_p)).a, 0x90006, ((a_data_p.aM + a_data_p.M * i1) - a_data_p.M) + a_data_p.U + e_int, ((a_data_p.aN + a_data_p.M * j1) - a_data_p.M) + a_data_p.V + f);
-			break;
-		}
-		if (++i == 4)
-			i = 0;
-	}
+         if(!this.a && !this.b) {
+            if((var1 = Math.abs(this.a.nextInt()) % 5) == 0) {
+               this.b = (long)((this.j + Math.abs(this.a.nextInt()) % 50) * 100);
+               this.a = 0L;
+               this.m = 2;
+            } else if(var1 == 1) {
+               this.b = (long)((70 + Math.abs(this.a.nextInt()) % 50) * 100);
+               this.a = 0L;
+               this.m = 1;
+               this.a.l[this.d * 180 + this.c] = 0;
+               this.b();
+               this.a = true;
+               this.b = true;
+            } else {
+               this.b();
+               this.a = true;
+               this.b = true;
+            }
+         }
+         break;
+      case 1:
+         if(this.a) {
+            if(this.k > 0) {
+               if(this.e < this.a.M - this.h) {
+                  this.k -= this.h;
+                  this.e += this.h;
+               } else {
+                  this.k -= this.h;
+                  this.e = this.e + this.h - this.a.M;
+                  if(this.c < 179) {
+                     ++this.c;
+                  } else {
+                     this.k = -this.k;
+                  }
+               }
 
-	public final boolean a()
-	{
-		return d_int >= a_data_p.ac - 1 && d_int <= a_data_p.ac + a_data_p.O + 2 && c_int >= a_data_p.ab - 1 && c_int <= a_data_p.ab + a_data_p.N + 2;
-	}
+               if(this.k <= 0) {
+                  this.a = false;
+               }
+            } else {
+               if(this.e > 0) {
+                  this.k += this.h;
+                  this.e -= this.h;
+               } else {
+                  this.k += this.h;
+                  this.e = this.e - this.h + this.a.M;
+                  if(this.c > 0) {
+                     --this.c;
+                  } else {
+                     this.k = -this.k;
+                  }
+               }
 
-	public final void b()
-	{
-		if (Math.abs(a_int - c_int) < g)
-		{
-			k = Math.abs(a_java_util_Random.nextInt()) % (2 * a_data_p.M * Math.abs(g - Math.abs(a_int - c_int))) - a_data_p.M * Math.abs(g - Math.abs(a_int - c_int));
-		} else
-		{
-			k = Math.abs(a_java_util_Random.nextInt()) % (a_data_p.M * g);
-			if (c_int > a_int)
-				k = -k;
-		}
-		if (Math.abs(b_int - d_int) < g)
-		{
-			l = Math.abs(a_java_util_Random.nextInt()) % (2 * a_data_p.M * Math.abs(g - Math.abs(b_int - d_int))) - a_data_p.M * Math.abs(g - Math.abs(b_int - d_int));
-			return;
-		}
-		l = Math.abs(a_java_util_Random.nextInt()) % (a_data_p.M * g);
-		if (d_int > b_int)
-			l = -l;
-	}
+               if(this.k > 0) {
+                  this.a = false;
+               }
+            }
+         }
+
+         if(this.b) {
+            if(this.l > 0) {
+               if(this.f < this.a.M - this.h) {
+                  this.l -= this.h;
+                  this.f += this.h;
+               } else {
+                  this.l -= this.h;
+                  this.f = this.f + this.h - this.a.M;
+                  if(this.d < 179) {
+                     ++this.d;
+                  } else {
+                     this.l = -this.l;
+                  }
+               }
+
+               if(this.l <= 0) {
+                  this.b = false;
+               }
+            } else {
+               if(this.f > 0) {
+                  this.l += this.h;
+                  this.f -= this.h;
+               } else {
+                  this.l += 2;
+                  this.f = this.f - this.h + this.a.M;
+                  if(this.d > 0) {
+                     --this.d;
+                  } else {
+                     this.l = -this.l;
+                  }
+               }
+
+               if(this.l > 0) {
+                  this.b = false;
+               }
+            }
+         }
+
+         if(!this.a && !this.b) {
+            this.b();
+            this.a = true;
+            this.b = true;
+         }
+
+         if(this.a > this.b && this.a.a.a(this.d * 180 + this.c, 3) && this.a.a.e(this.d * 180 + this.c, 3) && this.a.a.d(this.d * 180 + this.c, 3) && this.a.a.c(this.d * 180 + this.c, 3) && (this.c != this.a.Z || this.d != this.a.aa)) {
+            int var2;
+            if((var2 = Math.abs(this.a.nextInt()) % 5) == 0) {
+               this.b = (long)((this.j + Math.abs(this.a.nextInt()) % 50) * 100);
+               this.a = 0L;
+               this.m = 2;
+               this.a.l[this.d * 180 + this.c] = this.a;
+            } else if(var2 == 1) {
+               this.b = (long)((70 + Math.abs(this.a.nextInt()) % 50) * 100);
+               this.a = 0L;
+               this.b();
+               this.a = true;
+               this.b = true;
+            } else {
+               this.b();
+               this.a = true;
+               this.b = true;
+               this.m = 0;
+               this.a.l[this.d * 180 + this.c] = this.a;
+            }
+         }
+         break;
+      case 2:
+         if(this.a > this.b) {
+            if((var1 = Math.abs(this.a.nextInt()) % 5) == 0) {
+               this.b = (long)((this.j + Math.abs(this.a.nextInt()) % 50) * 100);
+               this.a = 0L;
+            } else if(var1 == 1) {
+               this.b = (long)((70 + Math.abs(this.a.nextInt()) % 50) * 100);
+               this.a = 0L;
+               this.m = 1;
+               this.b();
+               this.a = true;
+               this.b = true;
+               this.a.l[this.d * 180 + this.c] = 0;
+            } else {
+               this.b();
+               this.a = true;
+               this.b = true;
+               this.m = 0;
+            }
+         }
+      }
+
+      this.a += this.a.f;
+   }
+
+   public final void a(int var1, int var2) {
+      switch(this.m) {
+      case 0:
+         if(this.a.k[this.d * 180 + this.c] != this.a.e[4] && this.a.k[this.d * 180 + this.c] != this.a.e[5] && this.a.k[this.d * 180 + this.c] != this.a.e[6]) {
+            this.a.a.a(this.a.a, 589827, this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.e, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.f);
+         }
+
+         if((this.k <= 0 || !this.a) && (this.k > 0 || this.a)) {
+            if(this.i < 2) {
+               this.a.a.a(this.a.a, this.a[0], this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.e, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.f);
+            } else {
+               this.a.a.a(this.a.a, this.a[1], this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.e, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.f);
+            }
+         } else if(this.i < 2) {
+            this.a.a.a(this.a.a, this.b[0], this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.e, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.f);
+         } else {
+            this.a.a.a(this.a.a, this.b[1], this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.e, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.f);
+         }
+
+         if(this.a.k[this.d * 180 + this.c] == this.a.e[4] || this.a.k[this.d * 180 + this.c] == this.a.e[5] || this.a.k[this.d * 180 + this.c] == this.a.e[6]) {
+            if(this.i < 2) {
+               this.a.a.a(this.a.a, 589826, this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.e, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.f);
+            } else {
+               this.a.a.a(this.a.a, 589830, this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.e, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.f);
+            }
+         }
+         break;
+      case 1:
+         if((this.k <= 0 || !this.a) && (this.k > 0 || this.a)) {
+            if(this.i < 2) {
+               this.a.a.a(this.a.a, this.c[0], this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.e, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.f);
+            } else {
+               this.a.a.a(this.a.a, this.c[1], this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.e, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.f);
+            }
+         } else if(this.i < 2) {
+            this.a.a.a(this.a.a, this.d[0], this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.e, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.f);
+         } else {
+            this.a.a.a(this.a.a, this.d[1], this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.e, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.f);
+         }
+         break;
+      case 2:
+         if(this.a.k[this.d * 180 + this.c] != this.a.e[4] && this.a.k[this.d * 180 + this.c] != this.a.e[5] && this.a.k[this.d * 180 + this.c] != this.a.e[6]) {
+            this.a.a.a(this.a.a, 589827, this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.e, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.f);
+         }
+
+         if(this.i < 2) {
+            this.a.a.a(this.a.a, this.e[0], this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.e, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.f);
+         } else {
+            this.a.a.a(this.a.a, this.e[1], this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.e, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.f);
+         }
+
+         if(this.a.k[this.d * 180 + this.c] == this.a.e[4] || this.a.k[this.d * 180 + this.c] == this.a.e[5] || this.a.k[this.d * 180 + this.c] == this.a.e[6]) {
+            if(this.i < 2) {
+               this.a.a.a(this.a.a, 589826, this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.e, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.f);
+            } else {
+               this.a.a.a(this.a.a, 589830, this.a.aM + this.a.M * var1 - this.a.M + this.a.U + this.e, this.a.aN + this.a.M * var2 - this.a.M + this.a.V + this.f);
+            }
+         }
+      }
+
+      if(++this.i == 4) {
+         this.i = 0;
+      }
+
+   }
+
+   public final boolean a() {
+      return this.d >= this.a.ac - 1 && this.d <= this.a.ac + this.a.O + 2 && this.c >= this.a.ab - 1 && this.c <= this.a.ab + this.a.N + 2;
+   }
+
+   public final void b() {
+      if(Math.abs(this.a - this.c) < this.g) {
+         this.k = Math.abs(this.a.nextInt()) % (2 * this.a.M * Math.abs(this.g - Math.abs(this.a - this.c))) - this.a.M * Math.abs(this.g - Math.abs(this.a - this.c));
+      } else {
+         this.k = Math.abs(this.a.nextInt()) % (this.a.M * this.g);
+         if(this.c > this.a) {
+            this.k = -this.k;
+         }
+      }
+
+      if(Math.abs(this.b - this.d) < this.g) {
+         this.l = Math.abs(this.a.nextInt()) % (2 * this.a.M * Math.abs(this.g - Math.abs(this.b - this.d))) - this.a.M * Math.abs(this.g - Math.abs(this.b - this.d));
+      } else {
+         this.l = Math.abs(this.a.nextInt()) % (this.a.M * this.g);
+         if(this.d > this.b) {
+            this.l = -this.l;
+         }
+
+      }
+   }
 }

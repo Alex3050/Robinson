@@ -1,86 +1,70 @@
-// Decompiled by Jad v1.5.8e2. Copyright 2001 Pavel Kouznetsov.
-// Jad home page: http://kpdus.tripod.com/jad.html
-// Decompiler options: packimports(3) fieldsfirst ansi space 
-
 package data;
 
+import data.b;
+import data.k;
+import data.z;
 import javax.microedition.rms.RecordStore;
 import javax.microedition.rms.RecordStoreException;
 
-// Referenced classes of package data:
-//			b, k, z
+public final class e {
 
-public final class e
-{
+   private static e a = null;
 
-	private static e a = null;
 
-	private e()
-	{
-	}
+   public static final e a() {
+      if(k.a()) {
+         if(a == null) {
+            a = new e();
+         }
 
-	public static final e a()
-	{
-		if (k.a())
-		{
-			if (a == null)
-				a = new e();
-			return a;
-		} else
-		{
-			throw new b("Unauthorised operation");
-		}
-	}
+         return a;
+      } else {
+         throw new b("Unauthorised operation");
+      }
+   }
 
-	public final void a(String s, int i, int j, byte abyte0[])
-		throws z
-	{
-		Object obj = null;
-		i++;
-		try
-		{
-			RecordStore recordstore;
-			for (int i1 = (recordstore = RecordStore.openRecordStore(s, true)).getNumRecords(); i1 < i; i1++)
-				recordstore.addRecord(null, 0, 0);
+   public final void a(String var1, int var2, int var3, byte[] var4) throws z {
+      RecordStore var5 = null;
+      ++var2;
 
-			int l;
-			if ((l = recordstore.getSizeAvailable() + recordstore.getRecordSize(i)) < j)
-			{
-				recordstore.closeRecordStore();
-				throw new z("Not enought space");
-			}
-			recordstore.setRecord(i, abyte0, 0, j);
-			if (recordstore != null)
-				recordstore.closeRecordStore();
-			return;
-		}
-		catch (RecordStoreException recordstoreexception)
-		{
-			throw new z("CelsiusRecordStoreManager: " + recordstoreexception.getMessage());
-		}
-	}
+      try {
+         for(int var7 = (var5 = RecordStore.openRecordStore(var1, true)).getNumRecords(); var7 < var2; ++var7) {
+            var5.addRecord((byte[])null, 0, 0);
+         }
 
-	public final byte[] a(String s, int i)
-		throws z
-	{
-		Object obj = null;
-		i++;
-		byte abyte0[];
-		try
-		{
-			RecordStore recordstore;
-			int j;
-			if ((j = (recordstore = RecordStore.openRecordStore(s, false)).getNumRecords()) < i)
-				return null;
-			abyte0 = recordstore.getRecord(i);
-			if (recordstore != null)
-				recordstore.closeRecordStore();
-		}
-		catch (RecordStoreException recordstoreexception)
-		{
-			throw new z("CelsiusRecordStoreManager: " + recordstoreexception.getMessage());
-		}
-		return abyte0;
-	}
+         if(var5.getSizeAvailable() + var5.getRecordSize(var2) < var3) {
+            var5.closeRecordStore();
+            throw new z("Not enought space");
+         } else {
+            var5.setRecord(var2, var4, 0, var3);
+            if(var5 != null) {
+               var5.closeRecordStore();
+            }
+
+         }
+      } catch (RecordStoreException var9) {
+         throw new z("CelsiusRecordStoreManager: " + var9.getMessage());
+      }
+   }
+
+   public final byte[] a(String var1, int var2) throws z {
+      RecordStore var3 = null;
+      ++var2;
+
+      try {
+         if((var3 = RecordStore.openRecordStore(var1, false)).getNumRecords() < var2) {
+            return null;
+         } else {
+            byte[] var5 = var3.getRecord(var2);
+            if(var3 != null) {
+               var3.closeRecordStore();
+            }
+
+            return var5;
+         }
+      } catch (RecordStoreException var7) {
+         throw new z("CelsiusRecordStoreManager: " + var7.getMessage());
+      }
+   }
 
 }
